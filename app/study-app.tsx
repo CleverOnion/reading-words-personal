@@ -25,7 +25,7 @@ async function api<T=State>(data?:Record<string,unknown>,session?:string):Promis
  if(!r.ok)throw Object.assign(new Error(result.error||'暂时无法连接，请重试。'),{status:r.status});
  return result;
 }
-export default function StudyApp(){
+export default function StudyApp({standalone=false}:{standalone?:boolean}){
  const [view,setView]=useState<View>('library'),[year,setYear]=useState(2026);
  const [state,setState]=useState<State>({progress:{},sessions:[]});
  const [loading,setLoading]=useState(true),[busy,setBusy]=useState(false),[error,setError]=useState(''),[auth,setAuth]=useState(false);
@@ -70,7 +70,7 @@ export default function StudyApp(){
  const reviewed=state.sessions.reduce((n,s)=>n+s.answered,0),correct=state.sessions.reduce((n,s)=>n+s.correct,0);
  const controls=<div className="practice-controls"><Filter label="词序" value={order} onChange={setOrder} items={[['original','原文顺序'],['shuffle','随机顺序']]}/><Filter label="每次词数" value={limit} onChange={setLimit} items={[['all','全部词条'],['10','每次 10 词'],['20','每次 20 词']]}/></div>;
  return <div className="app-shell">
- <header className="site-header"><button className="wordmark" onClick={()=>navigate('library')} aria-label="读词首页">读词<span>.</span><small>READING NOTES</small></button><nav className="top-navigation">{([['library','阅读书架'],['wrong','错词手记'],['history','学习足迹']] as const).map(([v,label])=><button key={v} className={view===v?'active':''} disabled={busy} onClick={()=>navigate(v)}>{label}{v==='wrong'&&pending.length>0&&<i>{pending.length}</i>}</button>)}</nav><span className="header-edition">考研英语一<span>个人词汇研习室</span></span></header>
+ <header className="site-header"><button className="wordmark" onClick={()=>navigate('library')} aria-label="读词首页">读词<span>.</span><small>READING NOTES</small></button><nav className="top-navigation">{([['library','阅读书架'],['wrong','错词手记'],['history','学习足迹']] as const).map(([v,label])=><button key={v} className={view===v?'active':''} disabled={busy} onClick={()=>navigate(v)}>{label}{v==='wrong'&&pending.length>0&&<i>{pending.length}</i>}</button>)}</nav>{standalone?<div className="personal-tools"><a href="/api/backup" download>导出备份</a><form action="/auth/logout" method="post"><button type="submit" disabled={busy}>退出登录</button></form></div>:<span className="header-edition">考研英语一<span>个人词汇研习室</span></span>}</header>
  <main><div className="content">
  {error&&<div className="error-banner" role="alert"><span>{error}</span>{auth?<a href="/signin-with-chatgpt?return_to=%2F" target="_top">登录并继续 <ArrowRight size={15}/></a>:<Button variant="ghost" onClick={()=>{setError('');refresh().catch(()=>{});}}>重新加载记录</Button>}</div>}
  {view==='library'&&<ReadingLibrary progress={state.progress} sessions={state.sessions} loading={loading} busy={busy} start={start} restart={id=>start('passage',id,undefined,true)} resume={resume} controls={controls}/>}

@@ -21,3 +21,5 @@
 
 /* Keep every reading year visible at desktop and mobile widths. */
 .overview-tools{flex-wrap:wrap}.mini-filter{flex:1 1 100%;min-width:0;flex-wrap:wrap}.mini-filter button{white-space:nowrap}.overview-tools .legend{flex-wrap:wrap}
+
+.personal-tools{display:flex;align-items:center;gap:14px;font-size:12px;white-space:nowrap}.personal-tools a{color:#657651;text-underline-offset:4px}.personal-tools form{margin:0}.personal-tools button{background:none;border:0;padding:4px;color:#7b8271;font-size:12px}@media(max-width:760px){.personal-tools{gap:8px;font-size:11px}.personal-tools button{font-size:11px}}

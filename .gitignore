@@ -45,3 +45,7 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+
+# Personal deployment, credentials and learning-record backups
+/.cloudflare-build/
+/.cloudflare-private/
