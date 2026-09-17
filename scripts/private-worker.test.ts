@@ -18,6 +18,18 @@ test('private API rejects anonymous and spoofed identity headers',async()=>{
  assert.equal((await call('/api/study',{headers:{'oai-authenticated-user-id':'personal-owner'}})).status,401);
 });
 test('missing secrets fail closed',async()=>{assert.equal((await call('/',{},{})).status,503);});
+test('login documents preserve same-origin form origins, including password retry pages',async()=>{
+ for(const page of [await call('/auth/login'),await call('/auth/login',{method:'POST',headers:{origin,'Content-Type':'application/x-www-form-urlencoded'},body:'password=wrong'})]){
+  // no-referrer makes browsers send Origin: null for native form POSTs.
+  assert.equal(page.headers.get('Referrer-Policy'),'same-origin');
+ }
+});
+test('opaque or absent origins remain rejected',async()=>{
+ for(const extra of [{},{origin:'null'}] as Record<string,string>[]){
+  const r=await call('/auth/login',{method:'POST',headers:{...extra,'Content-Type':'application/x-www-form-urlencoded','sec-fetch-site':'same-origin'},body:new URLSearchParams({password})});
+  assert.equal(r.status,403);
+ }
+});
 test('configured personal password can be shorter than generated credentials',async()=>{
  const customPassword='sample123';
  const hash=Buffer.from(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(customPassword))).toString('hex');
