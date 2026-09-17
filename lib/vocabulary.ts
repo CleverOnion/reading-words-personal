@@ -10,9 +10,17 @@ export function shuffle<T>(items:T[],seed:number){
  return result;
 }
 export function optionsFor(wordId:string,sessionId:string,position:number){
- const word=byId.get(wordId)!;
+ const word=byId.get(wordId);
+ if(!word)throw new Error('Unknown vocabulary entry');
  const seed=Array.from(sessionId+position).reduce((h,c)=>Math.imul(h,31)+c.charCodeAt(0),7)>>>0;
  const group=passages.find(p=>p.id===wordId.split('-').slice(0,2).join('-'))!;
  const meanings=[...new Set(shuffle(group.words,seed).filter(w=>w.word!==word.word&&w.meaning!==word.meaning).map(w=>w.meaning))].slice(0,3);
- return shuffle([word.meaning,...meanings],seed+7);
+ const options=shuffle([word.meaning,...meanings],seed+7);
+ assertQuestion({id:wordId,word:word.word,options});
+ return options;
+}
+export function assertQuestion(q:{id:string;word:string;options:string[]}){
+ const w=byId.get(q.id);
+ if(!w||q.word!==w.word||q.options.length!==4||new Set(q.options).size!==4||q.options.filter(o=>o===w.meaning).length!==1)
+  throw new Error('题目与释义不一致，已停止展示。请刷新页面后继续，已保存进度不会丢失。');
 }

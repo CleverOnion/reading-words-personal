@@ -7,6 +7,7 @@
 - 阅读书架支持复习全景、阅读卡片、紧凑清单；全景按年份 × Text 显示复习轮次、词条覆盖率和错词数。
 - 英文选四个中文释义，可选择“不认识”；支持原文顺序、乱序、10/20/全部词条。
 - 每题保存到 D1，重复提交幂等；中断后通过首页或历史续练。
+- 重新点击同一篇优先续练，刷新可恢复当前会话；“新一轮”才会新建记录。保存退出后，首页优先显示最近学习的篇目。
 - 错词保留出错次数，连续答对 3 次标记已巩固；答错重新计数。答对一次、两次分别在 1 天、3 天后到期。
 - 学习足迹包含开始时间、练习类型、完成状态、答题数、正确率、用时及当次错词。
 - 数据通过 Sites 认证用户 ID 隔离。仅布局偏好使用本机存储。
@@ -34,6 +35,7 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 
 ```sh
 node --experimental-strip-types --test scripts/study.test.ts
+node --experimental-strip-types --test scripts/regressions.test.ts scripts/questions.test.mjs
 node node_modules/typescript/bin/tsc --noEmit
 npm run build
 ```

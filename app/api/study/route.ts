@@ -1,5 +1,6 @@
 import {db,state,getSession,answers} from '../../../lib/server-store';
 import {byId,passages,optionsFor,shuffle} from '../../../lib/vocabulary';
+import {findResumableSession} from '../../../lib/session-policy';
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store'}});
 const fail=(message:string,status=400)=>json({error:message},status);
@@ -27,6 +28,10 @@ export async function POST(request:Request){
    let queue:string[]=[];let title='';
    if(mode==='passage'){
     const p=passages.find(p=>p.id===body.passageId);if(!p)return fail('阅读篇目不存在。');
+    if(body.forceNew!==true){
+     const existing=findResumableSession((await state(uid)).sessions,p.id);
+     if(existing){await db().prepare("UPDATE sessions SET status = 'active', finished_at = NULL, updated_at = ? WHERE id = ? AND user_id = ?").bind(Date.now(),existing.id,uid).run();return json({id:existing.id,resumed:true});}
+    }
     queue=p.words.map(w=>w.id);title=p.year+' 年 · Text '+p.text;
    }else{
     const st=await state(uid);
@@ -44,14 +49,21 @@ export async function POST(request:Request){
   }
   if(typeof body.sessionId!=='string')return fail('缺少练习编号。');
   const s=await getSession(body.sessionId,uid);if(!s)return fail('未找到这次练习。',404);
+  if(body.action==='resume'||body.action==='pause'){
+   const items=await answers(s.id);const queue:string[]=JSON.parse(s.queue);
+   if(s.status==='completed'||items.length>=queue.length)return json({ok:true,completed:true});
+   await db().prepare("UPDATE sessions SET status = 'active', finished_at = NULL, updated_at = ? WHERE id = ? AND user_id = ?").bind(Date.now(),s.id,uid).run();
+   return json({ok:true,answered:items.length});
+  }
   if(body.action==='stop'){
-   await db().prepare("UPDATE sessions SET status = 'stopped', finished_at = ? WHERE id = ? AND user_id = ? AND status = 'active'").bind(Date.now(),s.id,uid).run();
+   await db().prepare("UPDATE sessions SET status = 'stopped', finished_at = ?, updated_at = ? WHERE id = ? AND user_id = ? AND status = 'active'").bind(Date.now(),Date.now(),s.id,uid).run();
    return json({ok:true});
   }
   if(body.action!=='answer')return fail('未知操作。');
   const queue:string[]=JSON.parse(s.queue);const pos=body.position;
   if(!Number.isInteger(pos)||Number(pos)<0||Number(pos)>=queue.length)return fail('题目编号无效。');
   const index=Number(pos);const w=byId.get(queue[index])!;
+  if(body.wordId!==undefined&&body.wordId!==w.id)return fail('题目已切换，请刷新后从已保存进度继续。',409);
   const previous=await answers(s.id);const replay=previous.find(a=>a.position===index);
   if(replay)return json({correct:!!replay.correct,meaning:w.meaning,choice:replay.choice,done:index===queue.length-1});
   if(s.status!=='active'||index!==previous.length)return fail('练习进度已更新，请重新打开这次练习。',409);
@@ -59,6 +71,7 @@ export async function POST(request:Request){
   const correct=body.choice===w.meaning;const now=Date.now();
   const duration=typeof body.duration==='number'&&Number.isFinite(body.duration)?Math.max(0,Math.min(300000,Math.round(body.duration))):0;
   const batch=[db().prepare('INSERT INTO attempts (session_id,position,word_id,choice,correct,answered_at,duration) VALUES (?,?,?,?,?,?,?) ON CONFLICT(session_id,position) DO NOTHING').bind(s.id,index,w.id,body.choice as string|null,Number(correct),now,duration)];
+  batch.push(db().prepare('UPDATE sessions SET updated_at = MAX(updated_at, ?) WHERE id = ? AND user_id = ?').bind(now,s.id,uid));
   if(index===queue.length-1)batch.push(db().prepare("UPDATE sessions SET status = 'completed', finished_at = ? WHERE id = ? AND user_id = ? AND (SELECT COUNT(*) FROM attempts WHERE session_id = ?) = ?").bind(now,s.id,uid,s.id,queue.length));
   await db().batch(batch);
   const saved=await db().prepare('SELECT correct, choice FROM attempts WHERE session_id = ? AND position = ?').bind(s.id,index).first<{correct:number;choice:string|null}>();

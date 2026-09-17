@@ -1,0 +1,1 @@
+ALTER TABLE `sessions` ADD `updated_at` integer DEFAULT 0 NOT NULL;
