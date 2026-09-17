@@ -22,9 +22,15 @@ export async function POST(request:Request){
  const origin=request.headers.get('origin');if(origin&&origin!==new URL(request.url).origin)return fail('请求来源不匹配。',403);
  try{
   const body=await request.json() as Record<string,unknown>;
+  if(body.action==='bookmark'){
+   if(typeof body.wordId!=='string'||!byId.has(body.wordId)||typeof body.saved!=='boolean')return fail('词条或收藏状态无效。');
+   if(body.saved)await db().prepare('INSERT INTO saved_words (user_id,word_id,saved_at) VALUES (?,?,?) ON CONFLICT(user_id,word_id) DO NOTHING').bind(uid,body.wordId,Date.now()).run();
+   else await db().prepare('DELETE FROM saved_words WHERE user_id = ? AND word_id = ?').bind(uid,body.wordId).run();
+   return json({ok:true});
+  }
   if(body.action==='start'){
    const mode=body.mode;
-   if(!['passage','wrong','due'].includes(String(mode)))return fail('练习模式无效。');
+   if(!['passage','wrong','due','saved'].includes(String(mode)))return fail('练习模式无效。');
    let queue:string[]=[];let title='';
    if(mode==='passage'){
     const p=passages.find(p=>p.id===body.passageId);if(!p)return fail('阅读篇目不存在。');
@@ -33,6 +39,11 @@ export async function POST(request:Request){
      if(existing){await db().prepare("UPDATE sessions SET status = 'active', finished_at = NULL, updated_at = ? WHERE id = ? AND user_id = ?").bind(Date.now(),existing.id,uid).run();return json({id:existing.id,resumed:true});}
     }
     queue=p.words.map(w=>w.id);title=p.year+' 年 · Text '+p.text;
+   }else if(mode==='saved'){
+    const st=await state(uid);queue=st.savedWordIds.filter(id=>byId.has(id));
+    if(body.passageId&&body.passageId!=='all')queue=queue.filter(id=>id.startsWith(String(body.passageId)+'-'));
+    if(Array.isArray(body.wordIds))queue=queue.filter(id=>(body.wordIds as unknown[]).includes(id));
+    title='重点词复习';
    }else{
     const st=await state(uid);
     const candidates=Object.values(st.progress).filter(p=>p.mistakes>0&&p.streak<3&&(mode!=='due'||p.dueAt<=Date.now()));

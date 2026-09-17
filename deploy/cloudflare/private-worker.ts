@@ -67,11 +67,12 @@ export async function handlePrivate(request: Request, env: PrivateEnv, next: (re
   if(url.pathname==='/api/backup'){
     if(request.method!=='GET')return error('不支持此操作。',405);
     if(!env.DB)return error('数据库不可用。',503);
-    const [sessions,attempts]=await env.DB.batch([
+    const [sessions,attempts,savedWords]=await env.DB.batch([
       env.DB.prepare('SELECT * FROM sessions WHERE user_id = ? ORDER BY started_at, id').bind(env.PRIVATE_USER_ID),
-      env.DB.prepare('SELECT a.* FROM attempts a JOIN sessions s ON s.id = a.session_id WHERE s.user_id = ? ORDER BY a.session_id, a.position').bind(env.PRIVATE_USER_ID)
+      env.DB.prepare('SELECT a.* FROM attempts a JOIN sessions s ON s.id = a.session_id WHERE s.user_id = ? ORDER BY a.session_id, a.position').bind(env.PRIVATE_USER_ID),
+      env.DB.prepare('SELECT * FROM saved_words WHERE user_id = ? ORDER BY saved_at, word_id').bind(env.PRIVATE_USER_ID)
     ]);
-    return Response.json({format:'reading-notes-backup',version:1,exportedAt:new Date().toISOString(),sessions:sessions.results,attempts:attempts.results},{headers:{'Content-Disposition':`attachment; filename="reading-notes-${new Date().toISOString().slice(0,10)}.json"`,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
+    return Response.json({format:'reading-notes-backup',version:2,exportedAt:new Date().toISOString(),sessions:sessions.results,attempts:attempts.results,saved_words:savedWords.results},{headers:{'Content-Disposition':`attachment; filename="reading-notes-${new Date().toISOString().slice(0,10)}.json"`,'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
   }
   const headers=new Headers(request.headers);
   for(const name of [...headers.keys()])if(name.startsWith('oai-authenticated-user-'))headers.delete(name);

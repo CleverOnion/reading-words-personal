@@ -9,3 +9,6 @@ export const attempts=sqliteTable('attempts',{
  wordId:text('word_id').notNull(),choice:text('choice'),correct:integer('correct').notNull(),
  answeredAt:integer('answered_at').notNull(),duration:integer('duration').notNull(),
 },t=>[primaryKey({columns:[t.sessionId,t.position]})]);
+export const savedWords=sqliteTable('saved_words',{
+ userId:text('user_id').notNull(),wordId:text('word_id').notNull(),savedAt:integer('saved_at').notNull(),
+},t=>[primaryKey({columns:[t.userId,t.wordId]})]);

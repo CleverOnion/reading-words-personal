@@ -15,6 +15,13 @@
       "when": 1789637290603,
       "tag": "0001_flippant_black_bird",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789646663931,
+      "tag": "0002_plain_ares",
+      "breakpoints": true
     }
   ]
 }

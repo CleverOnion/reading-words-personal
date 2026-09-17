@@ -4,8 +4,9 @@ import {createHash} from 'node:crypto';
 const [input,output]=process.argv.slice(2);
 if(!input||!output)throw new Error('Usage: node scripts/backup-to-sql.mjs backup.json output.sql');
 const raw=await readFile(input,'utf8');const backup=JSON.parse(raw);
-if(backup.format!=='reading-notes-backup'||backup.version!==1||!Array.isArray(backup.sessions)||!Array.isArray(backup.attempts))throw new Error('Unsupported backup');
-const owners=new Set(backup.sessions.map(s=>s.user_id));
+if(backup.format!=='reading-notes-backup'||![1,2].includes(backup.version)||!Array.isArray(backup.sessions)||!Array.isArray(backup.attempts)||(backup.version===2&&!Array.isArray(backup.saved_words)))throw new Error('Unsupported backup');
+backup.saved_words??=[];
+const owners=new Set([...backup.sessions,...backup.saved_words].map(s=>s.user_id));
 if(owners.size>1)throw new Error('Refusing multi-user backup');
 const sessions=new Set(backup.sessions.map(s=>s.id));
 if(sessions.size!==backup.sessions.length)throw new Error('Duplicate session IDs');
@@ -17,7 +18,7 @@ const quote=v=>{
   throw new Error('Invalid backup value');
 };
 let sql='-- Reading Notes backup SHA-256: '+createHash('sha256').update(raw).digest('hex')+'\n';
-const columns={sessions:['id','user_id','title','mode','queue','started_at','finished_at','status','updated_at'],attempts:['session_id','position','word_id','choice','correct','answered_at','duration']};
+const columns={sessions:['id','user_id','title','mode','queue','started_at','finished_at','status','updated_at'],attempts:['session_id','position','word_id','choice','correct','answered_at','duration'],saved_words:['user_id','word_id','saved_at']};
 for(const [table,fields] of Object.entries(columns))for(const row of backup[table]){
   if(table==='sessions'){
     const queue=JSON.parse(row.queue);

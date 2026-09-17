@@ -1,0 +1,533 @@
+[
+  {
+    "id": "2010-1",
+    "paragraphs": 5,
+    "words": 24,
+    "matched": 18,
+    "unmatched": [
+      "casual",
+      "horizon",
+      "layout",
+      "mournful",
+      "elaborate",
+      "prominent"
+    ]
+  },
+  {
+    "id": "2010-2",
+    "paragraphs": 5,
+    "words": 24,
+    "matched": 20,
+    "unmatched": [
+      "dismiss",
+      "uphold",
+      "looming",
+      "prevailing"
+    ]
+  },
+  {
+    "id": "2010-3",
+    "paragraphs": 5,
+    "words": 20,
+    "matched": 19,
+    "unmatched": [
+      "impulse"
+    ]
+  },
+  {
+    "id": "2010-4",
+    "paragraphs": 6,
+    "words": 13,
+    "matched": 12,
+    "unmatched": [
+      "evade"
+    ]
+  },
+  {
+    "id": "2011-1",
+    "paragraphs": 5,
+    "words": 18,
+    "matched": 18,
+    "unmatched": []
+  },
+  {
+    "id": "2011-2",
+    "paragraphs": 6,
+    "words": 21,
+    "matched": 20,
+    "unmatched": [
+      "impulsive"
+    ]
+  },
+  {
+    "id": "2011-3",
+    "paragraphs": 4,
+    "words": 22,
+    "matched": 21,
+    "unmatched": [
+      "dominance"
+    ]
+  },
+  {
+    "id": "2011-4",
+    "paragraphs": 5,
+    "words": 14,
+    "matched": 14,
+    "unmatched": []
+  },
+  {
+    "id": "2012-1",
+    "paragraphs": 6,
+    "words": 17,
+    "matched": 16,
+    "unmatched": [
+      "probe"
+    ]
+  },
+  {
+    "id": "2012-2",
+    "paragraphs": 6,
+    "words": 26,
+    "matched": 24,
+    "unmatched": [
+      "defy",
+      "withdraw"
+    ]
+  },
+  {
+    "id": "2012-3",
+    "paragraphs": 5,
+    "words": 24,
+    "matched": 21,
+    "unmatched": [
+      "deceptiveness",
+      "inspire",
+      "inspection"
+    ]
+  },
+  {
+    "id": "2012-4",
+    "paragraphs": 7,
+    "words": 19,
+    "matched": 15,
+    "unmatched": [
+      "present",
+      "secure",
+      "augment",
+      "patrol"
+    ]
+  },
+  {
+    "id": "2013-1",
+    "paragraphs": 6,
+    "words": 26,
+    "matched": 26,
+    "unmatched": []
+  },
+  {
+    "id": "2013-2",
+    "paragraphs": 7,
+    "words": 20,
+    "matched": 18,
+    "unmatched": [
+      "descendant",
+      "blog"
+    ]
+  },
+  {
+    "id": "2013-3",
+    "paragraphs": 7,
+    "words": 30,
+    "matched": 30,
+    "unmatched": []
+  },
+  {
+    "id": "2013-4",
+    "paragraphs": 7,
+    "words": 22,
+    "matched": 22,
+    "unmatched": []
+  },
+  {
+    "id": "2014-1",
+    "paragraphs": 4,
+    "words": 26,
+    "matched": 24,
+    "unmatched": [
+      "psychological",
+      "subside"
+    ]
+  },
+  {
+    "id": "2014-2",
+    "paragraphs": 6,
+    "words": 25,
+    "matched": 25,
+    "unmatched": []
+  },
+  {
+    "id": "2014-3",
+    "paragraphs": 5,
+    "words": 26,
+    "matched": 24,
+    "unmatched": [
+      "a hand of",
+      "outgrow"
+    ]
+  },
+  {
+    "id": "2014-4",
+    "paragraphs": 6,
+    "words": 26,
+    "matched": 26,
+    "unmatched": []
+  },
+  {
+    "id": "2015-1",
+    "paragraphs": 7,
+    "words": 33,
+    "matched": 33,
+    "unmatched": []
+  },
+  {
+    "id": "2015-2",
+    "paragraphs": 7,
+    "words": 38,
+    "matched": 38,
+    "unmatched": []
+  },
+  {
+    "id": "2015-3",
+    "paragraphs": 6,
+    "words": 23,
+    "matched": 22,
+    "unmatched": [
+      "impel"
+    ]
+  },
+  {
+    "id": "2015-4",
+    "paragraphs": 6,
+    "words": 26,
+    "matched": 26,
+    "unmatched": []
+  },
+  {
+    "id": "2016-1",
+    "paragraphs": 7,
+    "words": 32,
+    "matched": 31,
+    "unmatched": [
+      "ultra-"
+    ]
+  },
+  {
+    "id": "2016-2",
+    "paragraphs": 6,
+    "words": 38,
+    "matched": 38,
+    "unmatched": []
+  },
+  {
+    "id": "2016-3",
+    "paragraphs": 6,
+    "words": 27,
+    "matched": 25,
+    "unmatched": [
+      "have trouble doing sth",
+      "take sth. as sth."
+    ]
+  },
+  {
+    "id": "2016-4",
+    "paragraphs": 7,
+    "words": 37,
+    "matched": 37,
+    "unmatched": []
+  },
+  {
+    "id": "2017-1",
+    "paragraphs": 7,
+    "words": 30,
+    "matched": 30,
+    "unmatched": []
+  },
+  {
+    "id": "2017-2",
+    "paragraphs": 6,
+    "words": 42,
+    "matched": 35,
+    "unmatched": [
+      "remark",
+      "appreciation",
+      "feat",
+      "deem",
+      "implication",
+      "hostility",
+      "hesitancy"
+    ]
+  },
+  {
+    "id": "2017-3",
+    "paragraphs": 7,
+    "words": 23,
+    "matched": 23,
+    "unmatched": []
+  },
+  {
+    "id": "2017-4",
+    "paragraphs": 8,
+    "words": 48,
+    "matched": 37,
+    "unmatched": [
+      "sizable",
+      "compromise",
+      "justified",
+      "contemptuous",
+      "exempt",
+      "conscience",
+      "inspire",
+      "deem",
+      "corruptive",
+      "leak",
+      "intentionally"
+    ]
+  },
+  {
+    "id": "2018-1",
+    "paragraphs": 7,
+    "words": 24,
+    "matched": 24,
+    "unmatched": []
+  },
+  {
+    "id": "2018-2",
+    "paragraphs": 6,
+    "words": 29,
+    "matched": 29,
+    "unmatched": []
+  },
+  {
+    "id": "2018-3",
+    "paragraphs": 4,
+    "words": 22,
+    "matched": 22,
+    "unmatched": []
+  },
+  {
+    "id": "2018-4",
+    "paragraphs": 4,
+    "words": 23,
+    "matched": 21,
+    "unmatched": [
+      "pre-fund",
+      "defer"
+    ]
+  },
+  {
+    "id": "2019-1",
+    "paragraphs": 7,
+    "words": 34,
+    "matched": 31,
+    "unmatched": [
+      "pick sth. out of sth.",
+      "put sth. aside",
+      "dub"
+    ]
+  },
+  {
+    "id": "2019-2",
+    "paragraphs": 6,
+    "words": 27,
+    "matched": 25,
+    "unmatched": [
+      "incur",
+      "freshman"
+    ]
+  },
+  {
+    "id": "2019-3",
+    "paragraphs": 9,
+    "words": 38,
+    "matched": 35,
+    "unmatched": [
+      "concern",
+      "spark",
+      "mega-"
+    ]
+  },
+  {
+    "id": "2019-4",
+    "paragraphs": 7,
+    "words": 21,
+    "matched": 17,
+    "unmatched": [
+      "hinder",
+      "dilemma",
+      "dominance",
+      "factual"
+    ]
+  },
+  {
+    "id": "2020-1",
+    "paragraphs": 4,
+    "words": 22,
+    "matched": 21,
+    "unmatched": [
+      "bag"
+    ]
+  },
+  {
+    "id": "2020-2",
+    "paragraphs": 7,
+    "words": 34,
+    "matched": 33,
+    "unmatched": [
+      "drive"
+    ]
+  },
+  {
+    "id": "2020-3",
+    "paragraphs": 10,
+    "words": 19,
+    "matched": 19,
+    "unmatched": []
+  },
+  {
+    "id": "2020-4",
+    "paragraphs": 7,
+    "words": 23,
+    "matched": 23,
+    "unmatched": []
+  },
+  {
+    "id": "2021-1",
+    "paragraphs": 4,
+    "words": 45,
+    "matched": 45,
+    "unmatched": []
+  },
+  {
+    "id": "2021-2",
+    "paragraphs": 8,
+    "words": 36,
+    "matched": 35,
+    "unmatched": [
+      "tropic"
+    ]
+  },
+  {
+    "id": "2021-3",
+    "paragraphs": 6,
+    "words": 49,
+    "matched": 47,
+    "unmatched": [
+      "non-committal",
+      "breed"
+    ]
+  },
+  {
+    "id": "2021-4",
+    "paragraphs": 6,
+    "words": 41,
+    "matched": 38,
+    "unmatched": [
+      "trap",
+      "pen",
+      "uphold"
+    ]
+  },
+  {
+    "id": "2022-1",
+    "paragraphs": 7,
+    "words": 83,
+    "matched": 79,
+    "unmatched": [
+      "avant-garde",
+      "split",
+      "lock sth. away",
+      "assistant"
+    ]
+  },
+  {
+    "id": "2022-2",
+    "paragraphs": 7,
+    "words": 45,
+    "matched": 42,
+    "unmatched": [
+      "non-",
+      "scrap",
+      "up-skill"
+    ]
+  },
+  {
+    "id": "2022-3",
+    "paragraphs": 6,
+    "words": 86,
+    "matched": 80,
+    "unmatched": [
+      "broad",
+      "sense",
+      "ahead of…",
+      "focus sth. around",
+      "sub-discipline",
+      "tie-up"
+    ]
+  },
+  {
+    "id": "2022-4",
+    "paragraphs": 8,
+    "words": 70,
+    "matched": 67,
+    "unmatched": [
+      "may well",
+      "costly",
+      "deal with sth"
+    ]
+  },
+  {
+    "id": "2023-1",
+    "paragraphs": 8,
+    "words": 79,
+    "matched": 72,
+    "unmatched": [
+      "against",
+      "panic",
+      "push",
+      "claim",
+      "recognize",
+      "butter",
+      "biased"
+    ]
+  },
+  {
+    "id": "2023-2",
+    "paragraphs": 7,
+    "words": 74,
+    "matched": 72,
+    "unmatched": [
+      "have a hard time doing sth.",
+      "take sth. further"
+    ]
+  },
+  {
+    "id": "2023-3",
+    "paragraphs": 7,
+    "words": 65,
+    "matched": 63,
+    "unmatched": [
+      "literary agent",
+      "contact"
+    ]
+  },
+  {
+    "id": "2023-4",
+    "paragraphs": 5,
+    "words": 67,
+    "matched": 65,
+    "unmatched": [
+      "act as sth.",
+      "citation to sth."
+    ]
+  }
+]
