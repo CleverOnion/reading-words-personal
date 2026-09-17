@@ -17,7 +17,10 @@ if(process.argv.includes('--snapshot')){
 }
 assert.equal((await request('/readings/2010-1.json')).status,303,'Original text must require login');
 const original=await get('/api/study');assert.ok(Array.isArray(original.savedWordIds));
-const allIds=Array.from({length:14},(_,i)=>[1,2,3,4].map(t=>`${2010+i}-${t}`)).flat();
+const homepage=await auth('/');assert.equal(homepage.status,200);
+const html=await homepage.text();assert.match(html,/2010—2026 · 68 篇/);
+for(const year of [2024,2025,2026])for(const n of [1,2,3,4])assert.ok(html.includes(`${year} 年 Text ${n} 原文与译文`),'Missing reading entry');
+const allIds=Array.from({length:17},(_,i)=>[1,2,3,4].map(t=>`${2010+i}-${t}`)).flat();
 let paragraphs=0;
 // Bounded batches to avoid overwhelming the local server or the live Worker.
 for(let i=0;i<allIds.length;i+=4)await Promise.all(allIds.slice(i,i+4).map(async id=>{
@@ -25,7 +28,7 @@ for(let i=0;i<allIds.length;i+=4)await Promise.all(allIds.slice(i,i+4).map(async
  const expected=JSON.parse(await readFile(`public/readings/${id}.json`,'utf8'));
  assert.deepEqual(reading,expected,id+' deployed data mismatch');paragraphs+=reading.paragraphs.length;
 }));
-assert.equal((await auth('/readings/2024-1.json')).status,404);
+assert.equal((await auth('/readings/2027-1.json')).status,404);
 if(local){
  const post=async(data,status=200)=>{const r=await auth('/api/study',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});assert.equal(r.status,status,await r.clone().text());return r.json();};
  const wordId='2010-2-1';

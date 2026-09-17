@@ -529,5 +529,193 @@
       "act as sth.",
       "citation to sth."
     ]
+  },
+  {
+    "id": "2024-1",
+    "paragraphs": 7,
+    "words": 70,
+    "matched": 62,
+    "unmatched": [
+      "pull out of…",
+      "leave behind",
+      "get one's hands on sth.",
+      "millennium",
+      "drive",
+      "turn sth. into sth",
+      "make no apology for ...",
+      "be obsessed by sth."
+    ]
+  },
+  {
+    "id": "2024-2",
+    "paragraphs": 7,
+    "words": 93,
+    "matched": 91,
+    "unmatched": [
+      "break with sth.",
+      "look at sth."
+    ]
+  },
+  {
+    "id": "2024-3",
+    "paragraphs": 8,
+    "words": 84,
+    "matched": 80,
+    "unmatched": [
+      "build",
+      "search for sth.",
+      "bring back sth.",
+      "be linked to ..."
+    ]
+  },
+  {
+    "id": "2024-4",
+    "paragraphs": 5,
+    "words": 106,
+    "matched": 101,
+    "unmatched": [
+      "the Supreme Court",
+      "at odds with ...",
+      "when it comes to sth.",
+      "see for oneself",
+      "team"
+    ]
+  },
+  {
+    "id": "2025-1",
+    "paragraphs": 7,
+    "words": 45,
+    "matched": 23,
+    "unmatched": [
+      "land a punch",
+      "ground-breaking",
+      "put oneself in the shoes of sb.",
+      "conditions(condition",
+      "cliché",
+      "embed",
+      "compare with......",
+      "be combined with......",
+      "bring sth.to life",
+      "divide......into......",
+      "instruction",
+      "fluency",
+      "stimulate",
+      "reliance",
+      "description",
+      "omission",
+      "casual",
+      "preference",
+      "identify with sb.",
+      "promote",
+      "reluctant",
+      "concentrate on......"
+    ]
+  },
+  {
+    "id": "2025-2",
+    "paragraphs": 7,
+    "words": 41,
+    "matched": 29,
+    "unmatched": [
+      "lend itself to......",
+      "intention",
+      "suspicion",
+      "grave",
+      "consequence",
+      "arouse",
+      "groundless",
+      "justifiable",
+      "illustrate",
+      "endeavor",
+      "foster",
+      "triumph"
+    ]
+  },
+  {
+    "id": "2025-3",
+    "paragraphs": 6,
+    "words": 38,
+    "matched": 27,
+    "unmatched": [
+      "coordinate",
+      "crop up",
+      "draw lessons",
+      "surpass",
+      "advertiser",
+      "be confronted with",
+      "reap",
+      "protest",
+      "overwhelm",
+      "diminish",
+      "violation"
+    ]
+  },
+  {
+    "id": "2025-4",
+    "paragraphs": 5,
+    "words": 39,
+    "matched": 29,
+    "unmatched": [
+      "an embarrassment of riches",
+      "keep sb. up at night",
+      "revolve around sth",
+      "uniquely",
+      "position",
+      "integral",
+      "oversupply",
+      "be subject to......",
+      "retrieve",
+      "over-reliance"
+    ]
+  },
+  {
+    "id": "2026-1",
+    "paragraphs": 6,
+    "words": 47,
+    "matched": 40,
+    "unmatched": [
+      "rehearsal",
+      "be critical for sth.",
+      "propel sth. forward",
+      "trace sth. back to",
+      "coincide with sth.",
+      "put sb./sth. in the spotlight",
+      "one’s contribution to sth."
+    ]
+  },
+  {
+    "id": "2026-2",
+    "paragraphs": 7,
+    "words": 51,
+    "matched": 46,
+    "unmatched": [
+      "slip away",
+      "leave sb. in the dust",
+      "keep afloat",
+      "be too late",
+      "go on with (sth)"
+    ]
+  },
+  {
+    "id": "2026-3",
+    "paragraphs": 6,
+    "words": 59,
+    "matched": 57,
+    "unmatched": [
+      "build",
+      "catch up with"
+    ]
+  },
+  {
+    "id": "2026-4",
+    "paragraphs": 6,
+    "words": 50,
+    "matched": 46,
+    "unmatched": [
+      "put sth. out",
+      "rid sth. of",
+      "oversee",
+      "prevent A from doing B"
+    ]
   }
 ]

@@ -4,7 +4,7 @@ import {findWordMatches} from '../lib/reading-matches.ts';
 const vocabulary=JSON.parse(await readFile('data/vocabulary.json','utf8'));
 await mkdir('public/readings',{recursive:true});
 const report=[];let totalParagraphs=0;
-for(let year=2010;year<=2023;year++){
+for(let year=2010;year<=2026;year++){
  const source=JSON.parse(await readFile(`data/reading-sources/${year}.json`,'utf8'));
  const translations=JSON.parse(await readFile(`data/reading-translations/${year}.json`,'utf8'));
  assert.equal(source.length,4);
@@ -26,7 +26,7 @@ for(let year=2010;year<=2023;year++){
   await writeFile(`public/readings/${p.id}.json`,JSON.stringify(data)+'\n');
  }
 }
-assert.equal((await readdir('public/readings')).filter(s=>s.endsWith('.json')).length,56);
+assert.equal((await readdir('public/readings')).filter(s=>s.endsWith('.json')).length,68);
 await mkdir('docs',{recursive:true});
 await writeFile('docs/reading-match-report.json',JSON.stringify(report,null,2)+'\n');
-console.log(`Validated 56 readings / ${totalParagraphs} bilingual paragraphs. Matching ${report.reduce((n,p)=>n+p.matched,0)}/${report.reduce((n,p)=>n+p.words,0)} vocabulary entries.`);
+console.log(`Validated ${report.length} readings / ${totalParagraphs} bilingual paragraphs. Matching ${report.reduce((n,p)=>n+p.matched,0)}/${report.reduce((n,p)=>n+p.words,0)} vocabulary entries.`);
