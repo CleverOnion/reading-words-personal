@@ -54,7 +54,7 @@ export async function handlePrivate(request: Request, env: PrivateEnv, next: (re
     const actual=await digest(password);
     let difference=actual.length^env.PRIVATE_PASSWORD_HASH.length;
     for(let i=0;i<actual.length;i++)difference|=actual.charCodeAt(i)^env.PRIVATE_PASSWORD_HASH.charCodeAt(i);
-    if(password.length<24||password.length>256||difference)return loginPage('密码不正确，请重试。',returnTo,401);
+    if(!password.length||password.length>256||difference)return loginPage('密码不正确，请重试。',returnTo,401);
     const expires=Math.floor(Date.now()/1000)+lifetime;const nonce=crypto.randomUUID().replaceAll('-','');
     const signature=hex(await crypto.subtle.sign('HMAC',await signingKey(env.PRIVATE_SESSION_SECRET),encoder.encode(`${expires}.${nonce}.${env.PRIVATE_PASSWORD_HASH}`)));
     return redirect(returnTo,cookie(`${expires}.${nonce}.${signature}`));

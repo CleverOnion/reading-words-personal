@@ -18,6 +18,15 @@ test('private API rejects anonymous and spoofed identity headers',async()=>{
  assert.equal((await call('/api/study',{headers:{'oai-authenticated-user-id':'personal-owner'}})).status,401);
 });
 test('missing secrets fail closed',async()=>{assert.equal((await call('/',{},{})).status,503);});
+test('configured personal password can be shorter than generated credentials',async()=>{
+ const customPassword='sample123';
+ const hash=Buffer.from(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(customPassword))).toString('hex');
+ const customEnv={...env,PRIVATE_PASSWORD_HASH:hash};
+ const r=await call('/auth/login',{method:'POST',headers:{origin,'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({password:customPassword})},customEnv);
+ assert.equal(r.status,303);
+ const oldCookie=await login();
+ assert.equal((await call('/api/study',{headers:{cookie:oldCookie}},customEnv)).status,401);
+});
 test('login validates password and rejects cross-origin form submits',async()=>{
  assert.equal((await call('/auth/login',{method:'POST',headers:{origin,'Content-Type':'application/x-www-form-urlencoded'},body:'password=wrong'})).status,401);
  assert.equal((await call('/auth/login',{method:'POST',headers:{origin:'https://attacker.example','Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({password})})).status,403);
