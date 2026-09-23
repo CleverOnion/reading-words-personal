@@ -16,8 +16,8 @@ function subscribe(onChange:()=>void){
 export default function ExamCountdown(){
  const days=useSyncExternalStore(subscribe,getDays,serverDays);
  return <aside className="exam-countdown" aria-label="2027 考研倒计时">
-  <div className="exam-countdown-heading"><span>THE NEXT CHAPTER / 2027</span><h2>把今天，变成靠近的一天。</h2><p>2027 考研初试 · <time dateTime="2026-12-19">预计 2026.12.19</time></p></div>
-  <div className="exam-countdown-number"><span>{days===0?'已到预计考试日':'距预计初试还有'}</span><div><strong>{days===null?'—':String(days).padStart(2,'0')}</strong><span>天</span></div></div>
-  <div className="exam-countdown-note"><span>一天一篇，一词一步。</span><p>按北京时间每日更新<br/>预计日期，以<a href="https://yz.chsi.com.cn/" target="_blank" rel="noreferrer">研招网官方公告 ↗</a>为准</p></div>
+  <span>2027 考研</span><span className="exam-countdown-dot" aria-hidden="true">·</span>
+  <span>{days===0?'已到预计日期':<>还有 <strong>{days===null?'—':days}</strong> 天</>}</span>
+  <a href="https://yz.chsi.com.cn/" target="_blank" rel="noreferrer" title="暂按 2026 年 12 月 19 日计时，按北京时间每日更新，以研招网官方公告为准">预计 12.19 ↗</a>
  </aside>;
 }
