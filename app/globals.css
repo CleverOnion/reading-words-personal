@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "./reader.css";
+@import "./practice-review.css";
 @custom-variant dark (&:is(.dark *));
 :root{--background:#f6f5f1;--foreground:#252925;--card:#fff;--card-foreground:#252925;--popover:#fff;--popover-foreground:#252925;--primary:#252925;--primary-foreground:#fff;--secondary:#e9eee7;--secondary-foreground:#3a5141;--muted:#efeee9;--muted-foreground:#797e75;--accent:#e9eee7;--accent-foreground:#3a5141;--destructive:#b65f42;--border:#dedfd7;--input:#d5d7ce;--ring:#647a59;--radius:.5rem;--orange:#b35935}
 @theme inline{--color-background:var(--background);--color-foreground:var(--foreground);--color-card:var(--card);--color-card-foreground:var(--card-foreground);--color-popover:var(--popover);--color-popover-foreground:var(--popover-foreground);--color-primary:var(--primary);--color-primary-foreground:var(--primary-foreground);--color-secondary:var(--secondary);--color-secondary-foreground:var(--secondary-foreground);--color-muted:var(--muted);--color-muted-foreground:var(--muted-foreground);--color-accent:var(--accent);--color-accent-foreground:var(--accent-foreground);--color-destructive:var(--destructive);--color-border:var(--border);--color-input:var(--input);--color-ring:var(--ring)}
@@ -24,3 +25,5 @@
 .overview-tools{flex-wrap:wrap}.mini-filter{flex:1 1 100%;min-width:0;flex-wrap:wrap}.mini-filter button{white-space:nowrap}.overview-tools .legend{flex-wrap:wrap}
 
 .personal-tools{display:flex;align-items:center;gap:14px;font-size:12px;white-space:nowrap}.personal-tools a{color:#657651;text-underline-offset:4px}.personal-tools form{margin:0}.personal-tools button{background:none;border:0;padding:4px;color:#7b8271;font-size:12px}@media(max-width:760px){.personal-tools{gap:8px;font-size:11px}.personal-tools button{font-size:11px}}
+
+@media(max-width:600px){.site-header{height:auto;min-height:112px;display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 22px}.wordmark{grid-column:1;grid-row:1}.personal-tools{grid-column:2;grid-row:1;justify-self:end}.top-navigation{grid-column:1 / -1;grid-row:2;justify-content:space-between;width:100%}.top-navigation button{white-space:nowrap;flex:1;justify-content:center;padding:8px 10px;min-height:40px}.top-navigation i{flex-shrink:0}}

@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const base=process.argv[2]||'http://127.0.0.1:8788';
+if(new URL(base).hostname!=='127.0.0.1')throw new Error('Mutating checks are local-only');
+const password=(await readFile('.cloudflare-private/login-password.txt','utf8')).trim();
+const login=await fetch(base+'/auth/login',{method:'POST',redirect:'manual',headers:{origin:base,'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({password})});
+assert.equal(login.status,303);const cookie=login.headers.get('set-cookie').split(';')[0];
+async function request(path,body,status=200){const r=await fetch(base+path,{headers:{cookie,origin:base,'Content-Type':'application/json'},...(body?{method:'POST',body:JSON.stringify(body)}:{})});assert.equal(r.status,status,await r.clone().text());return r.json();}
+const post=(body,status)=>request('/api/study',body,status);
+const vocab=JSON.parse(await readFile('data/vocabulary.json','utf8')).flatMap(p=>p.words);
+const recall=await post({action:'start',mode:'passage',passageId:'2010-3',forceNew:true,limit:10});
+let q=await request('/api/study?session='+recall.id);
+assert.equal(q.studyFormat,'recall');assert.deepEqual(q.question.options,[]);assert.deepEqual(q.answers,[]);
+const first=q.question.id,meaning=vocab.find(w=>w.id===first).meaning;
+await post({action:'answer',sessionId:recall.id,wordId:first,position:0,choice:'arbitrary',duration:100},400);
+await post({action:'answer',sessionId:recall.id,wordId:first,position:0,choice:meaning,duration:1000});
+// Retrying a rating and fetching review history must not create another answer.
+await post({action:'answer',sessionId:recall.id,wordId:first,position:0,choice:meaning,duration:1000});
+q=await request('/api/study?session='+recall.id);assert.equal(q.index,1);assert.deepEqual(q.answers,[{position:0,wordId:first,choice:meaning,correct:true}]);
+assert.deepEqual(await request('/api/study?session='+recall.id),q);
+const second=q.question.id;
+await post({action:'answer',sessionId:recall.id,wordId:second,position:1,choice:null,duration:2000});
+await post({action:'pause',sessionId:recall.id});
+assert.equal((await post({action:'start',mode:'passage',passageId:'2010-3',studyFormat:'recall'})).id,recall.id);
+q=await request('/api/study?session='+recall.id);assert.equal(q.index,2);assert.equal(q.answers.length,2);assert.equal(q.answers[1].correct,false);assert.equal(q.answers[1].choice,null);
+const state=await request('/api/study');assert.ok(state.progress[second].mistakes>0);assert.equal(state.sessions.find(s=>s.id===recall.id).studyFormat,'recall');
+await post({action:'start',mode:'passage',passageId:'2010-3',studyFormat:'choice'},400);
+const wrong=await post({action:'start',mode:'wrong',studyFormat:'recall',wordIds:[second]});
+assert.equal((await request('/api/study?session='+wrong.id)).question.id,second);
+const backup=await request('/api/backup');assert.equal(backup.sessions.find(s=>s.id===recall.id).study_format,'recall');
+await request('/api/study?session=not-owned-or-missing',undefined,404);
+console.log('PASS: recall ratings, PDF definitions, forgotten words, persisted review history, read-only review, default recall mode, rejects new choice mode, backup format.');

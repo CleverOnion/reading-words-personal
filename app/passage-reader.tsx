@@ -1,7 +1,8 @@
 'use client';
+import Meaning from './meaning';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,ArrowUp,ArrowDown,Bookmark,Check,Search,X,BookOpen} from 'lucide-react';
-import {passages} from '../lib/vocabulary';
+import {passages,byId,wordSource} from '../lib/vocabulary';
 import type {WordProgress} from '../lib/study';
 import type {Reading} from '../lib/readings';
 import {findWordMatches,segmentParagraph} from '../lib/reading-matches';
@@ -13,7 +14,11 @@ export default function PassageReader({passageId,wordId,progress,savedWordIds,sa
  const [reading,setReading]=useState<Reading|null>(null),[error,setError]=useState(''),[retry,setRetry]=useState(0);
  const [mode,setMode]=useState<Mode>('reveal'),[selected,setSelected]=useState(wordId||''),[occurrence,setOccurrence]=useState(0);
  const [query,setQuery]=useState(''),[showWords,setShowWords]=useState(false),[revealed,setRevealed]=useState<Set<number>>(new Set());
- const passage=passages.find(p=>p.id===passageId)!;
+ const passage=useMemo(()=>{
+  const active=passages.find(p=>p.id===passageId)!;
+  const old=wordId&&byId.get(wordId);
+  return old&&!active.words.some(w=>w.id===old.id)?{...active,words:[old,...active.words]}:active;
+ },[passageId,wordId]);
  const selectedWord=passage.words.find(w=>w.id===selected),p=progress[selected];
  const saved=savedWordIds.includes(selected);
  useEffect(()=>{
@@ -67,7 +72,7 @@ export default function PassageReader({passageId,wordId,progress,savedWordIds,sa
    <aside className={'reader-vocab '+(showWords?'words-open':'')} aria-label="原文词汇对照">
     {saveError&&<p className="reader-error" role="alert">{saveError}</p>}
     <div className="reader-vocab-top"><span>WORDS IN CONTEXT</span><button onClick={()=>setShowWords(v=>!v)} aria-expanded={showWords}>{showWords?'收起词表':'本篇词表'} <span>{passage.words.length}</span></button></div>
-    {selectedWord?<div className="reader-selection" aria-live="polite"><div className="reader-selection-title"><h3>{selectedWord.word}</h3><button disabled={saving} aria-label={saved?'取消重点收藏':'加入重点收藏'} aria-pressed={saved} onClick={()=>onSave(selected,!saved)}>{saved?<Check size={18}/>:<Bookmark size={18}/>}</button></div><p className="reader-meaning">{selectedWord.meaning}</p><div className="reader-learning"><span>{p?`练过 ${p.seen} 次 · 错 ${p.mistakes} 次`:'尚未练习'}</span><span>{saved?'已加入重点词':'可收藏为重点词'}</span></div>
+    {selectedWord?<div className="reader-selection" aria-live="polite"><div className="reader-selection-title"><h3>{selectedWord.word}</h3><button disabled={saving} aria-label={saved?'取消重点收藏':'加入重点收藏'} aria-pressed={saved} onClick={()=>onSave(selected,!saved)}>{saved?<Check size={18}/>:<Bookmark size={18}/>}</button></div><p className="reader-meaning"><Meaning text={selectedWord.meaning}/></p><small>{wordSource(selectedWord.id)}</small><div className="reader-learning"><span>{p?`练过 ${p.seen} 次 · 错 ${p.mistakes} 次`:'尚未练习'}</span><span>{saved?'已加入重点词':'可收藏为重点词'}</span></div>
      {reading&&(occurrences.length?<div className="reader-occurrences"><span>原文位置 {occurrence+1} / {occurrences.length}<small>含词形变化</small></span><div><button aria-label="上一个出现位置" disabled={occurrences.length<2} onClick={()=>setOccurrence(n=>(n-1+occurrences.length)%occurrences.length)}><ArrowUp size={17}/></button><button aria-label="下一个出现位置" disabled={occurrences.length<2} onClick={()=>setOccurrence(n=>(n+1)%occurrences.length)}><ArrowDown size={17}/></button></div></div>:<p className="reader-unmatched">本篇未定位到该词。它可能来自题目、选项或词表中的扩展表达；这里仍保留 PDF 释义。</p>)}
     </div>:<div className="reader-selection reader-selection-empty"><BookOpen size={25}/><p>点一下原文中的标记词，<br/>看看释义和你的学习记录。</p></div>}
     <div className="reader-word-browser"><label className="reader-search"><Search size={15}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="查找本篇单词" aria-label="查找本篇单词"/></label><div className="reader-word-list">{filteredWords.map(w=><button key={w.id} className={selected===w.id?'selected':''} onClick={()=>choose(w.id)}><span>{w.word}{savedWordIds.includes(w.id)&&<Bookmark size={11}/>}</span><small>{!reading?'…':counts.get(w.id)?counts.get(w.id)+' 处':'未定位'}</small></button>)}{!filteredWords.length&&<p>本篇没有匹配的词条。</p>}</div><p className="reader-match-note">按完整词、常见词形与拼写变体定位；未定位的词不生成例句。</p></div>

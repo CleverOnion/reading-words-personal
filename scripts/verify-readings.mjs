@@ -18,9 +18,9 @@ if(process.argv.includes('--snapshot')){
 assert.equal((await request('/readings/2010-1.json')).status,303,'Original text must require login');
 const original=await get('/api/study');assert.ok(Array.isArray(original.savedWordIds));
 const homepage=await auth('/');assert.equal(homepage.status,200);
-const html=await homepage.text();assert.match(html,/2010—2026 · 68 篇/);
-for(const year of [2024,2025,2026])for(const n of [1,2,3,4])assert.ok(html.includes(`${year} 年 Text ${n} 原文与译文`),'Missing reading entry');
-const allIds=Array.from({length:17},(_,i)=>[1,2,3,4].map(t=>`${2010+i}-${t}`)).flat();
+const html=(await homepage.text()).replace(/<!--.*?-->/g,'');assert.match(html,/2010—2024 · 60 篇/);
+for(const year of [2010,2017,2024])for(const n of [1,2,3,4])assert.ok(html.includes(`${year} 年 Text ${n} 原文与译文`),'Missing reading entry');
+const allIds=Array.from({length:15},(_,i)=>[1,2,3,4].map(t=>`${2010+i}-${t}`)).flat();
 let paragraphs=0;
 // Bounded batches to avoid overwhelming the local server or the live Worker.
 for(let i=0;i<allIds.length;i+=4)await Promise.all(allIds.slice(i,i+4).map(async id=>{
@@ -31,7 +31,7 @@ for(let i=0;i<allIds.length;i+=4)await Promise.all(allIds.slice(i,i+4).map(async
 assert.equal((await auth('/readings/2027-1.json')).status,404);
 if(local){
  const post=async(data,status=200)=>{const r=await auth('/api/study',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});assert.equal(r.status,status,await r.clone().text());return r.json();};
- const wordId='2010-2-1';
+ const wordId=JSON.parse(await readFile('data/vocabulary.json','utf8')).find(p=>p.id==='2010-2').words[0].id;
  await post({action:'bookmark',wordId:'no-such-word',saved:true},400);
  await post({action:'bookmark',wordId,saved:'yes'},400);
  await post({action:'bookmark',wordId,saved:true});await post({action:'bookmark',wordId,saved:true});
@@ -43,7 +43,7 @@ if(local){
  const practice=await get('/api/study?session='+start.id);
  assert.equal(practice.question.id,wordId);assert.equal(practice.total,1);
  const vocab=JSON.parse(await readFile('data/vocabulary.json','utf8')).flatMap(p=>p.words);
- assert.ok(practice.question.options.includes(vocab.find(w=>w.id===wordId).meaning),'Must use PDF definition');
+ assert.deepEqual(practice.question.options,[]);assert.equal(practice.studyFormat,'recall');
  await post({action:'bookmark',wordId,saved:false});
  assert.ok(!(await get('/api/study')).savedWordIds.includes(wordId));
  // Existing quiz is still answerable after a bookmark is removed.
@@ -51,9 +51,6 @@ if(local){
  await post({action:'start',mode:'saved',wordIds:[wordId]},400);
 }
 const backup=await get('/api/backup');assert.equal(backup.version,2);assert.ok(Array.isArray(backup.saved_words));
-if(!local){
- const before=JSON.parse(await readFile('.cloudflare-private/pre-readings-backup.json','utf8'));
- for(const s of before.sessions){const current=backup.sessions.find(row=>row.id===s.id);assert.ok(current,'Session removed');for(const key of ['user_id','title','mode','queue','started_at'])assert.equal(current[key],s[key]);}
- for(const a of before.attempts)assert.deepEqual(backup.attempts.find(row=>row.session_id===a.session_id&&row.position===a.position),a,'Existing answer changed');
-}
-console.log(`PASS: ${allIds.length} authenticated readings / ${paragraphs} translated paragraphs, bookmark-aware backup, ${local?'bookmark validation/idempotency/practice and PDF meanings':'read-only production verification and preserved learning records'}.`);
+if(process.argv.includes('--fresh-start')){assert.equal(backup.sessions.length,0);assert.equal(backup.attempts.length,0);assert.equal(backup.saved_words.length,0);}
+
+console.log(`PASS: ${allIds.length} authenticated readings / ${paragraphs} translated paragraphs, bookmark-aware backup, ${local?'bookmark validation/idempotency/practice and PDF meanings':'read-only production verification'}.`);

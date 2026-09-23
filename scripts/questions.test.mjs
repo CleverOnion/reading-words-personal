@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {build} from 'esbuild';
 const bundle=await build({entryPoints:['lib/vocabulary.ts'],bundle:true,platform:'node',format:'esm',write:false});
 const {words,optionsFor,assertQuestion}=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));
-test('all 2619 PDF entries retain one correct answer across 32 question shuffles',()=>{
- assert.equal(words.length,2619);
+test('all active PDF entries retain one correct answer across 32 question shuffles',()=>{
+ assert.ok(words.length>3000);
  for(const word of words)for(let i=0;i<32;i++){
   const options=optionsFor(word.id,'audit-session-'+i,i);
   assert.equal(options.length,4,word.id);

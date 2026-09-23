@@ -13,8 +13,9 @@ export async function GET(request:Request){
   const s=await getSession(id,uid);if(!s)return fail('未找到这次练习。',404);
   const items=await answers(id);const queue:string[]=JSON.parse(s.queue);const index=items.length;
   const word=byId.get(queue[index]);
-  return json({id:s.id,title:s.title,status:s.status,total:queue.length,index,correct:items.filter(a=>a.correct).length,
-   question:s.status==='active'&&word?{id:word.id,word:word.word,page:word.page,options:optionsFor(word.id,id,index)}:null});
+  return json({id:s.id,title:s.title,studyFormat:s.study_format||'choice',status:s.status,total:queue.length,index,correct:items.filter(a=>a.correct).length,
+   answers:items.map(a=>({position:a.position,wordId:a.word_id,choice:a.choice,correct:!!a.correct})),
+   question:s.status==='active'&&word?{id:word.id,word:word.word,page:word.page,options:s.study_format==='recall'?[]:optionsFor(word.id,id,index)}:null});
  }catch(e){console.error('Study load failed',e);return fail('学习记录暂时无法加载，请稍后重试。',503);}
 }
 export async function POST(request:Request){
@@ -30,12 +31,14 @@ export async function POST(request:Request){
   }
   if(body.action==='start'){
    const mode=body.mode;
+   const studyFormat=body.studyFormat??'recall';
+   if(studyFormat!=='recall')return fail('背词方式无效。');
    if(!['passage','wrong','due','saved'].includes(String(mode)))return fail('练习模式无效。');
    let queue:string[]=[];let title='';
    if(mode==='passage'){
     const p=passages.find(p=>p.id===body.passageId);if(!p)return fail('阅读篇目不存在。');
     if(body.forceNew!==true){
-     const existing=findResumableSession((await state(uid)).sessions,p.id);
+     const existing=findResumableSession((await state(uid)).sessions.filter(s=>s.studyFormat===studyFormat),p.id);
      if(existing){await db().prepare("UPDATE sessions SET status = 'active', finished_at = NULL, updated_at = ? WHERE id = ? AND user_id = ?").bind(Date.now(),existing.id,uid).run();return json({id:existing.id,resumed:true});}
     }
     queue=p.words.map(w=>w.id);title=p.year+' 年 · Text '+p.text;
@@ -55,7 +58,7 @@ export async function POST(request:Request){
    if(!queue.length)return fail('当前没有需要练习的词条。');
    if(body.order==='shuffle')queue=shuffle(queue,crypto.getRandomValues(new Uint32Array(1))[0]);
    if(body.limit===10||body.limit===20)queue=queue.slice(0,body.limit);
-   const id=crypto.randomUUID();await db().prepare('INSERT INTO sessions (id,user_id,title,mode,queue,started_at,status) VALUES (?,?,?,?,?,?,?)').bind(id,uid,title,mode,JSON.stringify(queue),Date.now(),'active').run();
+   const id=crypto.randomUUID();await db().prepare('INSERT INTO sessions (id,user_id,title,mode,study_format,queue,started_at,status) VALUES (?,?,?,?,?,?,?,?)').bind(id,uid,title,mode,studyFormat,JSON.stringify(queue),Date.now(),'active').run();
    return json({id});
   }
   if(typeof body.sessionId!=='string')return fail('缺少练习编号。');
@@ -78,7 +81,8 @@ export async function POST(request:Request){
   const previous=await answers(s.id);const replay=previous.find(a=>a.position===index);
   if(replay)return json({correct:!!replay.correct,meaning:w.meaning,choice:replay.choice,done:index===queue.length-1});
   if(s.status!=='active'||index!==previous.length)return fail('练习进度已更新，请重新打开这次练习。',409);
-  if(body.choice!==null&&(typeof body.choice!=='string'||!optionsFor(w.id,s.id,index).includes(body.choice)))return fail('答案选项无效。');
+  if(s.study_format==='recall'&&body.choice!==null&&body.choice!==w.meaning)return fail('自评请选择记得或不记得。');
+  if(s.study_format!=='recall'&&body.choice!==null&&(typeof body.choice!=='string'||!optionsFor(w.id,s.id,index).includes(body.choice)))return fail('答案选项无效。');
   const correct=body.choice===w.meaning;const now=Date.now();
   const duration=typeof body.duration==='number'&&Number.isFinite(body.duration)?Math.max(0,Math.min(300000,Math.round(body.duration))):0;
   const batch=[db().prepare('INSERT INTO attempts (session_id,position,word_id,choice,correct,answered_at,duration) VALUES (?,?,?,?,?,?,?) ON CONFLICT(session_id,position) DO NOTHING').bind(s.id,index,w.id,body.choice as string|null,Number(correct),now,duration)];

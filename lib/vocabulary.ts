@@ -1,9 +1,15 @@
 import data from '../data/vocabulary.json';
-export type Word={id:string;word:string;meaning:string;page:number};
+export type Word={id:string;word:string;meaning:string;page:number;source?:string;section?:string};
 export type Passage={id:string;year:number;text:number;words:Word[]};
 export const passages:Passage[]=data;
 export const words=passages.flatMap(p=>p.words);
 export const byId=new Map(words.map(w=>[w.id,w]));
+export function wordSource(id:string){
+ const w=byId.get(id) as Word|undefined;
+ if(!w)return '';
+ if(w.source==='kongka')return `空卡 PDF 第 ${w.page} 页 · ${w.section==='options'?'选项词':'段落词'}`;
+ return `词库第 ${w.page} 页`;
+}
 export function shuffle<T>(items:T[],seed:number){
  const result=[...items];
  for(let i=result.length-1;i>0;i--){seed=(Math.imul(seed,1664525)+1013904223)>>>0;const j=seed%(i+1);[result[i],result[j]]=[result[j],result[i]];}

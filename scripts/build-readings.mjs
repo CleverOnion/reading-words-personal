@@ -1,10 +1,10 @@
-import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,readdir,unlink} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {findWordMatches} from '../lib/reading-matches.ts';
 const vocabulary=JSON.parse(await readFile('data/vocabulary.json','utf8'));
 await mkdir('public/readings',{recursive:true});
 const report=[];let totalParagraphs=0;
-for(let year=2010;year<=2026;year++){
+for(let year=2010;year<=2024;year++){
  const source=JSON.parse(await readFile(`data/reading-sources/${year}.json`,'utf8'));
  const translations=JSON.parse(await readFile(`data/reading-translations/${year}.json`,'utf8'));
  assert.equal(source.length,4);
@@ -26,7 +26,8 @@ for(let year=2010;year<=2026;year++){
   await writeFile(`public/readings/${p.id}.json`,JSON.stringify(data)+'\n');
  }
 }
-assert.equal((await readdir('public/readings')).filter(s=>s.endsWith('.json')).length,68);
+for(const name of await readdir('public/readings'))if(/^202[56]-[1-4]\.json$/.test(name))await unlink('public/readings/'+name);
+assert.equal((await readdir('public/readings')).filter(s=>s.endsWith('.json')).length,60);
 await mkdir('docs',{recursive:true});
 await writeFile('docs/reading-match-report.json',JSON.stringify(report,null,2)+'\n');
 console.log(`Validated ${report.length} readings / ${totalParagraphs} bilingual paragraphs. Matching ${report.reduce((n,p)=>n+p.matched,0)}/${report.reduce((n,p)=>n+p.words,0)} vocabulary entries.`);

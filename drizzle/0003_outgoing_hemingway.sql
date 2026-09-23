@@ -1,0 +1,1 @@
+ALTER TABLE `sessions` ADD `study_format` text DEFAULT 'choice' NOT NULL;
