@@ -1,5 +1,6 @@
 'use client';
 import Meaning from './meaning';
+import ExamCountdown from './exam-countdown';
 import {useState,useEffect} from 'react';
 import {ArrowUpRight,ArrowRight,BookOpen,LayoutGrid,Grid2X2,List,ChevronDown,Check} from 'lucide-react';
 import {Button} from '../components/ui/button';
@@ -29,6 +30,7 @@ export default function ReadingLibrary({progress,sessions,loading,busy,start,res
  const visible=passages.filter(p=>listYear==='all'||p.year===Number(listYear)).sort((a,b)=>b.year-a.year||a.text-b.text);
  return <>
  <section className="library-intro"><div><p className="eyebrow"><span className="tiny-line"/> THE READING COLLECTION / 英语一</p><h1>读过。记住。<br/><span>再见时，不再陌生。</span></h1><p className="intro-description">让单词回到阅读里。每一篇，都留下你的学习轨迹。</p><p className="reading-availability">{years[years.length-1]}—{years[0]} · {passages.length} 篇阅读 · 空卡真题核心词</p></div><div className="intro-index"><span>{years[years.length-1]}<span className="index-dash">—</span>{years[0]}</span><div className="index-bottom"><b>{passages.length}</b><span>篇真题阅读<br/>{passages.reduce((total,p)=>total+p.words.length,0).toLocaleString('en-US')} 个原文词条</span></div></div></section>
+ <ExamCountdown/>
  <div className="learning-strip"><div><span>我的阅读足迹</span><b>{loading?'—':practiced}<small>/ {passages.length} 篇</small></b></div><div><span>已练习词条</span><b>{loading?'—':words.filter(w=>progress[w.id]).length}<small>/ {words.length.toLocaleString('en-US')}</small></b></div><div><span>已完成练习</span><b>{loading?'—':completed.length}<small>轮</small></b></div><div><span>待巩固错词</span><b className="orange">{loading?'—':pending}<small>个</small></b></div><span className="strip-caption">EVERY SMALL STEP COUNTS.</span></div>
  {active&&<div className="resume-banner"><div><span className="resume-label">CONTINUE READING</span><b>{active.title}</b><p>上次停在第 {active.answered} / {active.total} 词，接着来吧。</p></div><Button className="primary" disabled={busy} onClick={()=>resume(active.id)}>继续练习 <ArrowRight size={16}/></Button></div>}
  <section className="collection-section"><div className="collection-heading"><div><span className="section-index">01 / COLLECTION</span><h2>你的阅读书架</h2></div><div className="layout-switch" aria-label="阅读布局">{([['panorama','复习全景',Grid2X2],['cards','阅读卡片',LayoutGrid],['list','紧凑清单',List]] as const).map(([id,label,Icon])=><button key={id} aria-pressed={layout===id} className={layout===id?'selected':''} onClick={()=>changeLayout(id)}><Icon size={16}/><span>{label}</span></button>)}</div></div>
