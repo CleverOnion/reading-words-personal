@@ -85,3 +85,5 @@
 .meaning-sections .meaning-pos{flex:0 0 auto;min-width:2.8em;font:italic .8em/1.7 Georgia,'Times New Roman',serif;letter-spacing:.02em;color:#87927a;white-space:nowrap}
 .meaning-sections .meaning-text{min-width:0;font-size:inherit;color:inherit;line-height:inherit;overflow-wrap:anywhere}
 .meaning-sections>.meaning-unlabeled{display:block}
+
+.recall-actions kbd{font:11px/1.4 Georgia,serif;border:1px solid currentColor;border-radius:3px;padding:1px 5px;opacity:.7;margin-left:3px}
