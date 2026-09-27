@@ -19,3 +19,11 @@ export function practiceExamples(word:string):string[]{
   `The surrounding words can help you remember “${word}” in context.`,
  ];
 }
+
+export function practiceExampleTranslations(word:string):string[]{
+ return [
+  `我今天又复习了“${word}”，并写下了它的含义。`,
+  `试着在你自己的句子中使用“${word}”。`,
+  `上下文中的其他词语可以帮助你记住“${word}”的用法。`,
+ ];
+}
