@@ -73,6 +73,17 @@ export async function POST(request:Request){
    await db().prepare("UPDATE sessions SET status = 'stopped', finished_at = ?, updated_at = ? WHERE id = ? AND user_id = ? AND status = 'active'").bind(Date.now(),Date.now(),s.id,uid).run();
    return json({ok:true});
   }
+  if(body.action==='revise'){
+   if(s.study_format!=='recall')return fail('仅支持修改自评记录。');
+   const queue:string[]=JSON.parse(s.queue),pos=body.position;
+   if(!Number.isInteger(pos)||Number(pos)<0||Number(pos)>=queue.length||typeof body.correct!=='boolean')return fail('修改参数无效。');
+   const w=byId.get(queue[Number(pos)]);
+   if(!w||body.wordId!==w.id)return fail('词条不匹配，请重新打开回看。',409);
+   const prior=(await answers(s.id)).find(a=>a.position===pos);
+   if(!prior)return fail('只能修改已经背过的词。',409);
+   await db().prepare('UPDATE attempts SET correct = ?, choice = ? WHERE session_id = ? AND position = ? AND word_id = ?').bind(Number(body.correct),body.correct?w.meaning:null,s.id,pos,w.id).run();
+   return json({ok:true});
+  }
   if(body.action!=='answer')return fail('未知操作。');
   const queue:string[]=JSON.parse(s.queue);const pos=body.position;
   if(!Number.isInteger(pos)||Number(pos)<0||Number(pos)>=queue.length)return fail('题目编号无效。');

@@ -30,3 +30,24 @@ assert.equal((await request('/api/study?session='+wrong.id)).question.id,second)
 const backup=await request('/api/backup');assert.equal(backup.sessions.find(s=>s.id===recall.id).study_format,'recall');
 await request('/api/study?session=not-owned-or-missing',undefined,404);
 console.log('PASS: recall ratings, PDF definitions, forgotten words, persisted review history, read-only review, default recall mode, rejects new choice mode, backup format.');
+
+const beforeRevision=await request('/api/backup');
+const original=beforeRevision.attempts.find(a=>a.session_id===recall.id&&a.position===0);
+await post({action:'revise',sessionId:recall.id,position:0,wordId:first,correct:false});
+await post({action:'revise',sessionId:recall.id,position:0,wordId:first,correct:false});
+let revised=await request('/api/study?session='+recall.id);
+assert.equal(revised.index,2);assert.equal(revised.answers[0].correct,false);
+await post({action:'revise',sessionId:recall.id,position:2,wordId:revised.question.id,correct:true},409);
+await post({action:'revise',sessionId:recall.id,position:0,wordId:second,correct:true},409);
+await post({action:'revise',sessionId:recall.id,position:0,wordId:first,correct:'true'},400);
+await post({action:'revise',sessionId:'not-owned',position:0,wordId:first,correct:true},404);
+await post({action:'revise',sessionId:recall.id,position:0,wordId:first,correct:true});
+const afterRevision=await request('/api/backup');
+assert.equal(afterRevision.attempts.length,beforeRevision.attempts.length);
+assert.deepEqual(afterRevision.attempts.find(a=>a.session_id===recall.id&&a.position===0),original);
+assert.deepEqual(afterRevision.sessions,beforeRevision.sessions);
+await post({action:'answer',sessionId:wrong.id,wordId:second,position:0,choice:null,duration:100});
+await post({action:'revise',sessionId:wrong.id,wordId:second,position:0,correct:true});
+revised=await request('/api/study?session='+wrong.id);
+assert.equal(revised.status,'completed');assert.equal(revised.correct,1);assert.equal(revised.answers[0].correct,true);
+console.log('PASS: correction in active/completed sessions, idempotence, unchanged timestamps/duration/counts, invalid and unowned revisions rejected.');
