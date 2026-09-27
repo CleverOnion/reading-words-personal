@@ -11,24 +11,6 @@
 .word-examples li .word-example-translation{font-family:inherit;font-size:12px;line-height:1.6;color:#88957d;margin-top:1px}
 .word-examples li small{font-size:9px;color:#a3ad96}
 .word-examples-state{font-size:11px;color:#a1aa94;margin:10px 0}
-.word-lookup{max-width:820px;margin:0 auto 16px;position:relative;padding:15px 17px 14px;border:1px solid #d8e1cc;border-radius:12px;background:linear-gradient(145deg,#fbfcf6,#f4f7ed);box-shadow:0 10px 26px #3445220e}
-.word-lookup-label{display:flex;align-items:baseline;gap:9px;margin-bottom:11px}
-.word-lookup-label span{font-size:9px;letter-spacing:1.7px;color:#a0ad95}
-.word-lookup-label strong{font-size:14px;font-weight:600;letter-spacing:.2px;color:#526646}
-.word-lookup-label small{margin-left:auto;font-size:10px;color:#9aa58d}
-.word-lookup-input{display:flex;align-items:center;gap:9px;min-height:43px;padding:0 8px 0 12px;border:1px solid #cdd8c0;border-radius:9px;background:#fff;box-shadow:0 4px 12px #4d603512;color:#879478}
-.word-lookup-input input{flex:1;min-width:0;border:0;background:transparent;outline:0;color:#425338;font-size:13px}
-.word-lookup-input input::placeholder{color:#aab5a0}
-.word-lookup-submit{border:0;border-radius:7px;background:#6e8359;color:#fff;padding:8px 16px;font-size:12px;cursor:pointer;box-shadow:0 3px 8px #51654325}
-.word-lookup-submit:hover{background:#5e744a}
-.word-lookup-clear{border:0;background:none;color:#88977c;padding:4px;cursor:pointer}
-.word-lookup-panel{margin-top:13px;padding:0 2px}
-.word-lookup-hint{font-size:11px;color:#94a187;margin:10px 1px 0}
-.word-lookup-word{display:flex;align-items:center;gap:9px;margin-top:9px}
-.word-lookup-word strong{font:25px Georgia,serif;color:#3f5435}
-.word-lookup-word button{border:0;background:none;color:#7d9663;padding:5px}
-.word-lookup-meaning{font-size:14px;color:#596c4b;margin:5px 0}
-.word-lookup-definition{font:12px/1.7 Georgia,serif;color:#748268;margin:5px 0}
 .word-examples.compact{margin-top:12px}
 .word-examples.compact li p{font-size:12px}
 @media(max-width:760px){
@@ -36,9 +18,4 @@
  .speak-toggle span{display:none}
  .speak-toggle{padding:5px}
  .word-examples li p{font-size:12px}
- .word-lookup{margin-left:0;margin-right:0;padding:13px 12px}
- .word-lookup-label{gap:6px;flex-wrap:wrap}
- .word-lookup-label small{width:100%;margin-left:0}
- .word-lookup-input{min-height:41px}
- .word-lookup-submit{padding:8px 12px}
 }
