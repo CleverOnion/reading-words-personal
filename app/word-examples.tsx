@@ -1,30 +1,47 @@
 'use client';
 import {useEffect,useState} from 'react';
-import {Volume2} from 'lucide-react';
-import {sentenceForWord,practiceExamples,practiceExampleTranslations} from '../lib/word-examples';
+import {Volume2,RotateCcw} from 'lucide-react';
+import {EXAMPLES_VERSION,readingExampleForWord,selectExamples,usageNoteForWord,type Example} from '../lib/word-examples';
 
-type ApiExample={text:string;translation:string;source:'dictionary'|'practice'};
-type Result={word:string;meaning:string;definition:string|null;examples:ApiExample[]};
-type DisplayExample={text:string;translation:string;source:'reading'|'dictionary'|'practice'};
-type Props={word:string;passageId?:string;speak?:(word:string)=>void;speechAvailable?:boolean;compact?:boolean};
-
-async function fetchResult(word:string,signal:AbortSignal){
- const response=await fetch(`/api/word?word=${encodeURIComponent(word)}`,{cache:'no-store',credentials:'same-origin',signal});
- const body=await response.json() as Result&{error?:string};
- if(!response.ok)throw new Error(body.error||'例句暂时无法加载');
- return body as Result;
-}
-
-export function WordExamples({word,passageId,speak,speechAvailable,compact=false}:Props){
- const [result,setResult]=useState<Result|null>(null),[source,setSource]=useState<DisplayExample|null>(null),[error,setError]=useState('');
- useEffect(()=>{const controller=new AbortController();
-  fetchResult(word,controller.signal).then(value=>{if(!controller.signal.aborted)setResult(value)}).catch(reason=>{if(!controller.signal.aborted)setError(reason instanceof Error?reason.message:'例句暂时无法加载')});
-  if(passageId){fetch(`/readings/${passageId}.json`,{cache:'force-cache',credentials:'same-origin',signal:controller.signal}).then(response=>response.ok?response.json() as Promise<{paragraphs:{en:string;zh:string}[]}>:null).then(reading=>{if(!reading||controller.signal.aborted)return;for(const paragraph of reading.paragraphs){const found=sentenceForWord(paragraph.en,word);if(found){setSource({text:found,translation:paragraph.zh,source:'reading'});break}}}).catch(()=>{})}
+type Result={examples:Example[];complete:boolean;version:string;error?:string};
+type Props={word:string;wordId?:string;passageId?:string;speak?:(word:string)=>void;speechAvailable?:boolean;compact?:boolean};
+const memory=new Map<string,Example[]>();
+export function WordExamples({word,wordId,passageId,speak,speechAvailable,compact=false}:Props){
+ const key=wordId??word;
+ const [result,setResult]=useState<{key:string;examples:Example[];loading:boolean;error:string}>({key,examples:[],loading:true,error:''});
+ const [source,setSource]=useState<{key:string;example:Example|null}>({key,example:null});
+ const [retry,setRetry]=useState(0);
+ useEffect(()=>{
+  const controller=new AbortController(),cached=memory.get(key);
+  setResult({key,examples:cached??[],loading:!cached,error:''});
+  setSource({key,example:null});
+  if(!cached){
+   const params=new URLSearchParams({[wordId?'wordId':'word']:wordId??word,v:EXAMPLES_VERSION});
+   fetch(`/api/word?${params}`,{credentials:'same-origin',signal:controller.signal,cache:retry?'reload':'default'})
+    .then(async response=>{
+     const body=await response.json() as Result;
+     if(!response.ok||body.version!==EXAMPLES_VERSION)throw new Error(body.error||'补充例句暂时未能加载');
+     const examples=selectExamples(null,Array.isArray(body.examples)?body.examples:[]);
+     if(controller.signal.aborted)return;
+     if(examples.length>=3){if(memory.size>=300)memory.delete(memory.keys().next().value!);memory.set(key,examples)}
+     setResult({key,examples,loading:false,error:examples.length<3?'暂未找到更多合适的双语例句':''});
+    }).catch(()=>{if(!controller.signal.aborted)setResult({key,examples:[],loading:false,error:'补充例句暂时未能加载'})});
+  }
+  if(passageId){
+   fetch(`/readings/${passageId}.json`,{cache:'force-cache',credentials:'same-origin',signal:controller.signal})
+    .then(response=>response.ok?response.json() as Promise<{paragraphs:{en:string;zh:string}[]}>:null)
+    .then(reading=>{if(reading&&!controller.signal.aborted)setSource({key,example:readingExampleForWord(reading.paragraphs,word)})}).catch(()=>{});
+  }
   return()=>controller.abort();
- },[word,passageId]);
- const examples:DisplayExample[]=[...(source?[source]:[]),...(result?.examples??[]).filter(example=>!source||example.text.toLowerCase()!==source.text.toLowerCase())];
- const fallbackText=practiceExamples(word),fallbackZh=practiceExampleTranslations(word);
- for(let index=0;examples.length<3;index++)examples.push({text:fallbackText[index],translation:fallbackZh[index],source:'practice'});
- const filled=examples.slice(0,3);
- return <section className={'word-examples '+(compact?'compact':'')} aria-label={`${word} 例句`}><div className="word-examples-heading"><span>EXAMPLES / 例句</span>{speak&&speechAvailable&&<button aria-label={`朗读 ${word} 例句`} onClick={()=>speak(filled.map(example=>example.text).join(' '))}><Volume2 size={15}/></button>}</div>{error?<p className="word-examples-state">{error}</p>:!result?<p className="word-examples-state">正在准备 3 个例句…</p>:<ol>{filled.map((example,index)=><li key={`${example.source}-${example.text}`}><span className="word-example-number">0{index+1}</span><div><p>{example.text}</p><p className="word-example-translation">{example.translation}</p><small>{example.source==='reading'?'真题原句':example.source==='dictionary'?'词典例句':'练习例句'}</small></div></li>)}</ol>}</section>;
+ },[key,word,wordId,passageId,retry]);
+ const current=result.key===key?result:{key,examples:[],loading:true,error:''};
+ const examples=selectExamples(source.key===key?source.example:null,current.examples);
+ const usageNote=usageNoteForWord(word);
+ const retryExamples=()=>{memory.delete(key);setRetry(value=>value+1)};
+ return <section className={'word-examples '+(compact?'compact':'')} aria-label={`${word} 例句`}>
+  <div className="word-examples-heading"><span>EXAMPLES / 例句</span>{speak&&speechAvailable&&<button disabled={!examples.length} aria-label={`朗读 ${word} 例句`} onClick={()=>speak(examples.map(example=>example.text).join(' '))}><Volume2 size={15}/></button>}</div>
+  {usageNote&&<p className="word-example-note">{usageNote}</p>}
+  {examples.length>0&&<ol>{examples.map((example,index)=><li key={`${example.source}-${example.text}`}><span className="word-example-number">0{index+1}</span><div><p>{example.text}</p><p className="word-example-translation">{example.translation}</p><small>{example.source==='reading'?(example.translationScope==='paragraph'?'真题语境 · 段落对照':'真题原句'):example.source==='dictionary'?<a href={example.sourceUrl} target="_blank" rel="noreferrer">{example.attribution||'双语词典例句'} ↗</a>:'自编例句'}</small></div></li>)}</ol>}
+  {examples.length<3&&(current.loading?<p className="word-examples-state" role="status">正在加载补充例句…</p>:<div className="word-examples-state"><span>{current.error||'暂未找到更多合适的双语例句'}</span><button type="button" className="word-examples-retry" onClick={retryExamples}><RotateCcw size={12}/>重试</button></div>)}
+ </section>;
 }

@@ -1,0 +1,63 @@
+{
+  "importedAt": "2026-09-28T15:37:43.716Z",
+  "scope": "2025—2026 阅读理解：段落词 + 选项词；排除新题型、完形等其它题型",
+  "passages": [
+    {
+      "id": "2025-1",
+      "words": 40,
+      "passageWords": 34,
+      "optionWords": 6,
+      "page": 190
+    },
+    {
+      "id": "2025-2",
+      "words": 62,
+      "passageWords": 55,
+      "optionWords": 7,
+      "page": 191
+    },
+    {
+      "id": "2025-3",
+      "words": 54,
+      "passageWords": 47,
+      "optionWords": 7,
+      "page": 193
+    },
+    {
+      "id": "2025-4",
+      "words": 45,
+      "passageWords": 44,
+      "optionWords": 1,
+      "page": 195
+    },
+    {
+      "id": "2026-1",
+      "words": 34,
+      "passageWords": 29,
+      "optionWords": 5,
+      "page": 199
+    },
+    {
+      "id": "2026-2",
+      "words": 37,
+      "passageWords": 31,
+      "optionWords": 6,
+      "page": 200
+    },
+    {
+      "id": "2026-3",
+      "words": 53,
+      "passageWords": 11,
+      "optionWords": 42,
+      "page": 201
+    },
+    {
+      "id": "2026-4",
+      "words": 42,
+      "passageWords": 36,
+      "optionWords": 6,
+      "page": 203
+    }
+  ],
+  "totalWords": 367
+}

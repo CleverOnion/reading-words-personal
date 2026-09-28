@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "读词 · 考研英语一阅读词汇",
-  description: "2010—2024 年英语一阅读真题词汇，按篇刷词、记录进步、复习错词。",
+  description: "2010—2026 年英语一阅读真题词汇，按篇刷词、记录进步、复习错词。",
   other: {
     "codex-preview": "development",
   },

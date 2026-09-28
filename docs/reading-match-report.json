@@ -1164,5 +1164,127 @@
       "trigger",
       "coordination"
     ]
+  },
+  {
+    "id": "2025-1",
+    "paragraphs": 7,
+    "words": 40,
+    "matched": 29,
+    "unmatched": [
+      "act sth. out",
+      "cliché",
+      "broad",
+      "embed",
+      "put oneself in different shoes",
+      "divide",
+      "enhance",
+      "stimulate",
+      "omission",
+      "centralize",
+      "be reluctant to"
+    ]
+  },
+  {
+    "id": "2025-2",
+    "paragraphs": 7,
+    "words": 62,
+    "matched": 55,
+    "unmatched": [
+      "suspicion",
+      "groundless",
+      "justifiable",
+      "foster",
+      "triumph",
+      "owe much to",
+      "ought to"
+    ]
+  },
+  {
+    "id": "2025-3",
+    "paragraphs": 6,
+    "words": 54,
+    "matched": 47,
+    "unmatched": [
+      "be confronted with",
+      "reaped benefits from",
+      "protest",
+      "in spite of",
+      "overwhelm",
+      "diminish",
+      "violation"
+    ]
+  },
+  {
+    "id": "2025-4",
+    "paragraphs": 5,
+    "words": 45,
+    "matched": 44,
+    "unmatched": [
+      "oversupply"
+    ]
+  },
+  {
+    "id": "2026-1",
+    "paragraphs": 6,
+    "words": 34,
+    "matched": 26,
+    "unmatched": [
+      "propel",
+      "become intertwined with",
+      "go through",
+      "put... in the spotlight",
+      "undergo",
+      "traceable",
+      "disperse",
+      "conventional"
+    ]
+  },
+  {
+    "id": "2026-2",
+    "paragraphs": 7,
+    "words": 37,
+    "matched": 29,
+    "unmatched": [
+      "slip away",
+      "leave...in the dust",
+      "keep afloat",
+      "nostalgia",
+      "gloomy",
+      "facility",
+      "stimulate",
+      "brain drain"
+    ]
+  },
+  {
+    "id": "2026-3",
+    "paragraphs": 6,
+    "words": 53,
+    "matched": 45,
+    "unmatched": [
+      "ingenuity",
+      "catch up with",
+      "be accessible to",
+      "miracle",
+      "eminent",
+      "trivial",
+      "quarrel",
+      "hum"
+    ]
+  },
+  {
+    "id": "2026-4",
+    "paragraphs": 6,
+    "words": 42,
+    "matched": 34,
+    "unmatched": [
+      "put out",
+      "oversee",
+      "scarcity",
+      "precolonial",
+      "intensity",
+      "markedly",
+      "misinterpret",
+      "render"
+    ]
   }
 ]
