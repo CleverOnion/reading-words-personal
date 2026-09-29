@@ -8,6 +8,7 @@
 .word-examples li{display:grid;grid-template-columns:27px 1fr;gap:9px;padding:9px 0;border-top:1px solid #e0e6d8}
 .word-example-number{font:11px Georgia,serif;color:#abb69e;padding-top:2px}
 .word-examples li p{font:13px/1.7 Georgia,'Times New Roman',serif;color:#58664e;margin:0}
+.word-example-highlight{background:rgba(157,174,112,.28);color:#405333;font-weight:600;padding:0 .12em;border-radius:.18em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .word-examples li .word-example-translation{font-family:inherit;font-size:12px;line-height:1.6;color:#88957d;margin-top:1px}
 .word-examples li small{font-size:9px;color:#a3ad96}
 .word-examples-state{font-size:11px;color:#a1aa94;margin:10px 0}

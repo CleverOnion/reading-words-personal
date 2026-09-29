@@ -2,6 +2,7 @@ import {usageExamples,usageNotes} from '../data/usage-examples.ts';
 import {findWordMatches} from './reading-matches.ts';
 
 export type Example={text:string;translation:string;source:'reading'|'dictionary'|'practice';attribution?:string;sourceUrl?:string;translationScope?:'sentence'|'paragraph'};
+export type HighlightedExampleSegment={text:string;highlight:boolean};
 export const EXAMPLES_VERSION='usage-v3';
 export const normalizeWord=(word:string)=>word.trim().toLowerCase().replace(/[‘’]/g,"'").replace(/\s+/g,' ');
 const escape=(text:string)=>text.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -12,6 +13,18 @@ export function sentenceForWord(text:string,word:string){
  const parts=sentences(text);
  const exact=new RegExp(`(?:^|[^A-Za-z])${escape(word.trim())}(?:$|[^A-Za-z])`,'i');
  return parts.find(part=>exact.test(part))??parts.find(part=>findWordMatches(part,word).length)??null;
+}
+export function highlightWord(text:string,word:string):HighlightedExampleSegment[]{
+ const matches=findWordMatches(text,word);
+ if(!matches.length)return [{text,highlight:false}];
+ const segments:HighlightedExampleSegment[]=[];let cursor=0;
+ for(const match of matches){
+  if(match.start>cursor)segments.push({text:text.slice(cursor,match.start),highlight:false});
+  if(match.end>cursor)segments.push({text:text.slice(Math.max(cursor,match.start),match.end),highlight:true});
+  cursor=Math.max(cursor,match.end);
+ }
+ if(cursor<text.length)segments.push({text:text.slice(cursor),highlight:false});
+ return segments;
 }
 export function readingExampleForWord(paragraphs:{en:string;zh:string}[],word:string):Example|null{
  for(const paragraph of paragraphs){

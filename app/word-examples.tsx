@@ -1,7 +1,7 @@
 'use client';
 import {useEffect,useState} from 'react';
 import {Volume2,RotateCcw} from 'lucide-react';
-import {EXAMPLES_VERSION,readingExampleForWord,selectExamples,usageNoteForWord,type Example} from '../lib/word-examples';
+import {EXAMPLES_VERSION,highlightWord,readingExampleForWord,selectExamples,usageNoteForWord,type Example} from '../lib/word-examples';
 
 type Result={examples:Example[];complete:boolean;version:string;error?:string};
 type Props={word:string;wordId?:string;passageId?:string;speak?:(word:string)=>void;speechAvailable?:boolean;compact?:boolean};
@@ -41,7 +41,7 @@ export function WordExamples({word,wordId,passageId,speak,speechAvailable,compac
  return <section className={'word-examples '+(compact?'compact':'')} aria-label={`${word} 例句`}>
   <div className="word-examples-heading"><span>EXAMPLES / 例句</span>{speak&&speechAvailable&&<button disabled={!examples.length} aria-label={`朗读 ${word} 例句`} onClick={()=>speak(examples.map(example=>example.text).join(' '))}><Volume2 size={15}/></button>}</div>
   {usageNote&&<p className="word-example-note">{usageNote}</p>}
-  {examples.length>0&&<ol>{examples.map((example,index)=><li key={`${example.source}-${example.text}`}><span className="word-example-number">0{index+1}</span><div><p>{example.text}</p><p className="word-example-translation">{example.translation}</p><small>{example.source==='reading'?(example.translationScope==='paragraph'?'真题语境 · 段落对照':'真题原句'):example.source==='dictionary'?<a href={example.sourceUrl} target="_blank" rel="noreferrer">{example.attribution||'双语词典例句'} ↗</a>:'自编例句'}</small></div></li>)}</ol>}
+  {examples.length>0&&<ol>{examples.map((example,index)=><li key={`${example.source}-${example.text}`}><span className="word-example-number">0{index+1}</span><div><p>{highlightWord(example.text,word).map((segment,segmentIndex)=>segment.highlight?<mark className="word-example-highlight" key={`${segmentIndex}-${segment.text}`}>{segment.text}</mark>:<span key={`${segmentIndex}-${segment.text}`}>{segment.text}</span>)}</p><p className="word-example-translation">{example.translation}</p><small>{example.source==='reading'?(example.translationScope==='paragraph'?'真题语境 · 段落对照':'真题原句'):example.source==='dictionary'?<a href={example.sourceUrl} target="_blank" rel="noreferrer">{example.attribution||'双语词典例句'} ↗</a>:'自编例句'}</small></div></li>)}</ol>}
   {examples.length<3&&(current.loading?<p className="word-examples-state" role="status">正在加载补充例句…</p>:<div className="word-examples-state"><span>{current.error||'暂未找到更多合适的双语例句'}</span><button type="button" className="word-examples-retry" onClick={retryExamples}><RotateCcw size={12}/>重试</button></div>)}
  </section>;
 }

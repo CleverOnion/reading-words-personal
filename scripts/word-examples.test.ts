@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {readFileSync} from 'node:fs';
 import {usageExamples} from '../data/usage-examples.ts';
-import {practiceExamples,practiceExampleTranslations,sentenceForWord,uniqueExamples,readingExampleForWord,selectExamples,isUsableExample,originalExamples,type Example} from '../lib/word-examples.ts';
+import {practiceExamples,practiceExampleTranslations,sentenceForWord,uniqueExamples,readingExampleForWord,selectExamples,isUsableExample,originalExamples,highlightWord,type Example} from '../lib/word-examples.ts';
 import {createExampleService,parseDictionaryExamples,plainText} from '../lib/example-provider.ts';
 
 test('finds the source sentence without matching a substring',()=>{
@@ -45,6 +45,21 @@ test('unaligned translations preserve the full paragraph and label its scope',()
 test('source sentence matching handles inflections, decimals and abbreviations',()=>{
  assert.equal(sentenceForWord('The board was 4.5 metres long. We nailed it in place.','nail'),'We nailed it in place.');
  assert.equal(sentenceForWord('A patient is waiting.','patent'),null);
+});
+
+test('highlights the target word and its matched word forms in example text',()=>{
+ assert.deepEqual(highlightWord('The nail board was discovered, and the nails were counted.','nail'),[
+  {text:'The ',highlight:false},
+  {text:'nail',highlight:true},
+  {text:' board was discovered, and the ',highlight:false},
+  {text:'nails',highlight:true},
+  {text:' were counted.',highlight:false},
+ ]);
+ assert.deepEqual(highlightWord('They nailed it down.','nail'),[
+  {text:'They ',highlight:false},
+  {text:'nailed',highlight:true},
+  {text:' it down.',highlight:false},
+ ]);
 });
 
 test('source example stays visible without supplementary data; templates never fill gaps',()=>{
