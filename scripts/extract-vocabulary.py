@@ -1,7 +1,7 @@
-import fitz, re, json
+import fitz, re, json, sys
 from pathlib import Path
 
-source = Path('F:/考研/CO/考研英语阅读真题词汇 - 英语一【公众号：学长小谭考研】.pdf')
+source = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('source-vocabulary.pdf')
 doc = fitz.open(source)
 groups = []
 year = None

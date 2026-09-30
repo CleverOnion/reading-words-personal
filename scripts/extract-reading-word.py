@@ -1,6 +1,6 @@
 """Extract paragraphs from the user's Word files, including misnamed binary DOC.
 
-Usage: python scripts/extract-reading-word.py "F:/.../Word folder"
+Usage: python scripts/extract-reading-word.py "path/to/Word folder"
 Dependencies: lxml, olefile. Source documents are opened read-only.
 """
 import json, struct, sys, zipfile

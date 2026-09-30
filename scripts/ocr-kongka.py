@@ -5,7 +5,8 @@ import fitz,cv2,numpy as np
 from rapidocr_onnxruntime import RapidOCR
 
 OUT=Path('work/kongka');OUT.mkdir(exist_ok=True,parents=True)
-doc=fitz.open(r'C:/Users/29516/Documents/空卡真题核心词（英语一）免费分享.pdf')
+source=Path(sys.argv[3]) if len(sys.argv)>3 else Path('source-kongka.pdf')
+doc=fitz.open(source)
 ocr=RapidOCR(intra_op_num_threads=4,inter_op_num_threads=1)
 pages=list(range(int(sys.argv[1]),int(sys.argv[2])+1))
 for n in pages:
