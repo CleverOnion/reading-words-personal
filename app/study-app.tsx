@@ -1,5 +1,6 @@
 'use client';
 import Meaning from './meaning';
+import BrandLogo from './brand-logo';
 import {useState,useEffect,useRef,useCallback} from 'react';
 import {BookOpen,Layers,History,Bookmark,ArrowUpRight,ArrowRight,ArrowLeft,Sparkles,Check,X,Search,RotateCcw,Clock,CheckCircle2,Cloud,Volume2,ChevronDown} from 'lucide-react';
 import {Button} from '../components/ui/button';
@@ -92,7 +93,7 @@ export default function StudyApp({standalone=false}:{standalone?:boolean}){
  const reviewed=state.sessions.reduce((n,s)=>n+s.answered,0),correct=state.sessions.reduce((n,s)=>n+s.correct,0);
  const controls=<div className="practice-controls"><Filter label="词序" value={order} onChange={setOrder} items={[['original','原文顺序'],['shuffle','随机顺序']]}/><Filter label="每次词数" value={limit} onChange={setLimit} items={[['all','全部词条'],['10','每次 10 词'],['20','每次 20 词']]}/></div>;
  return <div className={'app-shell'+(view==='practice'?' is-practicing':'')}>
- <header className="site-header"><button className="wordmark" onClick={()=>navigate('library')} aria-label="读词首页">读词<span>.</span><small>READING NOTES</small></button><nav className="top-navigation">{([['library','阅读书架'],['wrong','错词手记'],['history','学习足迹'],['statistics','学习画像']] as const).map(([v,label])=><button key={v} className={view===v?'active':''} disabled={busy} onClick={()=>navigate(v)}>{label}{v==='wrong'&&pending.length>0&&<i>{pending.length}</i>}</button>)}</nav>{standalone?<div className="personal-tools"><a href="/api/backup" download>导出备份</a><form action="/auth/logout" method="post"><button type="submit" disabled={busy}>退出登录</button></form></div>:<span className="header-edition">考研英语一<span>个人词汇研习室</span></span>}</header>
+ <header className="site-header"><button type="button" className="brand-home" onClick={()=>navigate('library')} aria-label="读词首页"><BrandLogo/></button><nav className="top-navigation">{([['library','阅读书架'],['wrong','错词手记'],['history','学习足迹'],['statistics','学习画像']] as const).map(([v,label])=><button key={v} className={view===v?'active':''} disabled={busy} onClick={()=>navigate(v)}>{label}{v==='wrong'&&pending.length>0&&<i>{pending.length}</i>}</button>)}</nav>{standalone?<div className="personal-tools"><a href="/api/backup" download>导出备份</a><form action="/auth/logout" method="post"><button type="submit" disabled={busy}>退出登录</button></form></div>:<span className="header-edition">考研英语一<span>个人词汇研习室</span></span>}</header>
  <main><div className="content">
  {error&&<div className="error-banner" role="alert"><span>{error}</span>{auth?<a href="/signin-with-chatgpt?return_to=%2F" target="_top">登录并继续 <ArrowRight size={15}/></a>:<Button variant="ghost" onClick={()=>{setError('');refresh().catch(()=>{});}}>重新加载记录</Button>}</div>}
  {view==='statistics'&&<StatisticsPanel start={start} read={read} busy={busy}/>}

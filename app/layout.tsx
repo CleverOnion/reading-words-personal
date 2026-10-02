@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {BRAND_ICON_URL} from '../lib/brand';
 
 export const metadata: Metadata = {
   title: "读词 · 考研英语一阅读词汇",
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
     "codex-preview": "development",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: BRAND_ICON_URL,
+    shortcut: BRAND_ICON_URL,
   },
 };
 
