@@ -1,0 +1,16 @@
+.similar-words{margin:0 0 24px;padding:0 0 18px;border-bottom:1px solid #dfe3d6;text-align:left}
+.similar-words-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:39px;font-size:10px;letter-spacing:1.3px;color:#71835f}
+.similar-words-note,.similar-words-source{font-size:11px;line-height:1.7;color:#859078;margin:0 0 8px}
+.similar-words-source{font-size:10px;margin:12px 0 0}
+.similar-words ul{list-style:none;margin:0;padding:0}
+.similar-words li{padding:12px 0;border-bottom:1px solid #e3e7da}
+.similar-words li:last-child{border-bottom:0;padding-bottom:0}
+.similar-spelling{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font:16px/1.6 Georgia,serif;color:#435539}
+.similar-original{font-size:13px;color:#839074}
+.similar-spelling strong{font-weight:600;overflow-wrap:anywhere}
+.similar-spelling mark{color:#8b492c;background:#f0e4cf;border-radius:2px;padding:0 1px;font-weight:inherit;box-decoration-break:clone}
+.similar-spelling svg{flex-shrink:0}
+.similar-spelling button{display:grid;place-items:center;border:0;background:none;color:#718660;min-width:32px;min-height:32px;margin-left:auto;padding:4px}
+.similar-words .similar-meaning{margin:5px 0 0;font-size:12px;line-height:1.8;color:#6c795f}
+.past-word-body .similar-words{margin:22px 0 4px;padding:16px 0 0;border-top:1px solid #dfe3d6;border-bottom:0}
+@media(max-width:760px){.similar-spelling{font-size:18px}.similar-original{font-size:14px}.similar-words .similar-meaning{font-size:13px}.similar-spelling button{min-width:44px;min-height:44px}}
