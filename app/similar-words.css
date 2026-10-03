@@ -2,6 +2,10 @@
 .similar-words-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:39px;font-size:10px;letter-spacing:1.3px;color:#71835f}
 .similar-words-note,.similar-words-source{font-size:11px;line-height:1.7;color:#859078;margin:0 0 8px}
 .similar-words-source{font-size:10px;margin:12px 0 0}
+.similar-words-source a{color:inherit;text-underline-offset:3px}
+.similar-kind{font-size:10px;color:#859078;line-height:1.6}
+.similar-distinction{font-size:12px;line-height:1.8;color:#687458;margin:8px 0;padding:8px 10px;background:#f0f1e9;border-left:2px solid #a8b594}
+.similar-expand{border:0;background:none;color:#607647;padding:10px 0;font-size:12px;min-height:40px;text-decoration:underline;text-underline-offset:4px}
 .similar-words ul{list-style:none;margin:0;padding:0}
 .similar-words li{padding:12px 0;border-bottom:1px solid #e3e7da}
 .similar-words li:last-child{border-bottom:0;padding-bottom:0}

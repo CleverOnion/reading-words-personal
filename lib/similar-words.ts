@@ -1,6 +1,8 @@
 import {findWordMatches} from './reading-matches.ts';
 
-type Entry={id:string;word:string;meaning:string};
+export type Entry={id:string;word:string;meaning:string;source?:string};
+export type RelatedWord=Entry&{kind:'spelling'|'confusable';note?:string};
+type ConfusableGroup={words:string[];note:string};
 export type SpellingPart={text:string;changed:boolean};
 const normalize=(word:string)=>word.trim().toLowerCase();
 
@@ -14,20 +16,25 @@ function matrix(a:string,b:string){
  return d;
 }
 
-export function createSimilarWordLookup(entries:Entry[]){
+export function createSimilarWordLookup(entries:Entry[],groups:ConfusableGroup[]=[],limit=3){
  const unique=new Map<string,Entry>();
  for(const entry of entries){const key=normalize(entry.word);if(/^[a-z]{3,24}$/.test(key)&&entry.meaning.trim()&&!unique.has(key))unique.set(key,entry);}
  const buckets=new Map<number,[string,Entry][]>();
  for(const item of unique){const length=item[0].length;buckets.set(length,[...(buckets.get(length)??[]),item]);}
- const cache=new Map<string,Entry[]>();
- return (word:string):Entry[]=>{
+ const cache=new Map<string,RelatedWord[]>();
+ return (word:string):RelatedWord[]=>{
   const term=normalize(word);
   if(!/^[a-z]{3,24}$/.test(term))return [];
   const cached=cache.get(term);if(cached)return cached;
   const maxDistance=term.length>=6?2:1;
+  const curated=new Map<string,RelatedWord>();
+  for(const group of groups)if(group.words.includes(term))for(const key of group.words){
+   const entry=unique.get(key);
+   if(entry&&key!==term&&!curated.has(key))curated.set(key,{...entry,kind:'confusable',note:group.note});
+  }
   const ranked:{entry:Entry;distance:number;ratio:number}[]=[];
   for(let length=term.length-maxDistance;length<=term.length+maxDistance;length++)for(const [key,entry] of buckets.get(length)??[]){
-   if(term===key)continue;
+   if(term===key||curated.has(key))continue;
    const distance=matrix(term,key)[term.length][key.length];
    const ratio=distance/Math.max(term.length,key.length);
    if(distance>maxDistance||ratio>.34)continue;
@@ -36,10 +43,17 @@ export function createSimilarWordLookup(entries:Entry[]){
    ranked.push({entry,distance,ratio});
   }
   ranked.sort((a,b)=>a.distance-b.distance||a.ratio-b.ratio||a.entry.word.localeCompare(b.entry.word,'en'));
-  const result=ranked.slice(0,3).map(item=>item.entry);
+  const result:RelatedWord[]=[...curated.values(),...ranked.map(item=>({...item.entry,kind:'spelling' as const}))].slice(0,limit);
   if(cache.size>=500)cache.delete(cache.keys().next().value!);
   cache.set(term,result);return result;
  };
+}
+
+// The syllabus defines membership; reading entries override definitions only.
+export function syllabusEntries(syllabus:Entry[],reading:Entry[]):Entry[]{
+ const preferred=new Map<string,Entry>();
+ for(const entry of reading)if(entry.meaning.trim()&&!preferred.has(normalize(entry.word)))preferred.set(normalize(entry.word),entry);
+ return syllabus.map(entry=>({...entry,meaning:preferred.get(normalize(entry.word))?.meaning??entry.meaning,source:preferred.has(normalize(entry.word))?'阅读词库释义':'大纲词表释义'}));
 }
 
 export function spellingDifference(original:string,candidate:string){
