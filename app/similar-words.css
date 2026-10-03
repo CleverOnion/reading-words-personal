@@ -1,20 +1,38 @@
-.similar-words{margin:0 0 24px;padding:0 0 18px;border-bottom:1px solid #dfe3d6;text-align:left}
-.similar-words-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:39px;font-size:10px;letter-spacing:1.3px;color:#71835f}
-.similar-words-note,.similar-words-source{font-size:11px;line-height:1.7;color:#859078;margin:0 0 8px}
-.similar-words-source{font-size:10px;margin:12px 0 0}
-.similar-words-source a{color:inherit;text-underline-offset:3px}
-.similar-kind{font-size:10px;color:#859078;line-height:1.6}
-.similar-distinction{font-size:12px;line-height:1.8;color:#687458;margin:8px 0;padding:8px 10px;background:#f0f1e9;border-left:2px solid #a8b594}
-.similar-expand{border:0;background:none;color:#607647;padding:10px 0;font-size:12px;min-height:40px;text-decoration:underline;text-underline-offset:4px}
-.similar-words ul{list-style:none;margin:0;padding:0}
-.similar-words li{padding:12px 0;border-bottom:1px solid #e3e7da}
-.similar-words li:last-child{border-bottom:0;padding-bottom:0}
-.similar-spelling{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font:16px/1.6 Georgia,serif;color:#435539}
-.similar-original{font-size:13px;color:#839074}
-.similar-spelling strong{font-weight:600;overflow-wrap:anywhere}
-.similar-spelling mark{color:#8b492c;background:#f0e4cf;border-radius:2px;padding:0 1px;font-weight:inherit;box-decoration-break:clone}
-.similar-spelling svg{flex-shrink:0}
-.similar-spelling button{display:grid;place-items:center;border:0;background:none;color:#718660;min-width:32px;min-height:32px;margin-left:auto;padding:4px}
-.similar-words .similar-meaning{margin:5px 0 0;font-size:12px;line-height:1.8;color:#6c795f}
-.past-word-body .similar-words{margin:22px 0 4px;padding:16px 0 0;border-top:1px solid #dfe3d6;border-bottom:0}
-@media(max-width:760px){.similar-spelling{font-size:18px}.similar-original{font-size:14px}.similar-words .similar-meaning{font-size:13px}.similar-spelling button{min-width:44px;min-height:44px}}
+.similar-words{--companion-ink:#3e4938;--companion-muted:#737b6b;margin:0 0 26px;padding:0 0 22px;border-bottom:1px solid #dfe3d6;text-align:left;color:var(--companion-ink)}
+.similar-words-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:3px 0 0}
+.similar-eyebrow{display:block;font:9px/1.5 Georgia,serif;letter-spacing:1.5px;color:#7e886f;margin-bottom:5px}
+.similar-words-heading h3{font-size:17px;font-weight:500;letter-spacing:1px;line-height:1.5;margin:0}
+.similar-count{font-size:11px;color:var(--companion-muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.similar-words-note{font-size:12px;line-height:1.7;color:var(--companion-muted);margin:8px 0 16px}
+.similar-words ul{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+.similar-words li{min-width:0;padding:12px 15px 14px;background:#fbfaf5;border:1px solid #e3e4d9;border-radius:9px}
+.similar-entry-top{display:flex;align-items:center;justify-content:space-between;min-height:26px;margin-bottom:3px}
+.similar-kind{font-size:10px;line-height:1.6;letter-spacing:.8px;color:#717d62}
+.similar-speak{display:grid;place-items:center;width:30px;height:30px;margin:-3px -5px -3px 0;padding:0;border:0;border-radius:50%;background:transparent;color:#78876a;cursor:pointer}
+.similar-speak:hover{background:#edf0e5;color:#405a32}
+.similar-spelling{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-family:Georgia,'Times New Roman',serif;line-height:1.5;color:var(--companion-ink)}
+.similar-original{font-size:13px;color:#77816c;overflow-wrap:anywhere}
+.similar-spelling strong{font-size:21px;font-weight:400;letter-spacing:-.3px;overflow-wrap:anywhere;min-width:0}
+.similar-spelling svg{align-self:center;flex-shrink:0;color:#9aa28f}
+.similar-spelling mark{color:#94542e;background:transparent;box-shadow:inset 0 -.3em #eedfc5;padding:0;font-weight:inherit;box-decoration-break:clone}
+.similar-words .similar-meaning{margin:7px 0 0;font-size:13px;line-height:1.85;color:#53604a;overflow-wrap:anywhere}
+.similar-words .similar-meaning .meaning-section{gap:8px;margin:0}
+.similar-words .similar-meaning .meaning-pos{min-width:22px;color:#88917d;font-size:12px}
+.similar-distinction{margin-top:10px;border-top:1px solid #e7e8dd}
+.similar-distinction summary{display:flex;align-items:center;justify-content:space-between;min-height:34px;padding-top:5px;font-size:11px;color:#667853;cursor:pointer;list-style:none}
+.similar-distinction summary::-webkit-details-marker{display:none}
+.similar-distinction[open] summary svg{transform:rotate(180deg)}
+.similar-distinction p{font-size:12px;line-height:1.9;color:#606a57;margin:4px 0 0;padding:0 0 2px}
+.similar-expand{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:40px;margin:10px 0 0;padding:8px 12px;border:1px solid #dee2d4;border-radius:7px;background:transparent;color:#667853;font-size:12px;cursor:pointer}
+.similar-expand:hover{background:#eef0e7}
+.similar-expand[aria-expanded=true] svg{transform:rotate(180deg)}
+.similar-words-source{font-size:10px;line-height:1.8;color:#7c8572;margin:12px 2px 0}
+.similar-words-source summary{cursor:pointer;min-height:24px;width:fit-content}
+.similar-words-source p{margin:5px 0 0}
+.similar-words-source a{color:inherit;text-underline-offset:3px;text-decoration:underline}
+.similar-empty{font-size:13px;line-height:1.9;color:#66725b;margin:16px 0;padding:16px;border:1px dashed #d9dece;border-radius:8px}
+.similar-empty span{font-size:12px;color:#818a75}
+.similar-words button:focus-visible,.similar-words summary:focus-visible,.similar-words a:focus-visible{outline:2px solid #83966e;outline-offset:3px}
+.past-word-body .similar-words{margin:22px 0 4px;padding:20px 0 0;border-top:1px solid #dfe3d6;border-bottom:0}
+@media(max-width:1279px){.practice-workspace .similar-words{padding-top:22px}.similar-words li{padding:14px 18px}}
+@media(max-width:760px){.similar-speak{width:40px;height:40px}.similar-distinction summary{min-height:42px}.similar-expand{min-height:44px}.similar-words-source summary{min-height:32px}.similar-spelling strong{font-size:23px}}

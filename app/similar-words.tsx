@@ -1,4 +1,4 @@
-import {ArrowRight,Volume2} from 'lucide-react';
+import {ArrowRight,ChevronDown,Volume2} from 'lucide-react';
 import {useState} from 'react';
 import {words} from '../lib/vocabulary';
 import syllabus from '../data/syllabus-vocabulary.json';
@@ -16,11 +16,11 @@ export default function SimilarWords({word,speak,speechAvailable=false}:{word:st
  const [expandedWord,setExpandedWord]=useState('');
  const expanded=expandedWord===word;
  return <section className="similar-words" aria-label={`${word} 的形近词与易混词`}>
-  <div className="similar-words-heading"><span>COMPARE / 形近 · 易混</span><span>{candidates.length?String(candidates.length).padStart(2,'0'):''}</span></div>
-  {candidates.length?<><p className="similar-words-note">大纲词汇范围 · 标亮拼写差异</p><ul>{(expanded?candidates:candidates.slice(0,3)).map(candidate=>{
+  <div className="similar-words-heading"><div><span className="similar-eyebrow">WORD COMPANIONS</span><h3>形近 · 易混</h3></div>{candidates.length>0&&<span className="similar-count">{candidates.length} 个对照</span>}</div>
+  {candidates.length?<><p className="similar-words-note">留意一点差别，记得更清楚。</p><ul>{(expanded?candidates:candidates.slice(0,3)).map(candidate=>{
    const diff=spellingDifference(word,candidate.word);
-   return <li key={candidate.id}><span className="similar-kind">{candidate.kind==='confusable'?'易混辨析':'拼写相近'}</span><div className="similar-spelling"><span className="similar-original" aria-label={`本词 ${word}`}><Spelling parts={diff.original}/></span><ArrowRight size={12} aria-hidden="true"/><strong aria-label={`形近词 ${candidate.word}`}><Spelling parts={diff.candidate}/></strong>{speak&&speechAvailable&&<button type="button" aria-label={`朗读形近词 ${candidate.word}`} onClick={()=>speak(candidate.word)}><Volume2 size={14}/></button>}</div><p className="similar-meaning"><Meaning text={candidate.meaning}/></p>{candidate.note&&<p className="similar-distinction">{candidate.note}</p>}<span className="similar-kind">{candidate.source}</span></li>;
-  })}</ul>{candidates.length>3&&<button className="similar-expand" type="button" aria-expanded={expanded} onClick={()=>setExpandedWord(expanded?'':word)}>{expanded?'收起':`查看其余 ${candidates.length-3} 个`}</button>}</>:<p className="similar-words-note">大纲候选词中暂无合适的形近词或已整理的易混词</p>}
-  <p className="similar-words-source"><a href="https://github.com/exam-data/NETEMVocabulary" target="_blank" rel="noreferrer">词表：NETEMVocabulary · 2024 大纲整理</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0</a></p>
+   return <li key={`${word}-${candidate.id}`}><div className="similar-entry-top"><span className="similar-kind">{candidate.kind==='confusable'?'易混词':'形近词'}</span>{speak&&speechAvailable&&<button className="similar-speak" type="button" aria-label={`朗读形近词 ${candidate.word}`} onClick={()=>speak(candidate.word)}><Volume2 size={15}/></button>}</div><div className="similar-spelling"><span className="similar-original" aria-label={`本词 ${word}`}><Spelling parts={diff.original}/></span><ArrowRight size={12} aria-hidden="true"/><strong aria-label={`形近词 ${candidate.word}`}><Spelling parts={diff.candidate}/></strong></div><p className="similar-meaning" title={candidate.source}><Meaning text={candidate.meaning}/></p>{candidate.note&&<details className="similar-distinction"><summary>查看区别<ChevronDown size={13} aria-hidden="true"/></summary><p>{candidate.note}</p></details>}</li>;
+  })}</ul>{candidates.length>3&&<button className="similar-expand" type="button" aria-expanded={expanded} onClick={()=>setExpandedWord(expanded?'':word)}>{expanded?'收起对照':`展开其余 ${candidates.length-3} 个`}<ChevronDown size={14} aria-hidden="true"/></button>}</>:<p className="similar-empty">暂未找到合适的对照词<br/><span>继续记住眼前这个词就好。</span></p>}
+  <details className="similar-words-source"><summary>词表与释义来源</summary><p>释义优先采用你的阅读词库。<a href="https://github.com/exam-data/NETEMVocabulary" target="_blank" rel="noreferrer">词表：NETEMVocabulary · 2024 大纲整理</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0</a>。</p></details>
  </section>;
 }
