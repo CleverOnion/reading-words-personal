@@ -17,7 +17,7 @@
     ". toolbar ."
     ". progress ."
     ". track ."
-    ". paper examples"
+    "similar paper examples"
     ". review ."
     ". note .";
   column-gap: 28px;
@@ -134,6 +134,8 @@
 .practice-workspace .practice-footnote { grid-area: note; max-width: none; margin: 18px 0 0; color: #98a18c; font: 12px/1.8 'STSong', 'SimSun', serif; text-align: center; letter-spacing: 1px; }
 /* Size containment lets the rail follow the paper's height, never lengthen it. */
 .practice-workspace .practice-examples-side { grid-area: examples; contain: size; align-self: stretch; width: 100%; max-width: 320px; min-width: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c7cebd transparent; padding: 0 14px 0 22px; border-left: 1px solid #dfe3d6; }
+.practice-workspace .practice-similar-side { grid-area: similar; contain: size; align-self: stretch; justify-self: end; width: 100%; max-width: 320px; min-width: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c7cebd transparent; padding: 0 22px 0 8px; border-right: 1px solid #dfe3d6; }
+.practice-workspace .practice-similar-side > .similar-words { margin: 0; padding-bottom: 0; border-bottom: 0; }
 .practice-workspace .word-examples { margin: 0; padding: 0; border: 0; }
 .practice-workspace .word-examples-heading { position: sticky; top: 0; z-index: 1; min-height: 39px; background: var(--background); color: #7d8a6e; font-size: 10px; }
 .practice-workspace .word-examples-heading button { width: 32px; min-height: 32px; display: grid; place-items: center; }
@@ -147,8 +149,9 @@
 .practice-workspace .feedback { border-top-color: #e0e3d7; }
 
 @media (max-width: 1279px) {
-  .practice-workspace { max-width: 680px; grid-template-columns: minmax(0, 1fr); grid-template-areas: "toolbar" "progress" "track" "paper" "review" "examples" "note"; }
+  .practice-workspace { max-width: 680px; grid-template-columns: minmax(0, 1fr); grid-template-areas: "toolbar" "progress" "track" "paper" "review" "similar" "examples" "note"; }
   .practice-workspace .practice-examples-side { contain: none; max-width: none; margin-top: 24px; padding: 0; border-left: 0; border-top: 1px solid #dfe3d6; overflow: visible; }
+  .practice-workspace .practice-similar-side { contain: none; max-width: none; margin-top: 24px; padding: 0; border-right: 0; border-top: 1px solid #dfe3d6; overflow: visible; }
   .practice-workspace .word-examples-heading { position: static; min-height: 48px; }
 }
 @media (max-width: 760px) {
