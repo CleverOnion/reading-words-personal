@@ -203,3 +203,20 @@
   .app-shell.is-practicing .top-navigation { min-width: 0; gap: 0; }
   .app-shell.is-practicing .top-navigation button { padding-inline: 6px; gap: 4px; font-size: 11px; }
 }
+
+/* Motion never delays the answer/save path; the next word is already mounted. */
+@keyframes recall-word-arrive { from { opacity: .55; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes recall-content-arrive { from { opacity: .25; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.practice-workspace .recall-word-card > span { animation: recall-word-arrive 180ms cubic-bezier(.2,.75,.25,1) both; }
+.practice-workspace .recall-card,
+.practice-workspace .recall-word-tools { animation: recall-content-arrive 200ms cubic-bezier(.2,.75,.25,1) both; }
+.practice-workspace .practice-similar-side,
+.practice-workspace .practice-examples-side { animation: recall-content-arrive 220ms cubic-bezier(.2,.75,.25,1) both; }
+.practice-workspace .recall-actions button { transition: background-color 140ms ease, border-color 140ms ease, transform 100ms ease; }
+.practice-workspace .recall-actions button:active:not(:disabled) { transform: scale(.98); }
+.practice-workspace .recall-word-card { transition: color 140ms ease; }
+.practice-workspace .similar-distinction[open] p { animation: recall-content-arrive 160ms ease-out both; }
+.practice-workspace .similar-speak { transition: color 140ms ease, background-color 140ms ease; }
+@media (prefers-reduced-motion: reduce) {
+ .practice-workspace *, .practice-workspace *::before, .practice-workspace *::after { animation: none !important; transition: none !important; }
+}

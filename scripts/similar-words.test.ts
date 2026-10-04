@@ -44,6 +44,29 @@ test('curated relationships never introduce candidates outside the allowed dicti
  assert.ok(!lookup('affect').some(e=>e.word==='unlisted'));
  assert.equal(lookup('effect')[0].word,'affect');
 });
+
+test('unambiguous inflections inherit confusable pairs without showing their own lemma',()=>{
+ const lookup=createSimilarWordLookup(entries,[{words:['adapt','adopt'],note:'适应与采用'}],Infinity);
+ assert.ok(lookup('adopted').some(e=>e.word==='adapt'&&e.kind==='confusable'));
+ assert.ok(!lookup('adopted').some(e=>e.word==='adopt'));
+ assert.ok(lookup('adopts').some(e=>e.word==='adapt'));
+ assert.deepEqual(lookup('adopted'),lookup('adopted'));
+});
+
+test('expanded confusable groups cover meaning and spelling distinctions',()=>{
+ const syllabus=JSON.parse(readFileSync(new URL('../data/syllabus-vocabulary.json',import.meta.url),'utf8'));
+ const lookup=createSimilarWordLookup(syllabus,confusableGroups,Infinity);
+ for(const [word,other] of [['device','devise'],['contract','contact'],['trail','trial'],['strategy','tactic'],['substitute','replace'],['sight','cite']]){
+  assert.ok(lookup(word).some(e=>e.word===other&&e.kind==='confusable'&&e.note),`${word}/${other}`);
+ }
+});
+
+test('banded search preserves transpositions and rejects distant candidates',()=>{
+ const lookup=createSimilarWordLookup(['trail','trial','trails','trivial','weather','whether','international'].map(word=>({id:word,word,meaning:word})),[],Infinity);
+ assert.ok(lookup('trail').some(e=>e.word==='trial'));
+ assert.ok(!lookup('trail').some(e=>e.word==='trails'||e.word==='international'));
+ assert.ok(lookup('weather').some(e=>e.word==='whether'));
+});
 test('deduplicates headwords, retains source meanings and limits results',()=>{
  const lookup=createSimilarWordLookup([...entries,{id:'duplicate',word:'patient',meaning:'another sense'},...['mail','sail','tail','fail','nail'].map(word=>({id:word,word,meaning:'原始释义'}))]);
  assert.equal(lookup('patent').filter(w=>w.word==='patient').length,1);
