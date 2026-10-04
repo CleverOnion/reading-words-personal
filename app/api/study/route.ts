@@ -13,7 +13,7 @@ export async function GET(request:Request){
   const s=await getSession(id,uid);if(!s)return fail('未找到这次练习。',404);
   const items=await answers(id);const queue:string[]=JSON.parse(s.queue);const index=items.length;
   const word=byId.get(queue[index]);
-  return json({id:s.id,title:s.title,studyFormat:s.study_format||'choice',status:s.status,total:queue.length,index,correct:items.filter(a=>a.correct).length,
+  return json({id:s.id,title:s.title,studyFormat:s.study_format||'choice',status:s.status,total:queue.length,index,correct:items.filter(a=>a.correct).length,queue:s.study_format==='recall'?queue:undefined,
    answers:items.map(a=>({position:a.position,wordId:a.word_id,choice:a.choice,correct:!!a.correct})),
    question:s.status==='active'&&word?{id:word.id,word:word.word,page:word.page,options:s.study_format==='recall'?[]:optionsFor(word.id,id,index)}:null});
  }catch(e){console.error('Study load failed',e);return fail('学习记录暂时无法加载，请稍后重试。',503);}
