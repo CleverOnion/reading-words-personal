@@ -1,6 +1,6 @@
 import { progressFromAnswers } from './study.ts';
 
-export type StatisticsAttempt = { wordId: string; correct: boolean; at: number; duration: number };
+export type StatisticsAttempt = { wordId: string; correct: boolean; at: number; duration: number; rating?:'forgotten'|'fuzzy'|'remembered' };
 export type StatisticsSession = { mode: string; status: string; passageId: string | null };
 export type StatisticsPassage = { id: string; year: number; text: number; words: readonly { id: string }[] };
 export type StatisticsInput = {

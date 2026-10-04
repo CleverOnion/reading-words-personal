@@ -1,3 +1,4 @@
+import {answerRating,isRecallRating,scheduleRecall,reviseRecallQueue} from '../../../lib/recall-policy';
 import {db,state,getSession,answers} from '../../../lib/server-store';
 import {byId,passages,optionsFor,shuffle} from '../../../lib/vocabulary';
 import {findResumableSession} from '../../../lib/session-policy';
@@ -14,7 +15,7 @@ export async function GET(request:Request){
   const items=await answers(id);const queue:string[]=JSON.parse(s.queue);const index=items.length;
   const word=byId.get(queue[index]);
   return json({id:s.id,title:s.title,studyFormat:s.study_format||'choice',status:s.status,total:queue.length,index,correct:items.filter(a=>a.correct).length,queue:s.study_format==='recall'?queue:undefined,
-   answers:items.map(a=>({position:a.position,wordId:a.word_id,choice:a.choice,correct:!!a.correct})),
+   answers:items.map(a=>({position:a.position,wordId:a.word_id,choice:a.choice,correct:!!a.correct,rating:answerRating(a)})),
    question:s.status==='active'&&word?{id:word.id,word:word.word,page:word.page,options:s.study_format==='recall'?[]:optionsFor(word.id,id,index)}:null});
  }catch(e){console.error('Study load failed',e);return fail('学习记录暂时无法加载，请稍后重试。',503);}
 }
@@ -76,12 +77,18 @@ export async function POST(request:Request){
   if(body.action==='revise'){
    if(s.study_format!=='recall')return fail('仅支持修改自评记录。');
    const queue:string[]=JSON.parse(s.queue),pos=body.position;
-   if(!Number.isInteger(pos)||Number(pos)<0||Number(pos)>=queue.length||typeof body.correct!=='boolean')return fail('修改参数无效。');
+   if(!Number.isInteger(pos)||Number(pos)<0||Number(pos)>=queue.length||(!isRecallRating(body.rating)&&typeof body.correct!=='boolean'))return fail('修改参数无效。');
    const w=byId.get(queue[Number(pos)]);
    if(!w||body.wordId!==w.id)return fail('词条不匹配，请重新打开回看。',409);
-   const prior=(await answers(s.id)).find(a=>a.position===pos);
+   const items=await answers(s.id);
+   const prior=items.find(a=>a.position===pos);
    if(!prior)return fail('只能修改已经背过的词。',409);
-   await db().prepare('UPDATE attempts SET correct = ?, choice = ? WHERE session_id = ? AND position = ? AND word_id = ?').bind(Number(body.correct),body.correct?w.meaning:null,s.id,pos,w.id).run();
+   const rating=isRecallRating(body.rating)?body.rating:body.correct?'remembered':'forgotten';
+   const changed=s.status==='active'?reviseRecallQueue(queue,items.length,Number(pos),rating):queue;
+   await db().batch([
+    db().prepare('UPDATE attempts SET correct = ?, choice = ?, rating = ? WHERE session_id = ? AND position = ? AND word_id = ?').bind(Number(rating==='remembered'),rating==='remembered'?w.meaning:null,rating,s.id,pos,w.id),
+    db().prepare("UPDATE sessions SET queue = ?, updated_at = ?, status = ?, finished_at = ? WHERE id = ? AND user_id = ? AND queue = ? AND (SELECT COUNT(*) FROM attempts WHERE session_id = ?) = ?").bind(JSON.stringify(changed),Date.now(),s.status==='active'&&items.length>=changed.length?'completed':s.status,s.status==='active'&&items.length>=changed.length?Date.now():s.finished_at,s.id,uid,s.queue,s.id,items.length)
+   ]);
    return json({ok:true});
   }
   if(body.action!=='answer')return fail('未知操作。');
@@ -90,17 +97,26 @@ export async function POST(request:Request){
   const index=Number(pos);const w=byId.get(queue[index])!;
   if(body.wordId!==undefined&&body.wordId!==w.id)return fail('题目已切换，请刷新后从已保存进度继续。',409);
   const previous=await answers(s.id);const replay=previous.find(a=>a.position===index);
-  if(replay)return json({correct:!!replay.correct,meaning:w.meaning,choice:replay.choice,done:index===queue.length-1});
+  if(replay)return json({correct:!!replay.correct,meaning:w.meaning,choice:replay.choice,rating:answerRating(replay),queue,done:s.status==='completed'});
   if(s.status!=='active'||index!==previous.length)return fail('练习进度已更新，请重新打开这次练习。',409);
-  if(s.study_format==='recall'&&body.choice!==null&&body.choice!==w.meaning)return fail('自评请选择记得或不记得。');
+  if(body.rating!==undefined&&!isRecallRating(body.rating))return fail('自评档位无效。');
+  if(s.study_format==='recall'&&body.rating===undefined&&body.choice!==null&&body.choice!==w.meaning)return fail('自评请选择忘记、有点模糊或没忘记。');
   if(s.study_format!=='recall'&&body.choice!==null&&(typeof body.choice!=='string'||!optionsFor(w.id,s.id,index).includes(body.choice)))return fail('答案选项无效。');
-  const correct=body.choice===w.meaning;const now=Date.now();
+  const rating=s.study_format==='recall'?(isRecallRating(body.rating)?body.rating:body.choice===w.meaning?'remembered':'forgotten'):null;
+  const correct=rating?rating==='remembered':body.choice===w.meaning;
+  const choice=rating?(correct?w.meaning:null):body.choice as string|null;
+  const nextQueue=rating?scheduleRecall(queue,index,rating):queue;
+  const now=Date.now();
   const duration=typeof body.duration==='number'&&Number.isFinite(body.duration)?Math.max(0,Math.min(300000,Math.round(body.duration))):0;
-  const batch=[db().prepare('INSERT INTO attempts (session_id,position,word_id,choice,correct,answered_at,duration) VALUES (?,?,?,?,?,?,?) ON CONFLICT(session_id,position) DO NOTHING').bind(s.id,index,w.id,body.choice as string|null,Number(correct),now,duration)];
-  batch.push(db().prepare('UPDATE sessions SET updated_at = MAX(updated_at, ?) WHERE id = ? AND user_id = ?').bind(now,s.id,uid));
-  if(index===queue.length-1)batch.push(db().prepare("UPDATE sessions SET status = 'completed', finished_at = ? WHERE id = ? AND user_id = ? AND (SELECT COUNT(*) FROM attempts WHERE session_id = ?) = ?").bind(now,s.id,uid,s.id,queue.length));
+  const batch=[db().prepare(`INSERT INTO attempts (session_id,position,word_id,choice,correct,rating,answered_at,duration)
+   SELECT ?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM sessions WHERE id=? AND user_id=? AND status='active' AND queue=?)
+   AND (SELECT COUNT(*) FROM attempts WHERE session_id=?)=? ON CONFLICT(session_id,position) DO NOTHING`).bind(s.id,index,w.id,choice,Number(correct),rating,now,duration,s.id,uid,s.queue,s.id,index)];
+  batch.push(db().prepare(`UPDATE sessions SET queue=?,updated_at=MAX(updated_at,?),status=?,finished_at=?
+   WHERE id=? AND user_id=? AND queue=? AND EXISTS(SELECT 1 FROM attempts WHERE session_id=? AND position=? AND correct=? AND choice IS ? AND rating IS ?)`)
+   .bind(JSON.stringify(nextQueue),now,index===nextQueue.length-1?'completed':'active',index===nextQueue.length-1?now:null,s.id,uid,s.queue,s.id,index,Number(correct),choice,rating));
   await db().batch(batch);
-  const saved=await db().prepare('SELECT correct, choice FROM attempts WHERE session_id = ? AND position = ?').bind(s.id,index).first<{correct:number;choice:string|null}>();
-  return json({correct:!!saved!.correct,meaning:w.meaning,choice:saved!.choice,done:index===queue.length-1});
+  const saved=await db().prepare('SELECT a.correct,a.choice,a.rating,s.queue,s.status FROM attempts a JOIN sessions s ON s.id=a.session_id WHERE a.session_id=? AND a.position=?').bind(s.id,index).first<{correct:number;choice:string|null;rating:string|null;queue:string;status:string}>();
+  if(!saved)return fail('练习进度已更新，请重新打开这次练习。',409);
+  return json({correct:!!saved.correct,meaning:w.meaning,choice:saved.choice,rating:answerRating(saved),queue:JSON.parse(saved.queue),done:saved.status==='completed'});
  }catch(e){console.error('Study save failed',e);return fail('本次操作未确认保存，请重试；同一道题不会重复计数。',503);}
 }

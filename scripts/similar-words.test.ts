@@ -56,7 +56,7 @@ test('unambiguous inflections inherit confusable pairs without showing their own
 test('expanded confusable groups cover meaning and spelling distinctions',()=>{
  const syllabus=JSON.parse(readFileSync(new URL('../data/syllabus-vocabulary.json',import.meta.url),'utf8'));
  const lookup=createSimilarWordLookup(syllabus,confusableGroups,Infinity);
- for(const [word,other] of [['device','devise'],['contract','contact'],['trail','trial'],['strategy','tactic'],['substitute','replace'],['sight','cite']]){
+ for(const [word,other] of [['device','devise'],['contract','contact'],['trail','trial'],['strategy','tactic'],['substitute','replace'],['sight','cite'],['consensus','census'],['stimulate','simulate'],['abundant','redundant'],['unanimous','anonymous'],['immigration','emigrate']]){
   assert.ok(lookup(word).some(e=>e.word===other&&e.kind==='confusable'&&e.note),`${word}/${other}`);
  }
 });

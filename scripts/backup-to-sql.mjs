@@ -18,8 +18,9 @@ const quote=v=>{
   throw new Error('Invalid backup value');
 };
 let sql='-- Reading Notes backup SHA-256: '+createHash('sha256').update(raw).digest('hex')+'\n';
-const columns={sessions:['id','user_id','title','mode','study_format','queue','started_at','finished_at','status','updated_at'],attempts:['session_id','position','word_id','choice','correct','answered_at','duration'],saved_words:['user_id','word_id','saved_at']};
+const columns={sessions:['id','user_id','title','mode','study_format','queue','started_at','finished_at','status','updated_at'],attempts:['session_id','position','word_id','choice','correct','rating','answered_at','duration'],saved_words:['user_id','word_id','saved_at']};
 for(const [table,fields] of Object.entries(columns))for(const row of backup[table]){
+  if(table==='attempts'){row.rating??=null;if(row.rating!==null&&!['forgotten','fuzzy','remembered'].includes(row.rating))throw new Error('Invalid rating');}
   if(table==='sessions'){
     row.study_format??='choice';
     if(!['choice','recall'].includes(row.study_format))throw new Error('Invalid study format');

@@ -6,7 +6,7 @@ export const sessions=sqliteTable('sessions',{
 },t=>[index('idx_sessions_user_started').on(t.userId,t.startedAt)]);
 export const attempts=sqliteTable('attempts',{
  sessionId:text('session_id').notNull().references(()=>sessions.id),position:integer('position').notNull(),
- wordId:text('word_id').notNull(),choice:text('choice'),correct:integer('correct').notNull(),
+ wordId:text('word_id').notNull(),choice:text('choice'),rating:text('rating'),correct:integer('correct').notNull(),
  answeredAt:integer('answered_at').notNull(),duration:integer('duration').notNull(),
 },t=>[primaryKey({columns:[t.sessionId,t.position]})]);
 export const savedWords=sqliteTable('saved_words',{

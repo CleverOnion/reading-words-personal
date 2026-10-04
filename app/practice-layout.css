@@ -220,3 +220,10 @@
 @media (prefers-reduced-motion: reduce) {
  .practice-workspace *, .practice-workspace *::before, .practice-workspace *::after { animation: none !important; transition: none !important; }
 }
+
+.practice-workspace .recall-actions.recall-three { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; }
+.practice-workspace .recall-actions .recall-fuzzy { background:#f4efdf; color:#8a7545; border-color:#ded4b9; }
+.practice-workspace .recall-actions .recall-fuzzy:hover:not(:disabled) { background:#ebe2c9; border-color:#c5b78d; }
+.return-tag { display:inline-block; margin-left:10px; padding:3px 7px; background:#ecf0e3; color:#6a7d50; font-size:10px; vertical-align:middle; border-radius:3px; }
+.result-recall-summary { text-align:center; font-size:12px; }
+@media(max-width:760px){.practice-workspace .recall-actions.recall-three { gap:6px; }.practice-workspace .recall-actions.recall-three button { padding:10px 4px; font-size:12px; gap:4px; }.practice-workspace .recall-actions.recall-three button svg { display:none; }.practice-workspace .practice-footnote { font-size:10px; letter-spacing:0; }}

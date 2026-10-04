@@ -1,3 +1,4 @@
+import {confusableAuditExtra} from './confusable-audit-extra.ts';
 export type ConfusableGroup={words:string[];note:string};
 // Explicit distinctions take priority over automatic spelling distance.
 // All returned candidates must still be present in the syllabus dictionary.
@@ -174,4 +175,6 @@ export const confusableGroups:ConfusableGroup[]=[
  {words:['classic','classical'],note:'classic：经典的、典型的；classical：古典的，也可指传统理论体系的。'},
  {words:['appointment','disappointment'],note:'appointment：预约、任命；disappointment：失望。'},
  {words:['availability','accessibility'],note:'availability：是否有供应、可获得；accessibility：是否便于接近或使用。'},
+ ...confusableAuditExtra,
 ];
+
