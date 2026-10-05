@@ -31,3 +31,39 @@ test('all recent meanings are usable Chinese strings',()=>{
   assert.ok(word.meaning.length>=1,`${word.id} has an empty meaning`);
  }
 });
+
+test('recent meanings contain no OCR debris or truncated brackets',()=>{
+ for(const p of recent)for(const w of p.words){
+  assert.doesNotMatch(w.meaning,/[\uFFFD\u0000-\u001f]|[（(]\s*[）)]|^[’'“”]|^的[；，]/u,w.id);
+  const stack=[];
+  for(const c of w.meaning){if(c==='（'||c==='(')stack.push(c);if(c==='）'||c===')')assert.equal(stack.pop(),c==='）'?'（':'(',w.id);}
+  assert.equal(stack.length,0,`${w.id} truncated definition`);
+ }
+});
+
+test('cross-row and missing major senses are corrected',()=>{
+ const meaning=(id,word)=>recent.find(p=>p.id===id).words.find(w=>w.word===word).meaning;
+ assert.match(meaning('2025-3','piracy'),/盗版/);
+ assert.doesNotMatch(meaning('2025-3','piracy'),/上传/);
+ assert.match(meaning('2025-3','paramount'),/至关重要/);
+ assert.match(meaning('2026-1','domestication'),/驯化/);
+ assert.match(meaning('2026-1','sequence'),/序列/);
+ assert.match(meaning('2026-1','pinpoint'),/精确确定/);
+ assert.match(meaning('2026-4','severe'),/严重/);
+ assert.match(meaning('2025-1','commission'),/v\..*n\./);
+ assert.doesNotMatch(meaning('2025-1','desert'),/罕见/);
+});
+
+test('2026 Text 3 follows photographed passage and option boundaries',()=>{
+ const p=recent.find(p=>p.id==='2026-3');
+ for(const word of ['sheer','shrink','broadcast','broom'])assert.equal(p.words.find(w=>w.word===word).section,'passage',word);
+ for(const word of ['ingenuity','be accessible to','hum'])assert.equal(p.words.find(w=>w.word===word).section,'options',word);
+});
+
+test('reviewed import source and displayed data stay identical',async()=>{
+ const {default:source}=await import('../data/recent-reading-vocabulary.json',{with:{type:'json'}});
+ assert.deepEqual(recent,source);
+ assert.equal(recent.flatMap(p=>p.words).length,368);
+ const ingenuity=recent.find(p=>p.id==='2025-2').words.find(w=>w.word==='ingenuity');
+ assert.equal(ingenuity.section,'passage');assert.equal(ingenuity.page,192);
+});

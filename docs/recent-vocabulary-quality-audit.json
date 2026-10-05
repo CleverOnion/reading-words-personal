@@ -1,0 +1,5898 @@
+{
+  "date": "2026-10-05",
+  "scope": "2025—2026 年阅读理解正文与选项；用户提供的 190—196、199—204 页照片",
+  "reviewedExistingEntries": 367,
+  "addedEntries": [
+    {
+      "id": "2025-2-kk-063",
+      "word": "ingenuity",
+      "meaning": "n. 创造力；足智多谋；心灵手巧",
+      "page": 192,
+      "source": "kongka",
+      "section": "passage"
+    }
+  ],
+  "changedMeanings": 104,
+  "changes": [
+    {
+      "id": "2025-1-kk-006",
+      "word": "commission",
+      "before": {
+        "id": "2025-1-kk-006",
+        "word": "commission",
+        "meaning": "委托；任命委员会；佣金；犯罪",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-006",
+        "word": "commission",
+        "meaning": "v. 委托；任命 n. 委员会；佣金；（罪行等的）实施",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-012",
+      "word": "pupil",
+      "before": {
+        "id": "2025-1-kk-012",
+        "word": "pupil",
+        "meaning": "（尤指）小学生：学生；瞳孔",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-012",
+        "word": "pupil",
+        "meaning": "n. （尤指）小学生；学生；瞳孔",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-013",
+      "word": "pedagogy",
+      "before": {
+        "id": "2025-1-kk-013",
+        "word": "pedagogy",
+        "meaning": "教学法：教育学",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-013",
+        "word": "pedagogy",
+        "meaning": "n. 教学法；教育学",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-014",
+      "word": "previously",
+      "before": {
+        "id": "2025-1-kk-014",
+        "word": "previously",
+        "meaning": "以前：原先",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-014",
+        "word": "previously",
+        "meaning": "adv. 以前；原先",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-015",
+      "word": "shipwreck",
+      "before": {
+        "id": "2025-1-kk-015",
+        "word": "shipwreck",
+        "meaning": "海难；失事的船使遭遇海难；使船只失事",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-015",
+        "word": "shipwreck",
+        "meaning": "n. 海难；失事的船 v. 使遭遇海难；使船只失事",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-016",
+      "word": "accompany",
+      "before": {
+        "id": "2025-1-kk-016",
+        "word": "accompany",
+        "meaning": "与相伴",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-016",
+        "word": "accompany",
+        "meaning": "v. 陪伴；伴随；与……相伴",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-017",
+      "word": "exposed to",
+      "before": {
+        "id": "2025-1-kk-017",
+        "word": "exposed to",
+        "meaning": "接触到",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-017",
+        "word": "exposed to",
+        "meaning": "接触到",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-018",
+      "word": "split into",
+      "before": {
+        "id": "2025-1-kk-018",
+        "word": "split into",
+        "meaning": "划分成",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-018",
+        "word": "split into",
+        "meaning": "划分成",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-019",
+      "word": "drama-based",
+      "before": {
+        "id": "2025-1-kk-019",
+        "word": "drama-based",
+        "meaning": "基于戏剧的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-019",
+        "word": "drama-based",
+        "meaning": "基于戏剧的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-020",
+      "word": "peer-reviewed",
+      "before": {
+        "id": "2025-1-kk-020",
+        "word": "peer-reviewed",
+        "meaning": "经过同行评审的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-020",
+        "word": "peer-reviewed",
+        "meaning": "经过同行评审的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-021",
+      "word": "sophisticated",
+      "before": {
+        "id": "2025-1-kk-021",
+        "word": "sophisticated",
+        "meaning": "复杂精妙的：高级的：尖端的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-021",
+        "word": "sophisticated",
+        "meaning": "adj. 复杂精妙的；高级的；尖端的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-022",
+      "word": "desert",
+      "before": {
+        "id": "2025-1-kk-022",
+        "word": "desert",
+        "meaning": "罕见的：荒芜的：荒无人烟的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-022",
+        "word": "desert",
+        "meaning": "adj. 荒芜的；荒无人烟的 n. 沙漠 v. 抛弃；离弃",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-023",
+      "word": "cliché",
+      "before": {
+        "id": "2025-1-kk-023",
+        "word": "cliché",
+        "meaning": "陈词滥调：老生常谈",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-023",
+        "word": "cliché",
+        "meaning": "n. 陈词滥调；老生常谈",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-024",
+      "word": "palm",
+      "before": {
+        "id": "2025-1-kk-024",
+        "word": "palm",
+        "meaning": "棕榈；棕树：手心把藏于掌心",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-024",
+        "word": "palm",
+        "meaning": "n. 棕榈；棕榈树；手掌 v. 把……藏于掌心",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-025",
+      "word": "expansive",
+      "before": {
+        "id": "2025-1-kk-025",
+        "word": "expansive",
+        "meaning": "广泛的：广阔的：膨胀的；开朗的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-025",
+        "word": "expansive",
+        "meaning": "adj. 广泛的；广阔的；膨胀的；开朗健谈的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-026",
+      "word": "broad",
+      "before": {
+        "id": "2025-1-kk-026",
+        "word": "broad",
+        "meaning": "广阔的；涉及各种各样的；概括的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-026",
+        "word": "broad",
+        "meaning": "广阔的；涉及各种各样的；概括的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-027",
+      "word": "atmospheric",
+      "before": {
+        "id": "2025-1-kk-027",
+        "word": "atmospheric",
+        "meaning": "’气候的；大气（层）的；令人激动的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-027",
+        "word": "atmospheric",
+        "meaning": "adj. 大气的；大气层的；有独特氛围的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-028",
+      "word": "evident",
+      "before": {
+        "id": "2025-1-kk-028",
+        "word": "evident",
+        "meaning": "显然的，清楚的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-028",
+        "word": "evident",
+        "meaning": "显然的，清楚的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-029",
+      "word": "embed",
+      "before": {
+        "id": "2025-1-kk-029",
+        "word": "embed",
+        "meaning": "使融入，把牢牢地嵌入：使扎根随军记者",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-029",
+        "word": "embed",
+        "meaning": "v. 使嵌入；把……牢牢融入；使扎根 n. 随军记者",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-030",
+      "word": "be replicated with",
+      "before": {
+        "id": "2025-1-kk-030",
+        "word": "be replicated with",
+        "meaning": "用……复制；通过……重现",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-030",
+        "word": "be replicated with",
+        "meaning": "用……复制；通过……重现",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-031",
+      "word": "dramatist",
+      "before": {
+        "id": "2025-1-kk-031",
+        "word": "dramatist",
+        "meaning": "剧作家；编剧；戏曲家",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-031",
+        "word": "dramatist",
+        "meaning": "剧作家；编剧；戏曲家",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-032",
+      "word": "massive",
+      "before": {
+        "id": "2025-1-kk-032",
+        "word": "massive",
+        "meaning": "大规模的；大量的：结实的：魁梧的",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-032",
+        "word": "massive",
+        "meaning": "adj. 大规模的；大量的；结实的；魁梧的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-033",
+      "word": "expansion",
+      "before": {
+        "id": "2025-1-kk-033",
+        "word": "expansion",
+        "meaning": "’（)拓展；扩大：膨胀",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-033",
+        "word": "expansion",
+        "meaning": "n. 拓展；扩大；膨胀",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-034",
+      "word": "put oneself in different shoes",
+      "before": {
+        "id": "2025-1-kk-034",
+        "word": "put oneself in different shoes",
+        "meaning": "设身处地为他人着想",
+        "page": 190,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-1-kk-034",
+        "word": "put oneself in different shoes",
+        "meaning": "设身处地为他人着想",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-1-kk-035",
+      "word": "divide",
+      "before": {
+        "id": "2025-1-kk-035",
+        "word": "divide",
+        "meaning": "划分；分开；分配；除以",
+        "page": 190,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-1-kk-035",
+        "word": "divide",
+        "meaning": "划分；分开；分配；除以",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-1-kk-036",
+      "word": "enhance",
+      "before": {
+        "id": "2025-1-kk-036",
+        "word": "enhance",
+        "meaning": "增强；提高；改善",
+        "page": 190,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-1-kk-036",
+        "word": "enhance",
+        "meaning": "增强；提高；改善",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-1-kk-037",
+      "word": "stimulate",
+      "before": {
+        "id": "2025-1-kk-037",
+        "word": "stimulate",
+        "meaning": "刺激；激发；促进",
+        "page": 190,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-1-kk-037",
+        "word": "stimulate",
+        "meaning": "刺激；激发；促进",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-1-kk-038",
+      "word": "omission",
+      "before": {
+        "id": "2025-1-kk-038",
+        "word": "omission",
+        "meaning": "省略；遗漏",
+        "page": 190,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-1-kk-038",
+        "word": "omission",
+        "meaning": "省略；遗漏",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-1-kk-039",
+      "word": "centralize",
+      "before": {
+        "id": "2025-1-kk-039",
+        "word": "centralize",
+        "meaning": "集中；使集权",
+        "page": 190,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-1-kk-039",
+        "word": "centralize",
+        "meaning": "集中；使集权",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-1-kk-040",
+      "word": "be reluctant to",
+      "before": {
+        "id": "2025-1-kk-040",
+        "word": "be reluctant to",
+        "meaning": "不愿意做……",
+        "page": 190,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-1-kk-040",
+        "word": "be reluctant to",
+        "meaning": "不愿意做……",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-2-kk-001",
+      "word": "decrease",
+      "before": {
+        "id": "2025-2-kk-001",
+        "word": "decrease",
+        "meaning": "减少；降低减少（量）降低",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-001",
+        "word": "decrease",
+        "meaning": "v. 减少；降低 n. 减少；减少量",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-004",
+      "word": "intensive",
+      "before": {
+        "id": "2025-2-kk-004",
+        "word": "intensive",
+        "meaning": "密集的：十分细致的；加强词意的加强",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-004",
+        "word": "intensive",
+        "meaning": "adj. 密集的；集中的；加强的；十分细致的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-005",
+      "word": "modelling",
+      "before": {
+        "id": "2025-2-kk-005",
+        "word": "modelling",
+        "meaning": "建模；模特（向顾客）穿戴展示；将做成才",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-005",
+        "word": "modelling",
+        "meaning": "n. 建模；模型制作；模特展示",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-006",
+      "word": "sustainable",
+      "before": {
+        "id": "2025-2-kk-006",
+        "word": "sustainable",
+        "meaning": "可持续的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-006",
+        "word": "sustainable",
+        "meaning": "可持续的",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-007",
+      "word": "scale back",
+      "before": {
+        "id": "2025-2-kk-007",
+        "word": "scale back",
+        "meaning": "缩小规模；削减",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-007",
+        "word": "scale back",
+        "meaning": "缩小规模；削减",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-008",
+      "word": "cut back",
+      "before": {
+        "id": "2025-2-kk-008",
+        "word": "cut back",
+        "meaning": "减少；削减",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-008",
+        "word": "cut back",
+        "meaning": "减少；削减",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-009",
+      "word": "in an effort to",
+      "before": {
+        "id": "2025-2-kk-009",
+        "word": "in an effort to",
+        "meaning": "为了；努力做……",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-009",
+        "word": "in an effort to",
+        "meaning": "为了；努力做……",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-010",
+      "word": "unarguable",
+      "before": {
+        "id": "2025-2-kk-010",
+        "word": "unarguable",
+        "meaning": "adj. 无可争辩的，不容置疑的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-010",
+        "word": "unarguable",
+        "meaning": "adj. 无可争辩的，不容置疑的",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-011",
+      "word": "laboratory",
+      "before": {
+        "id": "2025-2-kk-011",
+        "word": "laboratory",
+        "meaning": "实验室",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-011",
+        "word": "laboratory",
+        "meaning": "实验室",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-012",
+      "word": "satellite",
+      "before": {
+        "id": "2025-2-kk-012",
+        "word": "satellite",
+        "meaning": "卫星",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-012",
+        "word": "satellite",
+        "meaning": "卫星",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-013",
+      "word": "pulse",
+      "before": {
+        "id": "2025-2-kk-013",
+        "word": "pulse",
+        "meaning": "搏动：（使）脉动",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-013",
+        "word": "pulse",
+        "meaning": "n. 脉搏；脉冲；（事物的）动态、状况 v. 搏动；（使）脉动",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-014",
+      "word": "construction",
+      "before": {
+        "id": "2025-2-kk-014",
+        "word": "construction",
+        "meaning": "建造；建设",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-014",
+        "word": "construction",
+        "meaning": "建造；建设",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-015",
+      "word": "unrelenting",
+      "before": {
+        "id": "2025-2-kk-015",
+        "word": "unrelenting",
+        "meaning": "不懈的；持续强烈的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-015",
+        "word": "unrelenting",
+        "meaning": "不懈的；持续强烈的",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-016",
+      "word": "appetite",
+      "before": {
+        "id": "2025-2-kk-016",
+        "word": "appetite",
+        "meaning": "欲望；食欲；兴趣",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-016",
+        "word": "appetite",
+        "meaning": "欲望；食欲；兴趣",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-017",
+      "word": "mushrooming",
+      "before": {
+        "id": "2025-2-kk-017",
+        "word": "mushrooming",
+        "meaning": "迅速增长（的），迅速蔓延（的）",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-017",
+        "word": "mushrooming",
+        "meaning": "迅速增长（的），迅速蔓延（的）",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-018",
+      "word": "agency",
+      "before": {
+        "id": "2025-2-kk-018",
+        "word": "agency",
+        "meaning": "署，机构：代理；作用，力量",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-018",
+        "word": "agency",
+        "meaning": "n. 机构；署；代理机构；作用；力量",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-019",
+      "word": "consume",
+      "before": {
+        "id": "2025-2-kk-019",
+        "word": "consume",
+        "meaning": "消耗，花费：吃，喝；使充满（某种情绪）",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-019",
+        "word": "consume",
+        "meaning": "v. 消耗；花费；吃；喝；使充满（某种情绪）",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-020",
+      "word": "however",
+      "before": {
+        "id": "2025-2-kk-020",
+        "word": "however",
+        "meaning": "（)然而，可是无论以何种方式",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-020",
+        "word": "however",
+        "meaning": "adv. 然而；可是；无论如何；无论多么",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-021",
+      "word": "price",
+      "before": {
+        "id": "2025-2-kk-021",
+        "word": "price",
+        "meaning": "代价；价格给定价",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-021",
+        "word": "price",
+        "meaning": "n. 代价；价格 v. 给……定价",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-022",
+      "word": "emission",
+      "before": {
+        "id": "2025-2-kk-022",
+        "word": "emission",
+        "meaning": "排放；排放物",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-022",
+        "word": "emission",
+        "meaning": "排放；排放物",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-023",
+      "word": "carbon dioxide",
+      "before": {
+        "id": "2025-2-kk-023",
+        "word": "carbon dioxide",
+        "meaning": "二氧化碳",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-023",
+        "word": "carbon dioxide",
+        "meaning": "二氧化碳",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-024",
+      "word": "atmosphere",
+      "before": {
+        "id": "2025-2-kk-024",
+        "word": "atmosphere",
+        "meaning": "（)大气层，空气；气氛，氛围",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-024",
+        "word": "atmosphere",
+        "meaning": "n. 大气层；空气；气氛；氛围",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-025",
+      "word": "technological",
+      "before": {
+        "id": "2025-2-kk-025",
+        "word": "technological",
+        "meaning": "技术性的，科技的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-025",
+        "word": "technological",
+        "meaning": "技术性的，科技的",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-026",
+      "word": "ultimately",
+      "before": {
+        "id": "2025-2-kk-026",
+        "word": "ultimately",
+        "meaning": "归根结底，根本上；最终",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-026",
+        "word": "ultimately",
+        "meaning": "归根结底，根本上；最终",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-027",
+      "word": "bring down",
+      "before": {
+        "id": "2025-2-kk-027",
+        "word": "bring down",
+        "meaning": "降低；使下降",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-027",
+        "word": "bring down",
+        "meaning": "降低；使下降",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-028",
+      "word": "safeguard",
+      "before": {
+        "id": "2025-2-kk-028",
+        "word": "safeguard",
+        "meaning": "保护；保障保障条款；保护措施",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-028",
+        "word": "safeguard",
+        "meaning": "v. 保护；保障 n. 保障条款；保护措施",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-029",
+      "word": "complex",
+      "before": {
+        "id": "2025-2-kk-029",
+        "word": "complex",
+        "meaning": "复杂的，难懂的建筑群；情绪，情结",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-029",
+        "word": "complex",
+        "meaning": "adj. 复杂的；难懂的 n. 建筑群；情结",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-030",
+      "word": "lend",
+      "before": {
+        "id": "2025-2-kk-030",
+        "word": "lend",
+        "meaning": "（使）适合；借出；贷款；增添；提供",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-030",
+        "word": "lend",
+        "meaning": "（使）适合；借出；贷款；增添；提供",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-031",
+      "word": "interpretation",
+      "before": {
+        "id": "2025-2-kk-031",
+        "word": "interpretation",
+        "meaning": "解释；口译；演出",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-031",
+        "word": "interpretation",
+        "meaning": "n. 解释；理解；口译；（作品的）演绎",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-032",
+      "word": "explanation",
+      "before": {
+        "id": "2025-2-kk-032",
+        "word": "explanation",
+        "meaning": "说明，解释；阐述",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-032",
+        "word": "explanation",
+        "meaning": "说明，解释；阐述",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-033",
+      "word": "demonstrate",
+      "before": {
+        "id": "2025-2-kk-033",
+        "word": "demonstrate",
+        "meaning": "证明；演示；表露；示威",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-033",
+        "word": "demonstrate",
+        "meaning": "证明；演示；表露；示威",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-034",
+      "word": "crucial",
+      "before": {
+        "id": "2025-2-kk-034",
+        "word": "crucial",
+        "meaning": "至关重要的，决定性的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-034",
+        "word": "crucial",
+        "meaning": "至关重要的，决定性的",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-035",
+      "word": "recognize",
+      "before": {
+        "id": "2025-2-kk-035",
+        "word": "recognize",
+        "meaning": "认识到；识别；承认，认可",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-035",
+        "word": "recognize",
+        "meaning": "认识到；识别；承认，认可",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-036",
+      "word": "impetus",
+      "before": {
+        "id": "2025-2-kk-036",
+        "word": "impetus",
+        "meaning": "动力；促进；势头；动量",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-036",
+        "word": "impetus",
+        "meaning": "动力；促进；势头；动量",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-037",
+      "word": "millennium",
+      "before": {
+        "id": "2025-2-kk-037",
+        "word": "millennium",
+        "meaning": "千年；千年期",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-037",
+        "word": "millennium",
+        "meaning": "千年；千年期",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-038",
+      "word": "inventor",
+      "before": {
+        "id": "2025-2-kk-038",
+        "word": "inventor",
+        "meaning": "发明者",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-038",
+        "word": "inventor",
+        "meaning": "发明者",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-039",
+      "word": "passivate",
+      "before": {
+        "id": "2025-2-kk-039",
+        "word": "passivate",
+        "meaning": "使钝化；使失去活性",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-039",
+        "word": "passivate",
+        "meaning": "使钝化；使失去活性",
+        "page": 192,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-040",
+      "word": "emitter",
+      "before": {
+        "id": "2025-2-kk-040",
+        "word": "emitter",
+        "meaning": "发射器；排放者；排放源",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-040",
+        "word": "emitter",
+        "meaning": "发射器；排放者；排放源",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-041",
+      "word": "solar",
+      "before": {
+        "id": "2025-2-kk-041",
+        "word": "solar",
+        "meaning": "太阳的；太阳能的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-041",
+        "word": "solar",
+        "meaning": "太阳的；太阳能的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-042",
+      "word": "panel",
+      "before": {
+        "id": "2025-2-kk-042",
+        "word": "panel",
+        "meaning": "电池板；面板；专门小组",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-042",
+        "word": "panel",
+        "meaning": "电池板；面板；专门小组",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-043",
+      "word": "technologist",
+      "before": {
+        "id": "2025-2-kk-043",
+        "word": "technologist",
+        "meaning": "技术专家；工艺师",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-043",
+        "word": "technologist",
+        "meaning": "技术专家；工艺师",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-044",
+      "word": "exploit",
+      "before": {
+        "id": "2025-2-kk-044",
+        "word": "exploit",
+        "meaning": "利用；开发；剥削",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-044",
+        "word": "exploit",
+        "meaning": "利用；开发；剥削",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-045",
+      "word": "source",
+      "before": {
+        "id": "2025-2-kk-045",
+        "word": "source",
+        "meaning": "资源；来源；源头",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-045",
+        "word": "source",
+        "meaning": "资源；来源；源头",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-046",
+      "word": "intelligence",
+      "before": {
+        "id": "2025-2-kk-046",
+        "word": "intelligence",
+        "meaning": "智力；智慧；情报；信息",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-046",
+        "word": "intelligence",
+        "meaning": "智力；智慧；情报；信息",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-047",
+      "word": "astonishingly",
+      "before": {
+        "id": "2025-2-kk-047",
+        "word": "astonishingly",
+        "meaning": "令人惊讶地",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-047",
+        "word": "astonishingly",
+        "meaning": "令人惊讶地",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-048",
+      "word": "carbon-negative",
+      "before": {
+        "id": "2025-2-kk-048",
+        "word": "carbon-negative",
+        "meaning": "碳负排放的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-048",
+        "word": "carbon-negative",
+        "meaning": "碳负排放的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-049",
+      "word": "established",
+      "before": {
+        "id": "2025-2-kk-049",
+        "word": "established",
+        "meaning": "已建立的；已确立的；公认的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-049",
+        "word": "established",
+        "meaning": "已建立的；已确立的；公认的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-050",
+      "word": "mill",
+      "before": {
+        "id": "2025-2-kk-050",
+        "word": "mill",
+        "meaning": "工厂；磨坊；磨粉机",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-050",
+        "word": "mill",
+        "meaning": "工厂；磨坊；磨粉机",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-051",
+      "word": "nearby",
+      "before": {
+        "id": "2025-2-kk-051",
+        "word": "nearby",
+        "meaning": "附近的；在附近",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-051",
+        "word": "nearby",
+        "meaning": "附近的；在附近",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-052",
+      "word": "remote",
+      "before": {
+        "id": "2025-2-kk-052",
+        "word": "remote",
+        "meaning": "遥远的；偏远的",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-052",
+        "word": "remote",
+        "meaning": "遥远的；偏远的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-053",
+      "word": "surrounding",
+      "before": {
+        "id": "2025-2-kk-053",
+        "word": "surrounding",
+        "meaning": "周围的；附近的环境",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-053",
+        "word": "surrounding",
+        "meaning": "adj. 周围的；附近的 n. （surroundings）周围环境",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-054",
+      "word": "ambition",
+      "before": {
+        "id": "2025-2-kk-054",
+        "word": "ambition",
+        "meaning": "目标；理想；雄心；野心",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-054",
+        "word": "ambition",
+        "meaning": "目标；理想；雄心；野心",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-055",
+      "word": "deliver",
+      "before": {
+        "id": "2025-2-kk-055",
+        "word": "deliver",
+        "meaning": "（)提供：递送，交付：发表，讲迷；实现，履",
+        "page": 191,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-2-kk-055",
+        "word": "deliver",
+        "meaning": "v. 提供；递送；交付；发表；讲述；实现；履行",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-2-kk-056",
+      "word": "suspicion",
+      "before": {
+        "id": "2025-2-kk-056",
+        "word": "suspicion",
+        "meaning": "怀疑；嫌疑",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-2-kk-056",
+        "word": "suspicion",
+        "meaning": "怀疑；嫌疑",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-2-kk-057",
+      "word": "groundless",
+      "before": {
+        "id": "2025-2-kk-057",
+        "word": "groundless",
+        "meaning": "无根据的；无理由的",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-2-kk-057",
+        "word": "groundless",
+        "meaning": "无根据的；无理由的",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-2-kk-058",
+      "word": "justifiable",
+      "before": {
+        "id": "2025-2-kk-058",
+        "word": "justifiable",
+        "meaning": "合理的；正当的",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-2-kk-058",
+        "word": "justifiable",
+        "meaning": "合理的；正当的",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-2-kk-059",
+      "word": "foster",
+      "before": {
+        "id": "2025-2-kk-059",
+        "word": "foster",
+        "meaning": "促进；培养；寄养",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-2-kk-059",
+        "word": "foster",
+        "meaning": "促进；培养；寄养",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-2-kk-060",
+      "word": "triumph",
+      "before": {
+        "id": "2025-2-kk-060",
+        "word": "triumph",
+        "meaning": "胜利；巨大成就",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-2-kk-060",
+        "word": "triumph",
+        "meaning": "胜利；巨大成就",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-2-kk-061",
+      "word": "owe much to",
+      "before": {
+        "id": "2025-2-kk-061",
+        "word": "owe much to",
+        "meaning": "在很大程度上归功于",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-2-kk-061",
+        "word": "owe much to",
+        "meaning": "在很大程度上归功于",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-2-kk-062",
+      "word": "ought to",
+      "before": {
+        "id": "2025-2-kk-062",
+        "word": "ought to",
+        "meaning": "应该；应当",
+        "page": 191,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-2-kk-062",
+        "word": "ought to",
+        "meaning": "应该；应当",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-3-kk-004",
+      "word": "peacock",
+      "before": {
+        "id": "2025-3-kk-004",
+        "word": "peacock",
+        "meaning": "孔雀",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-004",
+        "word": "peacock",
+        "meaning": "n. 孔雀；文中 Peacock 指孔雀流媒体平台",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-005",
+      "word": "paramount",
+      "before": {
+        "id": "2025-3-kk-005",
+        "word": "paramount",
+        "meaning": "最高统治者",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-005",
+        "word": "paramount",
+        "meaning": "adj. 至关重要的；首要的；至高无上的；文中 Paramount 指派拉蒙公司",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-009",
+      "word": "cable",
+      "before": {
+        "id": "2025-3-kk-009",
+        "word": "cable",
+        "meaning": "有线电视：电缆，缆绳发电报",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-009",
+        "word": "cable",
+        "meaning": "n. 有线电视；电缆；缆绳 v. 发电报",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-010",
+      "word": "boon",
+      "before": {
+        "id": "2025-3-kk-010",
+        "word": "boon",
+        "meaning": "福音；益处：非常有用的东西",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-010",
+        "word": "boon",
+        "meaning": "n. 福音；益处；非常有用的东西",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-012",
+      "word": "pirate",
+      "before": {
+        "id": "2025-3-kk-012",
+        "word": "pirate",
+        "meaning": "盗版者；海盗",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-012",
+        "word": "pirate",
+        "meaning": "盗版者；海盗",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-013",
+      "word": "rip",
+      "before": {
+        "id": "2025-3-kk-013",
+        "word": "rip",
+        "meaning": "非法复制；撕裂",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-013",
+        "word": "rip",
+        "meaning": "非法复制；撕裂",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-014",
+      "word": "host",
+      "before": {
+        "id": "2025-3-kk-014",
+        "word": "host",
+        "meaning": "主办；托管",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-014",
+        "word": "host",
+        "meaning": "v. 主办；主持；托管、存储（网站或数据） n. 主人；东道主；大量",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-015",
+      "word": "illegitimate",
+      "before": {
+        "id": "2025-3-kk-015",
+        "word": "illegitimate",
+        "meaning": "非法的；私生的；不合逻辑的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-015",
+        "word": "illegitimate",
+        "meaning": "非法的；私生的；不合逻辑的",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-016",
+      "word": "rake in",
+      "before": {
+        "id": "2025-3-kk-016",
+        "word": "rake in",
+        "meaning": "赚得；轻易获得",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-016",
+        "word": "rake in",
+        "meaning": "赚得；轻易获得",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-017",
+      "word": "annually",
+      "before": {
+        "id": "2025-3-kk-017",
+        "word": "annually",
+        "meaning": "每年；一年一次",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-017",
+        "word": "annually",
+        "meaning": "每年；一年一次",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-018",
+      "word": "subscription",
+      "before": {
+        "id": "2025-3-kk-018",
+        "word": "subscription",
+        "meaning": "订阅；订阅费",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-018",
+        "word": "subscription",
+        "meaning": "订阅；订阅费",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-019",
+      "word": "profit margin",
+      "before": {
+        "id": "2025-3-kk-019",
+        "word": "profit margin",
+        "meaning": "利润率",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-019",
+        "word": "profit margin",
+        "meaning": "利润率",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-020",
+      "word": "crack down",
+      "before": {
+        "id": "2025-3-kk-020",
+        "word": "crack down",
+        "meaning": "采取严厉措施；打击",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-020",
+        "word": "crack down",
+        "meaning": "采取严厉措施；打击",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-021",
+      "word": "cropped up",
+      "before": {
+        "id": "2025-3-kk-021",
+        "word": "cropped up",
+        "meaning": "突然出现；涌现",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-021",
+        "word": "cropped up",
+        "meaning": "突然出现；涌现",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-022",
+      "word": "curb",
+      "before": {
+        "id": "2025-3-kk-022",
+        "word": "curb",
+        "meaning": "抑制；控制",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-022",
+        "word": "curb",
+        "meaning": "抑制；控制",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-023",
+      "word": "piracy",
+      "before": {
+        "id": "2025-3-kk-023",
+        "word": "piracy",
+        "meaning": "上传（的数据）向上（作用的）负载上传",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-023",
+        "word": "piracy",
+        "meaning": "n. 盗版；海上抢劫",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-024",
+      "word": "upload",
+      "before": {
+        "id": "2025-3-kk-024",
+        "word": "upload",
+        "meaning": "上传",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-024",
+        "word": "upload",
+        "meaning": "上传",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-025",
+      "word": "estimate",
+      "before": {
+        "id": "2025-3-kk-025",
+        "word": "estimate",
+        "meaning": "估计；估算",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-025",
+        "word": "estimate",
+        "meaning": "估计；估算",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-026",
+      "word": "impact",
+      "before": {
+        "id": "2025-3-kk-026",
+        "word": "impact",
+        "meaning": "影响；冲击",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-026",
+        "word": "impact",
+        "meaning": "影响；冲击",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-027",
+      "word": "operating",
+      "before": {
+        "id": "2025-3-kk-027",
+        "word": "operating",
+        "meaning": "运营的；操作的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-027",
+        "word": "operating",
+        "meaning": "运营的；操作的",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-028",
+      "word": "mom and pop operation",
+      "before": {
+        "id": "2025-3-kk-028",
+        "word": "mom and pop operation",
+        "meaning": "家庭式经营；夫妻店",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-028",
+        "word": "mom and pop operation",
+        "meaning": "家庭式经营；夫妻店",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-029",
+      "word": "chief",
+      "before": {
+        "id": "2025-3-kk-029",
+        "word": "chief",
+        "meaning": "首席的；主要的首领，长官",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-029",
+        "word": "chief",
+        "meaning": "adj. 首席的；主要的 n. 首领；长官",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-030",
+      "word": "executive",
+      "before": {
+        "id": "2025-3-kk-030",
+        "word": "executive",
+        "meaning": "高管，执行官行政的，执行的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-030",
+        "word": "executive",
+        "meaning": "n. 高管；执行官 adj. 行政的；执行的",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-031",
+      "word": "consensus",
+      "before": {
+        "id": "2025-3-kk-031",
+        "word": "consensus",
+        "meaning": "共识；一致看法",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-031",
+        "word": "consensus",
+        "meaning": "共识；一致看法",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-032",
+      "word": "congress",
+      "before": {
+        "id": "2025-3-kk-032",
+        "word": "congress",
+        "meaning": "国会，议会；代表大会",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-032",
+        "word": "congress",
+        "meaning": "国会，议会；代表大会",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-033",
+      "word": "alliance",
+      "before": {
+        "id": "2025-3-kk-033",
+        "word": "alliance",
+        "meaning": "联盟；同盟",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-033",
+        "word": "alliance",
+        "meaning": "联盟；同盟",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-034",
+      "word": "enforcement",
+      "before": {
+        "id": "2025-3-kk-034",
+        "word": "enforcement",
+        "meaning": "实施，执行",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-034",
+        "word": "enforcement",
+        "meaning": "实施，执行",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-035",
+      "word": "detective",
+      "before": {
+        "id": "2025-3-kk-035",
+        "word": "detective",
+        "meaning": "侦探：警探侦探的；破案的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-035",
+        "word": "detective",
+        "meaning": "n. 侦探；警探 adj. 侦探的；侦查的",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-036",
+      "word": "circle",
+      "before": {
+        "id": "2025-3-kk-036",
+        "word": "circle",
+        "meaning": "环绕，盘旋圆，圈；圈子，界",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-036",
+        "word": "circle",
+        "meaning": "v. 环绕；盘旋 n. 圆；圈；圈子；界",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-037",
+      "word": "authority",
+      "before": {
+        "id": "2025-3-kk-037",
+        "word": "authority",
+        "meaning": "权力，权威；当局，官方",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-037",
+        "word": "authority",
+        "meaning": "权力，权威；当局，官方",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-038",
+      "word": "aided in part",
+      "before": {
+        "id": "2025-3-kk-038",
+        "word": "aided in part",
+        "meaning": "部分得益于；部分由……帮助",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-038",
+        "word": "aided in part",
+        "meaning": "部分得益于；部分由……帮助",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-039",
+      "word": "federal",
+      "before": {
+        "id": "2025-3-kk-039",
+        "word": "federal",
+        "meaning": "联邦的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-039",
+        "word": "federal",
+        "meaning": "联邦的",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-040",
+      "word": "copyright",
+      "before": {
+        "id": "2025-3-kk-040",
+        "word": "copyright",
+        "meaning": "版权，著作权受版权保护的获得的版权",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-040",
+        "word": "copyright",
+        "meaning": "n. 版权；著作权 adj. 受版权保护的 v. 为……取得版权",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-041",
+      "word": "predict",
+      "before": {
+        "id": "2025-3-kk-041",
+        "word": "predict",
+        "meaning": "预言，预测",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-041",
+        "word": "predict",
+        "meaning": "预言，预测",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-042",
+      "word": "cumulative",
+      "before": {
+        "id": "2025-3-kk-042",
+        "word": "cumulative",
+        "meaning": "累积的；渐增的",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-042",
+        "word": "cumulative",
+        "meaning": "累积的；渐增的",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-043",
+      "word": "optimism",
+      "before": {
+        "id": "2025-3-kk-043",
+        "word": "optimism",
+        "meaning": "乐观；乐观主义",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-043",
+        "word": "optimism",
+        "meaning": "乐观；乐观主义",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-044",
+      "word": "countermeasure",
+      "before": {
+        "id": "2025-3-kk-044",
+        "word": "countermeasure",
+        "meaning": "反制措施；对策",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-044",
+        "word": "countermeasure",
+        "meaning": "反制措施；对策",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-045",
+      "word": "plateau",
+      "before": {
+        "id": "2025-3-kk-045",
+        "word": "plateau",
+        "meaning": "达到稳定状态；高原；停滞期",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-045",
+        "word": "plateau",
+        "meaning": "达到稳定状态；高原；停滞期",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-046",
+      "word": "stakeholder",
+      "before": {
+        "id": "2025-3-kk-046",
+        "word": "stakeholder",
+        "meaning": "利益相关者",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-046",
+        "word": "stakeholder",
+        "meaning": "利益相关者",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-047",
+      "word": "analyst",
+      "before": {
+        "id": "2025-3-kk-047",
+        "word": "analyst",
+        "meaning": "分析师，分析者",
+        "page": 193,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-3-kk-047",
+        "word": "analyst",
+        "meaning": "分析师，分析者",
+        "page": 194,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-3-kk-048",
+      "word": "be confronted with",
+      "before": {
+        "id": "2025-3-kk-048",
+        "word": "be confronted with",
+        "meaning": "面对；面临",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-3-kk-048",
+        "word": "be confronted with",
+        "meaning": "面对；面临",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-3-kk-049",
+      "word": "reaped benefits from",
+      "before": {
+        "id": "2025-3-kk-049",
+        "word": "reaped benefits from",
+        "meaning": "从……中获益",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-3-kk-049",
+        "word": "reaped benefits from",
+        "meaning": "从……中获益",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-3-kk-050",
+      "word": "protest",
+      "before": {
+        "id": "2025-3-kk-050",
+        "word": "protest",
+        "meaning": "抗议；反对",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-3-kk-050",
+        "word": "protest",
+        "meaning": "抗议；反对",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-3-kk-051",
+      "word": "in spite of",
+      "before": {
+        "id": "2025-3-kk-051",
+        "word": "in spite of",
+        "meaning": "尽管",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-3-kk-051",
+        "word": "in spite of",
+        "meaning": "尽管",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-3-kk-052",
+      "word": "overwhelm",
+      "before": {
+        "id": "2025-3-kk-052",
+        "word": "overwhelm",
+        "meaning": "压倒；使不知所措",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-3-kk-052",
+        "word": "overwhelm",
+        "meaning": "压倒；使不知所措",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-3-kk-053",
+      "word": "diminish",
+      "before": {
+        "id": "2025-3-kk-053",
+        "word": "diminish",
+        "meaning": "减少；减弱",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-3-kk-053",
+        "word": "diminish",
+        "meaning": "减少；减弱",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-3-kk-054",
+      "word": "violation",
+      "before": {
+        "id": "2025-3-kk-054",
+        "word": "violation",
+        "meaning": "违反；侵犯",
+        "page": 193,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-3-kk-054",
+        "word": "violation",
+        "meaning": "违反；侵犯",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2025-4-kk-003",
+      "word": "artifact",
+      "before": {
+        "id": "2025-4-kk-003",
+        "word": "artifact",
+        "meaning": "文物：人工制品；手工艺品",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-003",
+        "word": "artifact",
+        "meaning": "n. 文物；人工制品；手工艺品",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-005",
+      "word": "ephemera",
+      "before": {
+        "id": "2025-4-kk-005",
+        "word": "ephemera",
+        "meaning": "生命极短暂之物；蜉蝣",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-005",
+        "word": "ephemera",
+        "meaning": "n. 短暂存在的事物；（传单、票据等）短期使用的印刷品",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-007",
+      "word": "tangible",
+      "before": {
+        "id": "2025-4-kk-007",
+        "word": "tangible",
+        "meaning": "有形的：可触知的：真实的：实际的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-007",
+        "word": "tangible",
+        "meaning": "adj. 有形的；可触知的；真实的；实际的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-008",
+      "word": "ponder",
+      "before": {
+        "id": "2025-4-kk-008",
+        "word": "ponder",
+        "meaning": "()思索，衡量仔细考虑，沉思",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-008",
+        "word": "ponder",
+        "meaning": "v. 思索；仔细考虑；沉思",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-009",
+      "word": "intangible",
+      "before": {
+        "id": "2025-4-kk-009",
+        "word": "intangible",
+        "meaning": "无形的：难以捉摸的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-009",
+        "word": "intangible",
+        "meaning": "adj. 无形的；难以捉摸的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-012",
+      "word": "make provision for",
+      "before": {
+        "id": "2025-4-kk-012",
+        "word": "make provision for",
+        "meaning": "为作好准备，为预先采取措施",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-012",
+        "word": "make provision for",
+        "meaning": "为……做好准备；为……预先采取措施",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-013",
+      "word": "medium",
+      "before": {
+        "id": "2025-4-kk-013",
+        "word": "medium",
+        "meaning": "媒介，媒体；手段中等的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-013",
+        "word": "medium",
+        "meaning": "n. 媒介；媒体；手段 adj. 中等的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-014",
+      "word": "deliver",
+      "before": {
+        "id": "2025-4-kk-014",
+        "word": "deliver",
+        "meaning": "（)传递；递送，交付；发表，讲述；实现，履行",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-014",
+        "word": "deliver",
+        "meaning": "v. 传递；递送；交付；发表；讲述；实现；履行",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-017",
+      "word": "serve as",
+      "before": {
+        "id": "2025-4-kk-017",
+        "word": "serve as",
+        "meaning": "作为使用",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-017",
+        "word": "serve as",
+        "meaning": "充当；用作；作为……使用",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-018",
+      "word": "analog",
+      "before": {
+        "id": "2025-4-kk-018",
+        "word": "analog",
+        "meaning": "类似物：同源语；模拟（资产事物）",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-018",
+        "word": "analog",
+        "meaning": "adj. 模拟的；非数字化的 n. 类似物；对应物",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-019",
+      "word": "biographer",
+      "before": {
+        "id": "2025-4-kk-019",
+        "word": "biographer",
+        "meaning": "（)传记作家",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-019",
+        "word": "biographer",
+        "meaning": "n. 传记作家",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-020",
+      "word": "archive",
+      "before": {
+        "id": "2025-4-kk-020",
+        "word": "archive",
+        "meaning": "档案馆，档案存档",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-020",
+        "word": "archive",
+        "meaning": "n. 档案；档案馆 v. 将……存档",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-022",
+      "word": "access",
+      "before": {
+        "id": "2025-4-kk-022",
+        "word": "access",
+        "meaning": "访问：存取使用权，通道",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-022",
+        "word": "access",
+        "meaning": "v. 访问；存取 n. 使用权；进入的机会；通道",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-026",
+      "word": "devotion",
+      "before": {
+        "id": "2025-4-kk-026",
+        "word": "devotion",
+        "meaning": "奉献；热爱",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-026",
+        "word": "devotion",
+        "meaning": "奉献；热爱",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-027",
+      "word": "universality",
+      "before": {
+        "id": "2025-4-kk-027",
+        "word": "universality",
+        "meaning": "普遍性；通用性",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-027",
+        "word": "universality",
+        "meaning": "普遍性；通用性",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-028",
+      "word": "maintain",
+      "before": {
+        "id": "2025-4-kk-028",
+        "word": "maintain",
+        "meaning": "保存；保护：保持",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-028",
+        "word": "maintain",
+        "meaning": "v. 维持；保持；维护；保养",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-029",
+      "word": "preserve",
+      "before": {
+        "id": "2025-4-kk-029",
+        "word": "preserve",
+        "meaning": "保存；保护；维持",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-029",
+        "word": "preserve",
+        "meaning": "保存；保护；维持",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-030",
+      "word": "terrifying",
+      "before": {
+        "id": "2025-4-kk-030",
+        "word": "terrifying",
+        "meaning": "令人害怕的；可怕的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-030",
+        "word": "terrifying",
+        "meaning": "令人害怕的；可怕的",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-031",
+      "word": "archivist",
+      "before": {
+        "id": "2025-4-kk-031",
+        "word": "archivist",
+        "meaning": "档案管理员",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-031",
+        "word": "archivist",
+        "meaning": "档案管理员",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-032",
+      "word": "curate",
+      "before": {
+        "id": "2025-4-kk-032",
+        "word": "curate",
+        "meaning": "策划；整理（收藏或展品）",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-032",
+        "word": "curate",
+        "meaning": "策划；整理（收藏或展品）",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-033",
+      "word": "born-digital",
+      "before": {
+        "id": "2025-4-kk-033",
+        "word": "born-digital",
+        "meaning": "原生数字的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-033",
+        "word": "born-digital",
+        "meaning": "原生数字的",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-034",
+      "word": "obsolete",
+      "before": {
+        "id": "2025-4-kk-034",
+        "word": "obsolete",
+        "meaning": "陈旧的；过时的；淘汰的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-034",
+        "word": "obsolete",
+        "meaning": "陈旧的；过时的；淘汰的",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-035",
+      "word": "disk",
+      "before": {
+        "id": "2025-4-kk-035",
+        "word": "disk",
+        "meaning": "磁盘；圆盘；盘状物",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-035",
+        "word": "disk",
+        "meaning": "磁盘；圆盘；盘状物",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-036",
+      "word": "nightmare",
+      "before": {
+        "id": "2025-4-kk-036",
+        "word": "nightmare",
+        "meaning": "噩梦；可怕经历",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-036",
+        "word": "nightmare",
+        "meaning": "噩梦；可怕经历",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-037",
+      "word": "abruptly",
+      "before": {
+        "id": "2025-4-kk-037",
+        "word": "abruptly",
+        "meaning": "突然地",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-037",
+        "word": "abruptly",
+        "meaning": "突然地",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-038",
+      "word": "revolve",
+      "before": {
+        "id": "2025-4-kk-038",
+        "word": "revolve",
+        "meaning": "围绕；旋转",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-038",
+        "word": "revolve",
+        "meaning": "围绕；旋转",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-039",
+      "word": "comprehensive",
+      "before": {
+        "id": "2025-4-kk-039",
+        "word": "comprehensive",
+        "meaning": "全面的；综合的",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-039",
+        "word": "comprehensive",
+        "meaning": "全面的；综合的",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-040",
+      "word": "take some comfort",
+      "before": {
+        "id": "2025-4-kk-040",
+        "word": "take some comfort",
+        "meaning": "稍微安心；得到一些安慰",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-040",
+        "word": "take some comfort",
+        "meaning": "稍微安心；得到一些安慰",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-041",
+      "word": "multitude",
+      "before": {
+        "id": "2025-4-kk-041",
+        "word": "multitude",
+        "meaning": "大量；众多",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-041",
+        "word": "multitude",
+        "meaning": "大量；众多",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-042",
+      "word": "preservation",
+      "before": {
+        "id": "2025-4-kk-042",
+        "word": "preservation",
+        "meaning": "保存；保护",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-042",
+        "word": "preservation",
+        "meaning": "保存；保护",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-043",
+      "word": "realm",
+      "before": {
+        "id": "2025-4-kk-043",
+        "word": "realm",
+        "meaning": "领域；范围",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-043",
+        "word": "realm",
+        "meaning": "领域；范围",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-044",
+      "word": "ply",
+      "before": {
+        "id": "2025-4-kk-044",
+        "word": "ply",
+        "meaning": "从事；使用（工具）：固定往来",
+        "page": 195,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2025-4-kk-044",
+        "word": "ply",
+        "meaning": "v. 从事；使用（工具）；定期往来",
+        "page": 196,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2025-4-kk-045",
+      "word": "oversupply",
+      "before": {
+        "id": "2025-4-kk-045",
+        "word": "oversupply",
+        "meaning": "供应过剩；过量供应",
+        "page": 195,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2025-4-kk-045",
+        "word": "oversupply",
+        "meaning": "供应过剩；过量供应",
+        "page": 196,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-1-kk-002",
+      "word": "critical",
+      "before": {
+        "id": "2026-1-kk-002",
+        "word": "critical",
+        "meaning": "()关键的，极其重要的；批判的；严重的；病",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-002",
+        "word": "critical",
+        "meaning": "adj. 关键的；极其重要的；批判的；严重的；病危的",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-003",
+      "word": "propel",
+      "before": {
+        "id": "2026-1-kk-003",
+        "word": "propel",
+        "meaning": "推进，驱动：驱使",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-003",
+        "word": "propel",
+        "meaning": "v. 推进；驱动；驱使",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-007",
+      "word": "domestication",
+      "before": {
+        "id": "2026-1-kk-007",
+        "word": "domestication",
+        "meaning": "养，教化",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-007",
+        "word": "domestication",
+        "meaning": "n. 驯化；驯养",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-008",
+      "word": "equine",
+      "before": {
+        "id": "2026-1-kk-008",
+        "word": "equine",
+        "meaning": "马的马",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-008",
+        "word": "equine",
+        "meaning": "adj. 马的；马科的 n. 马；马科动物",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-010",
+      "word": "sequence",
+      "before": {
+        "id": "2026-1-kk-010",
+        "word": "sequence",
+        "meaning": "按顺序排列",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-010",
+        "word": "sequence",
+        "meaning": "n. 顺序；序列；（基因）序列；连续事件 v. 按顺序排列；测定……的序列",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-014",
+      "word": "evolutionary",
+      "before": {
+        "id": "2026-1-kk-014",
+        "word": "evolutionary",
+        "meaning": "（）进化的；演变的",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-014",
+        "word": "evolutionary",
+        "meaning": "adj. 进化的；演变的",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-015",
+      "word": "pinpoint",
+      "before": {
+        "id": "2026-1-kk-015",
+        "word": "pinpoint",
+        "meaning": "准确的；极小的",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-015",
+        "word": "pinpoint",
+        "meaning": "v. 精确确定；准确指出 adj. 精确的；极小的 n. 极小的点",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-016",
+      "word": "ass",
+      "before": {
+        "id": "2026-1-kk-016",
+        "word": "ass",
+        "meaning": "驴；蠢人；臀部",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-016",
+        "word": "ass",
+        "meaning": "驴；蠢人；臀部",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-017",
+      "word": "spread across",
+      "before": {
+        "id": "2026-1-kk-017",
+        "word": "spread across",
+        "meaning": "横跨；遍布",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-017",
+        "word": "spread across",
+        "meaning": "横跨；遍布",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-018",
+      "word": "continent",
+      "before": {
+        "id": "2026-1-kk-018",
+        "word": "continent",
+        "meaning": "洲；大陆",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-018",
+        "word": "continent",
+        "meaning": "洲；大陆",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-019",
+      "word": "coincided with",
+      "before": {
+        "id": "2026-1-kk-019",
+        "word": "coincided with",
+        "meaning": "与……同时发生",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-019",
+        "word": "coincided with",
+        "meaning": "与……同时发生",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-020",
+      "word": "go through",
+      "before": {
+        "id": "2026-1-kk-020",
+        "word": "go through",
+        "meaning": "穿越；经历；仔细研究",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-020",
+        "word": "go through",
+        "meaning": "穿越；经历；仔细研究",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-021",
+      "word": "prehistoric",
+      "before": {
+        "id": "2026-1-kk-021",
+        "word": "prehistoric",
+        "meaning": "史前的",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-021",
+        "word": "prehistoric",
+        "meaning": "史前的",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-022",
+      "word": "navigate",
+      "before": {
+        "id": "2026-1-kk-022",
+        "word": "navigate",
+        "meaning": "穿过；航行于；导航；驾驶；浏览",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-022",
+        "word": "navigate",
+        "meaning": "穿过；航行于；导航；驾驶；浏览",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-023",
+      "word": "put... in the spotlight",
+      "before": {
+        "id": "2026-1-kk-023",
+        "word": "put... in the spotlight",
+        "meaning": "使……受到关注",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-023",
+        "word": "put... in the spotlight",
+        "meaning": "使……受到关注",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-024",
+      "word": "equator",
+      "before": {
+        "id": "2026-1-kk-024",
+        "word": "equator",
+        "meaning": "赤道",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-024",
+        "word": "equator",
+        "meaning": "赤道",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-025",
+      "word": "archaeologist",
+      "before": {
+        "id": "2026-1-kk-025",
+        "word": "archaeologist",
+        "meaning": "考古学家",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-025",
+        "word": "archaeologist",
+        "meaning": "考古学家",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-026",
+      "word": "narrow",
+      "before": {
+        "id": "2026-1-kk-026",
+        "word": "narrow",
+        "meaning": "眯起来；使缩小海峡",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-026",
+        "word": "narrow",
+        "meaning": "adj. 狭窄的；有限的；范围小的 v. 使缩小；眯起（眼睛） n. （narrows）海峡；狭窄水道",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-027",
+      "word": "genetic",
+      "before": {
+        "id": "2026-1-kk-027",
+        "word": "genetic",
+        "meaning": "基因的；遗传的",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-027",
+        "word": "genetic",
+        "meaning": "基因的；遗传的",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-028",
+      "word": "makeup",
+      "before": {
+        "id": "2026-1-kk-028",
+        "word": "makeup",
+        "meaning": "组成；构成",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-028",
+        "word": "makeup",
+        "meaning": "组成；构成",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-029",
+      "word": "alter",
+      "before": {
+        "id": "2026-1-kk-029",
+        "word": "alter",
+        "meaning": "改变；改动",
+        "page": 199,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-1-kk-029",
+        "word": "alter",
+        "meaning": "改变；改动",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-1-kk-030",
+      "word": "undergo",
+      "before": {
+        "id": "2026-1-kk-030",
+        "word": "undergo",
+        "meaning": "经历；遭受",
+        "page": 199,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-1-kk-030",
+        "word": "undergo",
+        "meaning": "经历；遭受",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-1-kk-031",
+      "word": "traceable",
+      "before": {
+        "id": "2026-1-kk-031",
+        "word": "traceable",
+        "meaning": "可追踪的",
+        "page": 199,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-1-kk-031",
+        "word": "traceable",
+        "meaning": "可追踪的",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-1-kk-032",
+      "word": "insight",
+      "before": {
+        "id": "2026-1-kk-032",
+        "word": "insight",
+        "meaning": "洞察；深刻见解",
+        "page": 199,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-1-kk-032",
+        "word": "insight",
+        "meaning": "洞察；深刻见解",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-1-kk-033",
+      "word": "disperse",
+      "before": {
+        "id": "2026-1-kk-033",
+        "word": "disperse",
+        "meaning": "分散；驱散",
+        "page": 199,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-1-kk-033",
+        "word": "disperse",
+        "meaning": "分散；驱散",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-1-kk-034",
+      "word": "conventional",
+      "before": {
+        "id": "2026-1-kk-034",
+        "word": "conventional",
+        "meaning": "传统的；惯例的",
+        "page": 199,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-1-kk-034",
+        "word": "conventional",
+        "meaning": "传统的；惯例的",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-2-kk-002",
+      "word": "suspend",
+      "before": {
+        "id": "2026-2-kk-002",
+        "word": "suspend",
+        "meaning": "暂停，中止：延缓：悬浮",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-002",
+        "word": "suspend",
+        "meaning": "v. 暂停；中止；延缓；悬挂；悬浮",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-004",
+      "word": "decline",
+      "before": {
+        "id": "2026-2-kk-004",
+        "word": "decline",
+        "meaning": "衰退，减少下降，衰退；拒绝",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-004",
+        "word": "decline",
+        "meaning": "n. 衰退；减少 v. 下降；衰退；拒绝",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-010",
+      "word": "transferable",
+      "before": {
+        "id": "2026-2-kk-010",
+        "word": "transferable",
+        "meaning": "()可转让的",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-010",
+        "word": "transferable",
+        "meaning": "adj. 可转让的；可转移的",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-017",
+      "word": "generate",
+      "before": {
+        "id": "2026-2-kk-017",
+        "word": "generate",
+        "meaning": "v. 产生，引起",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-017",
+        "word": "generate",
+        "meaning": "v. 产生，引起",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-018",
+      "word": "subscriber",
+      "before": {
+        "id": "2026-2-kk-018",
+        "word": "subscriber",
+        "meaning": "订阅者；消费者；用户",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-018",
+        "word": "subscriber",
+        "meaning": "n. 订阅者；订购者；用户",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-019",
+      "word": "script",
+      "before": {
+        "id": "2026-2-kk-019",
+        "word": "script",
+        "meaning": "剧本；脚本；手稿",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-019",
+        "word": "script",
+        "meaning": "剧本；脚本；手稿",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-020",
+      "word": "streamer",
+      "before": {
+        "id": "2026-2-kk-020",
+        "word": "streamer",
+        "meaning": "网络主播；流媒体服务商",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-020",
+        "word": "streamer",
+        "meaning": "n. 流媒体服务商；网络主播；飘带",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-021",
+      "word": "profitability",
+      "before": {
+        "id": "2026-2-kk-021",
+        "word": "profitability",
+        "meaning": "盈利能力；收益性",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-021",
+        "word": "profitability",
+        "meaning": "盈利能力；收益性",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-022",
+      "word": "dip",
+      "before": {
+        "id": "2026-2-kk-022",
+        "word": "dip",
+        "meaning": "下降；下沉；浸",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-022",
+        "word": "dip",
+        "meaning": "v. 下降；下沉；浸 n. 减少；下降；凹陷",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-023",
+      "word": "drift away",
+      "before": {
+        "id": "2026-2-kk-023",
+        "word": "drift away",
+        "meaning": "流失；离去；漂流",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-023",
+        "word": "drift away",
+        "meaning": "流失；离去；漂流",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-024",
+      "word": "revenue",
+      "before": {
+        "id": "2026-2-kk-024",
+        "word": "revenue",
+        "meaning": "收益；收入",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-024",
+        "word": "revenue",
+        "meaning": "收益；收入",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-025",
+      "word": "studio",
+      "before": {
+        "id": "2026-2-kk-025",
+        "word": "studio",
+        "meaning": "电影制作厂；录音室；工作室",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-025",
+        "word": "studio",
+        "meaning": "电影制作厂；录音室；工作室",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-026",
+      "word": "film",
+      "before": {
+        "id": "2026-2-kk-026",
+        "word": "film",
+        "meaning": "拍摄；电影；胶片",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-026",
+        "word": "film",
+        "meaning": "v. 拍摄；录制 n. 电影；胶片；薄膜",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-027",
+      "word": "deep bench",
+      "before": {
+        "id": "2026-2-kk-027",
+        "word": "deep bench",
+        "meaning": "人才储备深厚",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-027",
+        "word": "deep bench",
+        "meaning": "人才储备深厚",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-028",
+      "word": "entertainment",
+      "before": {
+        "id": "2026-2-kk-028",
+        "word": "entertainment",
+        "meaning": "娱乐；招待",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-028",
+        "word": "entertainment",
+        "meaning": "娱乐；招待",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-029",
+      "word": "counterpart",
+      "before": {
+        "id": "2026-2-kk-029",
+        "word": "counterpart",
+        "meaning": "对应的人（或事物）",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-029",
+        "word": "counterpart",
+        "meaning": "对应的人（或事物）",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-030",
+      "word": "dramatically",
+      "before": {
+        "id": "2026-2-kk-030",
+        "word": "dramatically",
+        "meaning": "剧烈地；明显地；戏剧性地",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-030",
+        "word": "dramatically",
+        "meaning": "剧烈地；明显地；戏剧性地",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-031",
+      "word": "go on with",
+      "before": {
+        "id": "2026-2-kk-031",
+        "word": "go on with",
+        "meaning": "继续；进行",
+        "page": 200,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-2-kk-031",
+        "word": "go on with",
+        "meaning": "继续；进行",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-2-kk-032",
+      "word": "nostalgia",
+      "before": {
+        "id": "2026-2-kk-032",
+        "word": "nostalgia",
+        "meaning": "怀旧；念旧",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-2-kk-032",
+        "word": "nostalgia",
+        "meaning": "怀旧；念旧",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-2-kk-033",
+      "word": "gloomy",
+      "before": {
+        "id": "2026-2-kk-033",
+        "word": "gloomy",
+        "meaning": "阴暗的；悲观的",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-2-kk-033",
+        "word": "gloomy",
+        "meaning": "阴暗的；悲观的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-2-kk-034",
+      "word": "facility",
+      "before": {
+        "id": "2026-2-kk-034",
+        "word": "facility",
+        "meaning": "设施；设备；才能",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-2-kk-034",
+        "word": "facility",
+        "meaning": "设施；设备；才能",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-2-kk-035",
+      "word": "stimulate",
+      "before": {
+        "id": "2026-2-kk-035",
+        "word": "stimulate",
+        "meaning": "刺激；激发；促进",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-2-kk-035",
+        "word": "stimulate",
+        "meaning": "刺激；激发；促进",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-2-kk-036",
+      "word": "peak",
+      "before": {
+        "id": "2026-2-kk-036",
+        "word": "peak",
+        "meaning": "顶峰；达到顶峰",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-2-kk-036",
+        "word": "peak",
+        "meaning": "n. 峰值；顶峰；山顶 v. 达到顶峰 adj. 最高的；高峰时期的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-2-kk-037",
+      "word": "brain drain",
+      "before": {
+        "id": "2026-2-kk-037",
+        "word": "brain drain",
+        "meaning": "人才流失",
+        "page": 200,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-2-kk-037",
+        "word": "brain drain",
+        "meaning": "人才流失",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-3-kk-001",
+      "word": "ingenuity",
+      "before": {
+        "id": "2026-3-kk-001",
+        "word": "ingenuity",
+        "meaning": "创造力；足智多谋；心灵手巧；精巧的装",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-001",
+        "word": "ingenuity",
+        "meaning": "n. 创造力；足智多谋；心灵手巧",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-3-kk-002",
+      "word": "shrink",
+      "before": {
+        "id": "2026-3-kk-002",
+        "word": "shrink",
+        "meaning": "缩小；减少",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-002",
+        "word": "shrink",
+        "meaning": "缩小；减少",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-003",
+      "word": "pioneer",
+      "before": {
+        "id": "2026-3-kk-003",
+        "word": "pioneer",
+        "meaning": "（）先锋，拓荒者；少年先锋队员",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-3-kk-003",
+        "word": "pioneer",
+        "meaning": "n. 先锋；拓荒者；先驱 adj. 先驱的 v. 开创；开辟",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-004",
+      "word": "wireless",
+      "before": {
+        "id": "2026-3-kk-004",
+        "word": "wireless",
+        "meaning": "无线电无线电的",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-3-kk-004",
+        "word": "wireless",
+        "meaning": "n. 无线电 adj. 无线的；无线电的",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-007",
+      "word": "simultaneously",
+      "before": {
+        "id": "2026-3-kk-007",
+        "word": "simultaneously",
+        "meaning": "（)同时地",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-3-kk-007",
+        "word": "simultaneously",
+        "meaning": "adv. 同时地",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-008",
+      "word": "exhibition",
+      "before": {
+        "id": "2026-3-kk-008",
+        "word": "exhibition",
+        "meaning": "（）展览，展出；表现",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-3-kk-008",
+        "word": "exhibition",
+        "meaning": "n. 展览；展出；表现",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-011",
+      "word": "field",
+      "before": {
+        "id": "2026-3-kk-011",
+        "word": "field",
+        "meaning": "田地；专业，领域；现场，实地：体育场：视野；战场",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-3-kk-011",
+        "word": "field",
+        "meaning": "n. 田地；专业；领域；现场；实地；体育场；战场 adj. 实地的；野外的 v. 派出（队伍）；处理（问题）",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-012",
+      "word": "verbatim",
+      "before": {
+        "id": "2026-3-kk-012",
+        "word": "verbatim",
+        "meaning": "一字不差地，逐字地",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-3-kk-012",
+        "word": "verbatim",
+        "meaning": "adj. 一字不差的；逐字的 adv. 一字不差地；逐字地",
+        "page": 201,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-014",
+      "word": "sheer",
+      "before": {
+        "id": "2026-3-kk-014",
+        "word": "sheer",
+        "meaning": "完全的；陡峭的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-014",
+        "word": "sheer",
+        "meaning": "adj. 完全的；纯粹的；陡峭的 adv. 陡直地 v. 突然转向",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-015",
+      "word": "mock",
+      "before": {
+        "id": "2026-3-kk-015",
+        "word": "mock",
+        "meaning": "嘲笑；模仿；模拟的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-015",
+        "word": "mock",
+        "meaning": "v. 嘲弄；嘲笑；模仿 adj. 假装的；模拟的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-016",
+      "word": "converse",
+      "before": {
+        "id": "2026-3-kk-016",
+        "word": "converse",
+        "meaning": "相反的；交谈",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-016",
+        "word": "converse",
+        "meaning": "v. 交谈 adj. 相反的；逆向的 n. 相反的事物",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-017",
+      "word": "headphone",
+      "before": {
+        "id": "2026-3-kk-017",
+        "word": "headphone",
+        "meaning": "耳机",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-017",
+        "word": "headphone",
+        "meaning": "耳机",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-018",
+      "word": "broadcast",
+      "before": {
+        "id": "2026-3-kk-018",
+        "word": "broadcast",
+        "meaning": "广播；播送",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-018",
+        "word": "broadcast",
+        "meaning": "n. 广播；电视节目 v. 广播；播送；传播",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-019",
+      "word": "whistle",
+      "before": {
+        "id": "2026-3-kk-019",
+        "word": "whistle",
+        "meaning": "口哨；吹口哨",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-019",
+        "word": "whistle",
+        "meaning": "v. 吹口哨；鸣笛 n. 哨子；口哨声；汽笛声",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-020",
+      "word": "tune",
+      "before": {
+        "id": "2026-3-kk-020",
+        "word": "tune",
+        "meaning": "曲调；调音",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-020",
+        "word": "tune",
+        "meaning": "n. 曲调；曲子 v. 调音；调谐",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-021",
+      "word": "brush",
+      "before": {
+        "id": "2026-3-kk-021",
+        "word": "brush",
+        "meaning": "刷；轻擦",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-021",
+        "word": "brush",
+        "meaning": "n. 刷子；轻擦；小冲突 v. 刷；拂去；轻擦",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-022",
+      "word": "handle",
+      "before": {
+        "id": "2026-3-kk-022",
+        "word": "handle",
+        "meaning": "处理；把手",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-022",
+        "word": "handle",
+        "meaning": "v. 处理；操作；经营 n. 把手；手柄",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-023",
+      "word": "by and large",
+      "before": {
+        "id": "2026-3-kk-023",
+        "word": "by and large",
+        "meaning": "总的来说；大体上",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-023",
+        "word": "by and large",
+        "meaning": "总的来说；大体上",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-024",
+      "word": "ice hockey",
+      "before": {
+        "id": "2026-3-kk-024",
+        "word": "ice hockey",
+        "meaning": "冰球",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-024",
+        "word": "ice hockey",
+        "meaning": "冰球",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-025",
+      "word": "pre-digital",
+      "before": {
+        "id": "2026-3-kk-025",
+        "word": "pre-digital",
+        "meaning": "数字技术出现以前的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-025",
+        "word": "pre-digital",
+        "meaning": "数字技术出现以前的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-026",
+      "word": "serendipity",
+      "before": {
+        "id": "2026-3-kk-026",
+        "word": "serendipity",
+        "meaning": "意外发现美好事物的运气",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-026",
+        "word": "serendipity",
+        "meaning": "意外发现美好事物的运气",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-027",
+      "word": "random",
+      "before": {
+        "id": "2026-3-kk-027",
+        "word": "random",
+        "meaning": "随机的；任意的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-027",
+        "word": "random",
+        "meaning": "随机的；任意的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-028",
+      "word": "enlivening",
+      "before": {
+        "id": "2026-3-kk-028",
+        "word": "enlivening",
+        "meaning": "使有趣；增添活力",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-028",
+        "word": "enlivening",
+        "meaning": "adj. 使活跃的；增添乐趣的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-029",
+      "word": "dull",
+      "before": {
+        "id": "2026-3-kk-029",
+        "word": "dull",
+        "meaning": "枯燥的；迟钝的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-029",
+        "word": "dull",
+        "meaning": "adj. 枯燥无聊的；无精打采的；迟钝的；暗淡的 v. 减轻；使迟钝",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-030",
+      "word": "manual",
+      "before": {
+        "id": "2026-3-kk-030",
+        "word": "manual",
+        "meaning": "手工的；手册",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-030",
+        "word": "manual",
+        "meaning": "adj. 手工的；体力的；手动的 n. 使用手册；说明书",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-031",
+      "word": "catch up with",
+      "before": {
+        "id": "2026-3-kk-031",
+        "word": "catch up with",
+        "meaning": "赶上；追上",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-031",
+        "word": "catch up with",
+        "meaning": "赶上；追上",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-032",
+      "word": "startlingly",
+      "before": {
+        "id": "2026-3-kk-032",
+        "word": "startlingly",
+        "meaning": "惊人地",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-032",
+        "word": "startlingly",
+        "meaning": "惊人地",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-033",
+      "word": "unpretentious",
+      "before": {
+        "id": "2026-3-kk-033",
+        "word": "unpretentious",
+        "meaning": "朴实无华的；谦逊的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-033",
+        "word": "unpretentious",
+        "meaning": "朴实无华的；谦逊的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-034",
+      "word": "stethoscope",
+      "before": {
+        "id": "2026-3-kk-034",
+        "word": "stethoscope",
+        "meaning": "听诊器",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-034",
+        "word": "stethoscope",
+        "meaning": "听诊器",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-035",
+      "word": "ebb",
+      "before": {
+        "id": "2026-3-kk-035",
+        "word": "ebb",
+        "meaning": "衰退；退潮",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-035",
+        "word": "ebb",
+        "meaning": "v. 衰退；退潮 n. 衰退；退潮",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-036",
+      "word": "podcast",
+      "before": {
+        "id": "2026-3-kk-036",
+        "word": "podcast",
+        "meaning": "播客",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-036",
+        "word": "podcast",
+        "meaning": "播客",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-037",
+      "word": "infinite",
+      "before": {
+        "id": "2026-3-kk-037",
+        "word": "infinite",
+        "meaning": "无限的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-037",
+        "word": "infinite",
+        "meaning": "无限的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-038",
+      "word": "niche interest",
+      "before": {
+        "id": "2026-3-kk-038",
+        "word": "niche interest",
+        "meaning": "小众兴趣",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-038",
+        "word": "niche interest",
+        "meaning": "小众兴趣",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-039",
+      "word": "sympathetic",
+      "before": {
+        "id": "2026-3-kk-039",
+        "word": "sympathetic",
+        "meaning": "同情的；赞同的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-039",
+        "word": "sympathetic",
+        "meaning": "同情的；赞同的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-040",
+      "word": "audiobook",
+      "before": {
+        "id": "2026-3-kk-040",
+        "word": "audiobook",
+        "meaning": "有声读物",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-040",
+        "word": "audiobook",
+        "meaning": "有声读物",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-041",
+      "word": "boom",
+      "before": {
+        "id": "2026-3-kk-041",
+        "word": "boom",
+        "meaning": "繁荣；隆隆声",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-041",
+        "word": "boom",
+        "meaning": "n. 繁荣；隆隆声 v. 迅速发展；繁荣",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-042",
+      "word": "revive",
+      "before": {
+        "id": "2026-3-kk-042",
+        "word": "revive",
+        "meaning": "恢复；使复苏",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-042",
+        "word": "revive",
+        "meaning": "恢复；使复苏",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-043",
+      "word": "shield",
+      "before": {
+        "id": "2026-3-kk-043",
+        "word": "shield",
+        "meaning": "保护；遮挡；盾牌",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-043",
+        "word": "shield",
+        "meaning": "v. 保护；遮挡；屏蔽 n. 盾牌；防护物",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-044",
+      "word": "fret about",
+      "before": {
+        "id": "2026-3-kk-044",
+        "word": "fret about",
+        "meaning": "为……烦恼",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-044",
+        "word": "fret about",
+        "meaning": "为……烦恼",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-045",
+      "word": "selfie-vanity",
+      "before": {
+        "id": "2026-3-kk-045",
+        "word": "selfie-vanity",
+        "meaning": "自拍狂热；自拍虚荣",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-045",
+        "word": "selfie-vanity",
+        "meaning": "自拍狂热；自拍虚荣",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-046",
+      "word": "neighbourly",
+      "before": {
+        "id": "2026-3-kk-046",
+        "word": "neighbourly",
+        "meaning": "睦邻的；友好的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-046",
+        "word": "neighbourly",
+        "meaning": "睦邻的；友好的",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-047",
+      "word": "broom",
+      "before": {
+        "id": "2026-3-kk-047",
+        "word": "broom",
+        "meaning": "扫帚",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-047",
+        "word": "broom",
+        "meaning": "扫帚",
+        "page": 202,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-3-kk-048",
+      "word": "be accessible to",
+      "before": {
+        "id": "2026-3-kk-048",
+        "word": "be accessible to",
+        "meaning": "对……可接近/可获得",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-048",
+        "word": "be accessible to",
+        "meaning": "可被……接近、进入或使用；对……而言容易获得",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-3-kk-049",
+      "word": "miracle",
+      "before": {
+        "id": "2026-3-kk-049",
+        "word": "miracle",
+        "meaning": "奇迹",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-049",
+        "word": "miracle",
+        "meaning": "奇迹",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-3-kk-050",
+      "word": "eminent",
+      "before": {
+        "id": "2026-3-kk-050",
+        "word": "eminent",
+        "meaning": "杰出的；显著的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-050",
+        "word": "eminent",
+        "meaning": "adj. 杰出的；卓越的；著名的",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-3-kk-051",
+      "word": "trivial",
+      "before": {
+        "id": "2026-3-kk-051",
+        "word": "trivial",
+        "meaning": "琐碎的；不重要的",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-051",
+        "word": "trivial",
+        "meaning": "琐碎的；不重要的",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-3-kk-052",
+      "word": "quarrel",
+      "before": {
+        "id": "2026-3-kk-052",
+        "word": "quarrel",
+        "meaning": "争吵；争论",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-052",
+        "word": "quarrel",
+        "meaning": "争吵；争论",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-3-kk-053",
+      "word": "hum",
+      "before": {
+        "id": "2026-3-kk-053",
+        "word": "hum",
+        "meaning": "哼唱；嗡嗡声",
+        "page": 201,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-3-kk-053",
+        "word": "hum",
+        "meaning": "v. 哼唱；发出嗡嗡声 n. 嗡嗡声",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-4-kk-001",
+      "word": "mandate",
+      "before": {
+        "id": "2026-4-kk-001",
+        "word": "mandate",
+        "meaning": "授权；任期；命令；托管权",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-001",
+        "word": "mandate",
+        "meaning": "n. 授权；任期；命令；托管权 v. 强制执行；授权；命令",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-004",
+      "word": "blaze",
+      "before": {
+        "id": "2026-4-kk-004",
+        "word": "blaze",
+        "meaning": "大火，火焰：（光或色彩等的）展现；（强烈感",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-004",
+        "word": "blaze",
+        "meaning": "n. 大火；火焰；（光或色彩的）绚丽展示；（感情的）迸发 v. 熊熊燃烧；闪耀",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-005",
+      "word": "colonist",
+      "before": {
+        "id": "2026-4-kk-005",
+        "word": "colonist",
+        "meaning": "殖民者殖民主义的",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-005",
+        "word": "colonist",
+        "meaning": "n. 殖民者；殖民地居民",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-007",
+      "word": "scar",
+      "before": {
+        "id": "2026-4-kk-007",
+        "word": "scar",
+        "meaning": "留下精神创伤",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-007",
+        "word": "scar",
+        "meaning": "n. 伤疤；（精神上的）创伤；污点 v. 留下伤疤；给……留下精神创伤",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-008",
+      "word": "ring",
+      "before": {
+        "id": "2026-4-kk-008",
+        "word": "ring",
+        "meaning": "把圈起来；敲钟；（给）打电话",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-008",
+        "word": "ring",
+        "meaning": "n. 环状物；圆圈；戒指；铃声 v. 包围；把……围起来；敲钟；打电话",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-009",
+      "word": "severe",
+      "before": {
+        "id": "2026-4-kk-009",
+        "word": "severe",
+        "meaning": "的；（风格、衣着等）朴素的",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-009",
+        "word": "severe",
+        "meaning": "adj. 十分严重的；严峻的；严厉的；苛刻的；（风格、衣着等）朴素的",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-012",
+      "word": "flammable",
+      "before": {
+        "id": "2026-4-kk-012",
+        "word": "flammable",
+        "meaning": "（)易燃的；可燃的",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-012",
+        "word": "flammable",
+        "meaning": "adj. 易燃的；可燃的",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-020",
+      "word": "cadence",
+      "before": {
+        "id": "2026-4-kk-020",
+        "word": "cadence",
+        "meaning": "（)抑扬顿挫，起落；节奏",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-020",
+        "word": "cadence",
+        "meaning": "n. 节奏；韵律；抑扬顿挫",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-025",
+      "word": "testament",
+      "before": {
+        "id": "2026-4-kk-025",
+        "word": "testament",
+        "meaning": "证明；证据；遗嘱",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-025",
+        "word": "testament",
+        "meaning": "证明；证据；遗嘱",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-026",
+      "word": "firefighting",
+      "before": {
+        "id": "2026-4-kk-026",
+        "word": "firefighting",
+        "meaning": "消防",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-026",
+        "word": "firefighting",
+        "meaning": "消防",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-027",
+      "word": "erode",
+      "before": {
+        "id": "2026-4-kk-027",
+        "word": "erode",
+        "meaning": "削弱；降低；侵蚀；腐蚀",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-027",
+        "word": "erode",
+        "meaning": "削弱；降低；侵蚀；腐蚀",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-028",
+      "word": "ignite",
+      "before": {
+        "id": "2026-4-kk-028",
+        "word": "ignite",
+        "meaning": "点燃；燃烧；引发",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-028",
+        "word": "ignite",
+        "meaning": "点燃；燃烧；引发",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-029",
+      "word": "go up in smoke",
+      "before": {
+        "id": "2026-4-kk-029",
+        "word": "go up in smoke",
+        "meaning": "被烧毁；化为乌有",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-029",
+        "word": "go up in smoke",
+        "meaning": "被烧毁；化为乌有",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-030",
+      "word": "oversee",
+      "before": {
+        "id": "2026-4-kk-030",
+        "word": "oversee",
+        "meaning": "监督；监管",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-030",
+        "word": "oversee",
+        "meaning": "监督；监管",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-031",
+      "word": "prescribe",
+      "before": {
+        "id": "2026-4-kk-031",
+        "word": "prescribe",
+        "meaning": "规定；给……开药；开处方",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-031",
+        "word": "prescribe",
+        "meaning": "规定；给……开药；开处方",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-032",
+      "word": "resilient",
+      "before": {
+        "id": "2026-4-kk-032",
+        "word": "resilient",
+        "meaning": "适应性强的；有复原力的；有弹性的",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-032",
+        "word": "resilient",
+        "meaning": "适应性强的；有复原力的；有弹性的",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-033",
+      "word": "intentionally",
+      "before": {
+        "id": "2026-4-kk-033",
+        "word": "intentionally",
+        "meaning": "故意地；有意地",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-033",
+        "word": "intentionally",
+        "meaning": "故意地；有意地",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-034",
+      "word": "eliminate",
+      "before": {
+        "id": "2026-4-kk-034",
+        "word": "eliminate",
+        "meaning": "消除；排除",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-034",
+        "word": "eliminate",
+        "meaning": "消除；排除",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-035",
+      "word": "subsequent",
+      "before": {
+        "id": "2026-4-kk-035",
+        "word": "subsequent",
+        "meaning": "随后的，接着的",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-035",
+        "word": "subsequent",
+        "meaning": "随后的，接着的",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-036",
+      "word": "double-edged sword",
+      "before": {
+        "id": "2026-4-kk-036",
+        "word": "double-edged sword",
+        "meaning": "双刃剑",
+        "page": 203,
+        "source": "kongka",
+        "section": "passage"
+      },
+      "after": {
+        "id": "2026-4-kk-036",
+        "word": "double-edged sword",
+        "meaning": "双刃剑",
+        "page": 204,
+        "source": "kongka",
+        "section": "passage"
+      }
+    },
+    {
+      "id": "2026-4-kk-037",
+      "word": "scarcity",
+      "before": {
+        "id": "2026-4-kk-037",
+        "word": "scarcity",
+        "meaning": "缺乏；不足",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-4-kk-037",
+        "word": "scarcity",
+        "meaning": "缺乏；不足",
+        "page": 204,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-4-kk-038",
+      "word": "precolonial",
+      "before": {
+        "id": "2026-4-kk-038",
+        "word": "precolonial",
+        "meaning": "殖民地时期以前的",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-4-kk-038",
+        "word": "precolonial",
+        "meaning": "殖民地时期以前的",
+        "page": 204,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-4-kk-039",
+      "word": "intensity",
+      "before": {
+        "id": "2026-4-kk-039",
+        "word": "intensity",
+        "meaning": "强度；强烈",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-4-kk-039",
+        "word": "intensity",
+        "meaning": "强度；强烈",
+        "page": 204,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-4-kk-040",
+      "word": "markedly",
+      "before": {
+        "id": "2026-4-kk-040",
+        "word": "markedly",
+        "meaning": "显著地；明显地",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-4-kk-040",
+        "word": "markedly",
+        "meaning": "显著地；明显地",
+        "page": 204,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-4-kk-041",
+      "word": "misinterpret",
+      "before": {
+        "id": "2026-4-kk-041",
+        "word": "misinterpret",
+        "meaning": "误解；曲解",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-4-kk-041",
+        "word": "misinterpret",
+        "meaning": "误解；曲解",
+        "page": 204,
+        "source": "kongka",
+        "section": "options"
+      }
+    },
+    {
+      "id": "2026-4-kk-042",
+      "word": "render",
+      "before": {
+        "id": "2026-4-kk-042",
+        "word": "render",
+        "meaning": "使成为；给予；表现",
+        "page": 203,
+        "source": "kongka",
+        "section": "options"
+      },
+      "after": {
+        "id": "2026-4-kk-042",
+        "word": "render",
+        "meaning": "v. 使成为；使处于某种状态；给予；表现；提供；呈交",
+        "page": 204,
+        "source": "kongka",
+        "section": "options"
+      }
+    }
+  ]
+}
