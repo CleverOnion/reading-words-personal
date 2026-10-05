@@ -1,6 +1,7 @@
 import {cp, mkdir, readFile, writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
+import {build} from 'esbuild';
 
 // Reads only account IDs and resource names, never authentication credentials.
 const configPath=process.argv[2]||'.cloudflare-private/deployment.json';
@@ -23,9 +24,11 @@ await writeFile(path.join(releaseDir,'server/brand.js'),brandModule.outputText);
 const source=(await readFile('deploy/cloudflare/private-worker.ts','utf8')).replace("from '../../lib/brand.ts'", "from './brand.js'");
 const {outputText}=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}});
 await writeFile(path.join(releaseDir,'server/private-worker.js'),outputText);
+await build({entryPoints:['lib/native-ai-server.ts'],outfile:path.join(releaseDir,'server/native-ai-runner.js'),bundle:true,format:'esm',platform:'browser',target:'es2022'});
 await writeFile(path.join(releaseDir,'server/private-entry.js'),`import app from './index.js';
 import {handlePrivate} from './private-worker.js';
-export default {fetch(request,env,ctx){return handlePrivate(request,env,async(trusted)=>{
+import {runAiBatch} from './native-ai-runner.js';
+export default {async scheduled(controller,env,ctx){await runAiBatch(env);},fetch(request,env,ctx){return handlePrivate(request,env,async(trusted)=>{
   if(trusted.method==='GET'||trusted.method==='HEAD'){
     const asset=await env.ASSETS.fetch(trusted);
     if(asset.status!==404)return asset;
@@ -45,6 +48,7 @@ const config={
   vars:{PRIVATE_DEPLOYMENT:'1',PRIVATE_USER_ID:target.user_id},
   observability:{enabled:false}
 };
+config.triggers={crons:['* * * * *']};
 await writeFile('.cloudflare-build/wrangler.json',JSON.stringify(config,null,2)+'\n');
 console.log('Prepared private Worker:',target.worker_name);
 console.log('Config:',path.resolve('.cloudflare-build/wrangler.json'));

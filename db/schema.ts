@@ -12,3 +12,12 @@ export const attempts=sqliteTable('attempts',{
 export const savedWords=sqliteTable('saved_words',{
  userId:text('user_id').notNull(),wordId:text('word_id').notNull(),savedAt:integer('saved_at').notNull(),
 },t=>[primaryKey({columns:[t.userId,t.wordId]})]);
+export const aiSettings=sqliteTable('ai_settings',{
+ userId:text('user_id').primaryKey(),baseUrl:text('base_url').notNull(),model:text('model').notNull(),encryptedKey:text('encrypted_key').notNull(),updatedAt:integer('updated_at').notNull(),
+});
+export const aiNotes=sqliteTable('ai_notes',{
+ userId:text('user_id').notNull(),wordKey:text('word_key').notNull(),wordId:text('word_id').notNull(),status:text('status').notNull().default('pending'),content:text('content'),model:text('model'),error:text('error'),updatedAt:integer('updated_at').notNull(),leaseUntil:integer('lease_until').notNull().default(0),leaseToken:text('lease_token'),
+},t=>[primaryKey({columns:[t.userId,t.wordKey]}),index('idx_ai_notes_queue').on(t.userId,t.status,t.leaseUntil)]);
+export const aiJobs=sqliteTable('ai_jobs',{
+ userId:text('user_id').primaryKey(),status:text('status').notNull().default('paused'),leaseUntil:integer('lease_until').notNull().default(0),leaseToken:text('lease_token'),lastError:text('last_error'),updatedAt:integer('updated_at').notNull(),
+});

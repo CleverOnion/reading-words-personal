@@ -58,3 +58,11 @@ test('authenticated mutations require same origin and sign-out clears the cookie
  assert.equal((await call('/api/study',{method:'POST',headers:{cookie,origin:'https://attacker.example'}})).status,403);
  assert.equal((await call('/auth/logout',{method:'POST',headers:{cookie,origin}})).headers.get('Set-Cookie')?.includes('Max-Age=0'),true);
 });
+
+test('backup includes saved AI explanations but never provider settings or keys',async()=>{
+ const queries:string[]=[];
+ const DB={prepare:(query:string)=>{queries.push(query);return {bind:()=>({})};},batch:async()=>[{results:[]},{results:[]},{results:[]},{results:[{word_key:'nail',content:'saved explanation'}]}]} as unknown as D1Database;
+ const cookie=await login();const r=await call('/api/backup',{headers:{cookie}},{...env,DB});
+ assert.equal(r.status,200);const body=await r.json() as {ai_notes:unknown[]};assert.equal(body.ai_notes.length,1);
+ assert.ok(queries.some(q=>q.includes('FROM ai_notes')));assert.ok(queries.every(q=>!q.includes('ai_settings')&&!q.includes('encrypted_key')));
+});

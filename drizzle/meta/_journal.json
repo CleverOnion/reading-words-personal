@@ -36,6 +36,13 @@
       "when": 1791081945104,
       "tag": "0004_recall_rating",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1791180834849,
+      "tag": "0005_native_ai",
+      "breakpoints": true
     }
   ]
 }
